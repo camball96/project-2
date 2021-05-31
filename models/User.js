@@ -46,4 +46,4 @@ User.init(
     }
 );
 
-module.exports = user;
+module.exports = User;

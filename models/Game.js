@@ -35,4 +35,4 @@ Game.init(
     }
 );
 
-module.exports = game;
+module.exports = Game;

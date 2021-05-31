@@ -38,8 +38,8 @@ Review.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'game',
+        modelName: 'review',
     }
 );
 
-module.exports = game;
+module.exports = Review;
