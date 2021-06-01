@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { User, Score, Game, Review } = require('../../models');
 // const Score = require('../models/score');
 
-
+//updated
 // Routes needed....
 // get all
 // get one - for when user clicks one

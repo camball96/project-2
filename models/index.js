@@ -3,7 +3,7 @@ const Game = require('./game');
 const Review = require('./review');
 const Score = require('./score');
 
-
+// updated
 // will add more as needed...just basic models
 Game.hasMany(Review, {
     foreignKey: 'review_ids'

@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Review extends Model { }
 
-// review store.
+// review store.// updated
 
 Review.init(
     {

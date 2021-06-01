@@ -4,6 +4,7 @@ const userRoutes = require('./api/user-routes');
 const reviewRoutes = require('./api/review-routes');
 const scoreRoutes = require('./api/score-routes');
 
+//updated
 
 router.use('/game', gameRoutes);
 router.use('/user', userRoutes);
