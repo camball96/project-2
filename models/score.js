@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Review extends Model { }
+class Score extends Model { }
 
-// review store.// updated
+// score table // updated
 
-Review.init(
+Score.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,12 +13,9 @@ Review.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        review_txt: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        review_score: {
-            type: DataTypes.NUMERIC,
+        rating: {
+            type: DataTypes.DECIMAL,
+            allowNull: false
         },
         game_id: {
             type: DataTypes.INTEGER,
@@ -36,13 +33,21 @@ Review.init(
                 key: 'id'
             }
         },
+        review_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'review',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'review',
+        modelName: 'score',
     }
 );
 
-module.exports = Review;
+module.exports = Score;

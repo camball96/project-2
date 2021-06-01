@@ -1,8 +1,6 @@
-
 const express = require('express');
 const routes = require('./controllers');
-const sequelize = require('./config/connection')
-const session = require('express-session');
+const sequelize = require('./config/connection_test')
 const mysql = require('mysql2')
 
 const app = express();
@@ -14,10 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-// updated
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}!`);
-  })
+    app.listen(PORT, () => {
+        console.log(`App listening on port ${PORT}!`);
+    })
 })

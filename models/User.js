@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class User extends Model { }
 
-//user table
+//user table .// updated
 
 User.init(
     {
@@ -28,15 +28,10 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: len[10]
-        },
-        review_ids: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'review',
-                key: 'id'
+            validate: {
+                len: 10
             }
-        }
+        },
     },
     {
         sequelize,

@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Game extends Model { }
 
-// game table
+// game table.// updated
 
 Game.init(
     {
@@ -18,14 +18,10 @@ Game.init(
             allowNull: false,
             unique: true
         },
-        review_ids: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'reviews',
-                key: 'id'
-            }
-        },
+        picture: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        }
     },
     {
         sequelize,
