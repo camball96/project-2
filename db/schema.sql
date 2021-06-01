@@ -10,21 +10,21 @@ USE gamereview_db;
 CREATE TABLE Game (
     title VARCHAR(50) NOT NULL,
 
-    picture NOT NULL,
+    picture VARCHAR(1000) NOT NULL,
 
-    gameid INTEGER(1) AUTO_INCREMENT NOT NULL,
-)
+    gameid INT(1) AUTO_INCREMENT NOT NULL PRIMARY KEY
+);
 
 -- Creates the Game table in gamereview_db
 CREATE TABLE Review (
-    reviewID INTEGER(1) AUTO_INCREMENT NOT NULL,
-)
+    reviewID INT(1) AUTO_INCREMENT NOT NULL PRIMARY KEY
+);
 
 -- Creates the Game table in gamereview_db
 CREATE TABLE User (
-    userid INTEGER(10) AUTO_INCREMENT NOT NULL,
+    userid INT(10) AUTO_INCREMENT NOT NULL PRIMARY KEY,
 
     username VARCHAR(50) NOT NULL,
 
-    pass VARCHAR(50) NOT NULL,
+    pass VARCHAR(50) NOT NULL
 )
