@@ -18,20 +18,10 @@ Game.init(
             allowNull: false,
             unique: true
         },
-        review_ids: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'reviews',
-                key: 'id'
-            }
-        },
-        score_ids: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'reviews',
-                key: 'id'
-            }
-        },
+        picture: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        }
     },
     {
         sequelize,

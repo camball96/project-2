@@ -28,15 +28,10 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: len[10]
-        },
-        review_ids: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'review',
-                key: 'id'
+            validate: {
+                len: 10
             }
-        }
+        },
     },
     {
         sequelize,

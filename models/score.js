@@ -14,7 +14,7 @@ Score.init(
             autoIncrement: true,
         },
         rating: {
-            type: DataTypes.NUMERIC,
+            type: DataTypes.DECIMAL,
             allowNull: false
         },
         game_id: {
@@ -34,7 +34,7 @@ Score.init(
             }
         },
         review_id: {
-            Type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'review',

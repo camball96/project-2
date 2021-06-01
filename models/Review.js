@@ -36,14 +36,6 @@ Review.init(
                 key: 'id'
             }
         },
-        score_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'score',
-                key: 'id'
-            }
-        },
     },
     {
         sequelize,
