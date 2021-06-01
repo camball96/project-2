@@ -18,6 +18,10 @@ Project Owners - Cam, Ty, Nick, Aaron
 
 ## Description
 
+Table structure
+
+
+
 
 ## License
 MIT License
@@ -42,6 +46,14 @@ For contributions, you may follow the industry standard: [Contributor Covenant](
 
 * Basic NPM Packages were used: [NPM Packages](https://www.npmjs.com/).
 
+* bcrypt
+* dotenv
+* mysql2
+* express
+* express-handlebars
+* express-session
+* sequelize
+* passport 
 
 ## Tests
 
