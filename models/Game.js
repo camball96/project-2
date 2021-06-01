@@ -20,7 +20,13 @@ Game.init(
         },
         review_ids: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            references: {
+                model: 'reviews',
+                key: 'id'
+            }
+        },
+        score_ids: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'reviews',
                 key: 'id'
