@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Score extends Model { }
 
-// review store
+// score table
 
 Score.init(
     {
