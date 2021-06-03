@@ -9,7 +9,24 @@
 	font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
 /* this is for static styles */
+
+:root {
+	--midnightblack: black;
+	--lavender: rgb(158, 129, 158);
+	--lilac: rgb(176, 176, 240);
+	--purewhite: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "elixiaregular", sans-serif;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+}
 
 * {
 	box-sizing: border-box;
@@ -20,20 +37,20 @@
 body,
 html {
 	height: 100%;
+	background-color: var(--midnightblack);
 }
 
 body {
-	font-family: "Lato", sans-serif;
 	font-size: 16px;
 }
 
 nav {
-	background: #222;
+	background: var(--midnightblack);
 	padding: 0 15px;
 }
 
 a {
-	color: white;
+	color: var(--purewhite);
 	text-decoration: none;
 }
 
@@ -45,7 +62,7 @@ img {
 .topNav {
 	display: flex;
 	justify-content: flex-end;
-	background-color: #222;
+	background-color: var(--midnightblack);
 	width: auto;
 }
 
@@ -59,7 +76,7 @@ img {
 }
 
 .loginButton :hover {
-	color: rgb(158, 129, 158);
+	color: var(--lavender);
 	text-decoration: none;
 	cursor: pointer;
 	transition: 0.5s;
@@ -75,7 +92,7 @@ img {
 }
 
 .makeAccButton :hover {
-	color: rgb(158, 129, 158);
+	color: var(--lavender);
 	text-decoration: none;
 	cursor: pointer;
 	transition: 0.5s;
@@ -99,8 +116,8 @@ img {
 	font-family: "elixiaregular", sans-serif;
 	font-weight: 300;
 	font-style: normal;
-	background-color: black;
-	color: white;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
 }
 
 .header h1 {
@@ -109,7 +126,7 @@ img {
 
 .typewriter h1 {
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: 0.15em solid rgb(176, 176, 240); /* The typwriter cursor */
+	border-right: 0.15em solid var(--lilac); /* The typwriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
 	letter-spacing: 0.15em; /* Adjust as needed */
@@ -133,7 +150,7 @@ img {
 		border-color: transparent;
 	}
 	50% {
-		border-color: rgb(176, 176, 240);
+		border-color: var(--lilac);
 	}
 }
 
@@ -152,7 +169,7 @@ img {
 
 .input {
     padding: 10px;
-    box-shadow: black;
+    box-shadow: var(--midnightblack);
     border-radius: 5px;
     width: 100%;
     font-family:monospace;
@@ -162,10 +179,10 @@ img {
     padding: 10px;
     border-radius: 5px;
     font-family:monospace;
-    background-color: white;
+    background-color: var(--purewhite);
 }
 .searchButton:hover {
-    color: rgb(158, 129, 158);
+    color: var(--lavender);
     background-color: darkgray;
     text-decoration: none;
     cursor: pointer;
@@ -180,8 +197,8 @@ img {
 	font-style: normal;
 	flex-wrap: wrap;
 	width: auto;
-	background-color: #222;
-	color: white;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
 }
 
 .trendingHeader {
@@ -192,8 +209,8 @@ img {
 	font-style: normal;
 	flex-wrap: wrap;
 	width: auto;
-	background-color: #222;
-	color: white;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
 }
 
 .trendingHeader h4 {
@@ -215,40 +232,68 @@ img {
 
 .trendingTitle, .trendingRating {
 	display: inline-block;
-	background-color: black;
-	color: white;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
 	font-size: 2rem;
 }
 
-/* GAME PROFILE CARD */
-.gameCard {
 
+.row {
+	align-self: center;
+	justify-content: center;
+}
+/* GAME PROFILE CARD */
+.gameCard, .gameReviewCard {
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 0.1rem solid var(--purewhite);
+	border-radius: 10px;
+	width: 500px;
 }
 
 .cardHeader {
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 3rem;
+	font-style: normal;
+	flex-wrap: wrap;
+	width: auto;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+}
+
+.gameTitle {
+	display: flex;
+	flex: column
+
+}
+
+.gameRating { 
+	display: flex;
 
 }
 
 .gameImg {
-
+	display: inline-block;
+	height: 500px;
+	padding: 0.5rem;
 }
 
-.gameRating {
-
+.gameImg img {
+	border-radius: 10px;
 }
 
 .gameProfile {
-
+	background-color: var(--midnightblack);
 }
 
 /* GAME REVIEW CARD */
-.gameReviewCard { 
-
-}
-
-.reviewTitle {
-
-}
 
 .reviewPost {
 
@@ -258,10 +303,6 @@ img {
 
 }
 
-.reviewUsername {
-
-}
-
-.reviewDateTime {
-	
+.reviewUsername, .reviewDateTime {
+	font-style: italic;
 }

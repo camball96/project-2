@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Gamer's Hideout - A Game Review Forum</title>
 		<link rel="stylesheet" href="../../public/css/jass.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="../../public/css/style.css" />
 		<script src="../../public/js/index.js"></script>
 	</head>
@@ -71,51 +76,37 @@
 			</div>
 		</div>
 		<!-- This is the game profile review section -->
-		<div class="gameCard">
-			<div class="cardHeader">
-				<h4>Game Title</h4>
+		<div class="row">
+			<div class="gameCard">
+				<div class="cardHeader">
+					<div class="gameTitle">
+						<h4>Game Title</h4>
+					</div>
+					<div class="gameRating">
+						<h4>R A T I N G</h4>
+					</div>
+				</div>
+				<div class="gameImg">
+					<img src="../../public/images/game-placeholder-image.jpg" />
+				</div>
+				<div class="gameProfile">
+					<p>Description: Test</p>
+				</div>
 			</div>
-			<div class="gameImg">
-				<img src="../../public/images/game-placeholder-image.jpg" />
-			</div>
-			<div class="gameRating">
-				<h4>RATING</h4>
-			</div>
-			<div class="gameProfile">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-					nulla elit. Maecenas finibus, tortor ac blandit lacinia, erat ex
-					varius enim, ac posuere mi tortor id mi. Nulla malesuada sem nec ex
-					dignissim, hendrerit interdum massa suscipit. Nam condimentum
-					porttitor libero, non hendrerit dui. Nam ultrices auctor iaculis.
-					Vivamus eros orci, iaculis sed efficitur eu, ornare sit amet mauris.
-					Donec finibus neque eget odio efficitur tempus. Suspendisse potenti.
-					Suspendisse vitae eros quam. Duis in turpis urna. Nulla eu felis vel
-					nulla sodales molestie eget a purus. Quisque quis neque nec augue
-					interdum euismod at quis tortor. Mauris leo ex, tincidunt non nisi et,
-					tristique finibus urna. Suspendisse blandit, enim eget varius cursus,
-					lorem nulla facilisis odio, molestie iaculis dolor mauris auctor
-					risus. Curabitur vel enim a urna posuere lobortis et a eros. Curabitur
-					in lorem nec arcu finibus hendrerit non id quam. Aenean ac arcu id
-					enim dictum laoreet nec non lectus. Pellentesque facilisis vestibulum
-					mi, at fermentum libero tincidunt sed. In sit amet leo feugiat,
-					euismod sapien id, consequat arcu. Donec turpis lorem, ornare ac
-					laoreet venenatis, fermentum tincidunt diam. Mauris consequat mollis
-					mi, nec facilisis lectus sodales at. Donec vitae tortor nisi. Duis
-					laoreet ligula leo, nec sodales elit ultrices at. Vivamus porta in
-					turpis eu accumsan. Donec ac metus ultricies, pharetra dui a, eleifend
-					mi.
-				</p>
-			</div>
-		</div>
-		<div class="gameReviewCard">
-			<div class="reviewTitle">
-				<h4>R E V I E W S</h4>
-			</div>
-			<div class="reviewPost">
-				<p class="reviewContent">This is a section for the users' game reviews.</p>
-				<h6 class="reviewUsername">This is the person's username who left that review</h6>
-				<p class="reviewDateTime">This is the datetime of the review</p>
+			<!-- This is the review/comment section -->
+			<div class="gameReviewCard">
+				<div class="cardHeader">
+					<h4>R E V I E W S</h4>
+				</div>
+				<div class="reviewPost">
+					<p class="reviewContent">
+						"This is a section for the users' game reviews."
+					</p>
+					<p class="reviewUsername">
+						This is the person's username who left that review
+					</p>
+					<p class="reviewDateTime">This is the datetime of the review</p>
+				</div>
 			</div>
 		</div>
 	</body>
