@@ -1,10 +1,12 @@
 /* Custom Fonts */
 @font-face {
-	font-family: 'elixiaregular';
-    src: url('../fonts/webfontkit-20210601-062142/elixia-webfont.woff2') format('woff2'),
-         url('../fonts/webfontkit-20210601-062142/elixia-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: "elixiaregular";
+	src: url("../fonts/webfontkit-20210601-062142/elixia-webfont.woff2")
+			format("woff2"),
+		url("../fonts/webfontkit-20210601-062142/elixia-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* this is for static styles */
@@ -33,6 +35,11 @@ nav {
 a {
 	color: white;
 	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .topNav {
@@ -77,7 +84,7 @@ a {
 .mainBackground {
 	background-image: url("../images/background-image.jpeg");
 	height: 100%;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 90%;
@@ -89,9 +96,9 @@ a {
 	align-items: center;
 	padding: 0.5rem;
 	margin: 0.5rem;
-	font-family: "elixiaregular", sans-serif;	
+	font-family: "elixiaregular", sans-serif;
 	font-weight: 300;
-	font-style:normal;
+	font-style: normal;
 	background-color: black;
 	color: white;
 }
@@ -100,19 +107,76 @@ a {
 	font-size: 3rem;
 }
 
-.search {
-	width: auto;
+.typewriter h1 {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.15em solid rgb(176, 176, 240); /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: 0.15em; /* Adjust as needed */
+	animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: rgb(176, 176, 240);
+	}
+}
+
+.searchBar {
+    display: flex;
+    margin: 20% auto;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    width: auto;
+
+}
+
+.input {
+    padding: 10px;
+    box-shadow: black;
+    border-radius: 5px;
+    width: 100%;
+    font-family:monospace;
+}
 .searchButton {
-	width: auto;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-family:monospace;
+    background-color: white;
+}
+.searchButton:hover {
+    color: rgb(158, 129, 158);
+    background-color: darkgray;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .trendingGallery {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: "elixiaregular", sans-serif;	
+	font-family: "elixiaregular", sans-serif;
 	font-style: normal;
 	flex-wrap: wrap;
 	width: auto;
@@ -121,14 +185,38 @@ a {
 }
 
 .trendingHeader {
-	flex: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "elixiaregular", sans-serif;
+	font-style: normal;
+	flex-wrap: wrap;
+	width: auto;
+	background-color: #222;
+	color: white;
+}
+
+.trendingHeader h4 {
+	font-size: 3rem;
+}
+
+.trendingGames {
+	flex-direction: column;
 }
 
 .trendingImg {
-	width: auto;
-	height: auto;
+	height: 200px;
+	padding-right: 0.5rem;
 }
 
-.trendingBox {
-	width: auto;
+/* .trendingImg :hover {
+ 
+} */
+
+.trendingTitle, .trendingRating {
+	display: inline-block;
+	background-color: black;
+	color: white;
+	font-size: 2rem;
 }
+
