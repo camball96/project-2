@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 
 /* this is for static styles */
 
@@ -20,7 +20,12 @@
 	--purewhite: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: "elixiaregular", sans-serif;
 }
 
@@ -55,8 +60,8 @@ a {
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .topNav {
@@ -155,38 +160,37 @@ img {
 }
 
 .searchBar {
-    display: flex;
-    margin: 20% auto;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	margin: 20% auto;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
 }
 
 .search {
-    width: auto;
-
+	width: auto;
 }
 
 .input {
-    padding: 10px;
-    box-shadow: var(--midnightblack);
-    border-radius: 5px;
-    width: 100%;
-    font-family:monospace;
+	padding: 10px;
+	box-shadow: var(--midnightblack);
+	border-radius: 5px;
+	width: 100%;
+	font-family: monospace;
 }
 .searchButton {
-    width: auto;
-    padding: 10px;
-    border-radius: 5px;
-    font-family:monospace;
-    background-color: var(--purewhite);
+	width: auto;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: monospace;
+	background-color: var(--purewhite);
 }
 .searchButton:hover {
-    color: var(--lavender);
-    background-color: darkgray;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.5s;
+	color: var(--lavender);
+	background-color: darkgray;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
 }
 
 .trendingGallery {
@@ -230,20 +234,21 @@ img {
  
 } */
 
-.trendingTitle, .trendingRating {
+.trendingTitle,
+.trendingRating {
 	display: inline-block;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-size: 2rem;
 }
 
-
 .row {
 	align-self: center;
 	justify-content: center;
 }
 /* GAME PROFILE CARD */
-.gameCard, .gameReviewCard {
+.gameCard,
+.gameReviewCard {
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	display: flex;
@@ -270,13 +275,10 @@ img {
 
 .gameTitle {
 	display: flex;
-	flex: column
-
-}
-
-.gameRating { 
-	display: flex;
-
+	justify-content: center;
+	width: 100%;
+	font-size: larger;
+	text-align: center;
 }
 
 .gameImg {
@@ -296,51 +298,54 @@ img {
 /* GAME REVIEW CARD */
 
 .reviewPost {
-
+	border: 2px solid var(--purewhite);
+	border-radius: 2px;
+	padding: 10px;
 }
 
 .reviewContent {
-
 }
 
-.reviewUsername, .reviewDateTime {
+.reviewUsername,
+.reviewDateTime {
 	font-style: italic;
+	text-align: right;
 }
-
 
 /* Star Rating styling */
 .gameRating {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
+	float: left;
+	justify-content: center;
+	height: 46px;
+	padding: 0 10px;
 }
 .gameRating:not(:checked) > input {
-    position:absolute;
-    top:-9999px;
+	position: absolute;
+	top: -9999px;
 }
 .gameRating:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 30px;
+	color: #ccc;
 }
 .gameRating:not(:checked) > label:before {
-    content: '★ ';
+	content: "★ ";
 }
 .gameRating > input:checked ~ label {
-    color: #ffc700;    
+	color: #ffc700;
 }
 .gameRating:not(:checked) > label:hover,
 .gameRating:not(:checked) > label:hover ~ label {
-    color: #deb217;  
+	color: #deb217;
 }
 .gameRating > input:checked + label:hover,
 .gameRating > input:checked + label:hover ~ label,
 .gameRating > input:checked ~ label:hover,
 .gameRating > input:checked ~ label:hover ~ label,
 .gameRating > label:hover ~ input:checked ~ label {
-    color: #c59b08;
+	color: #c59b08;
 }
