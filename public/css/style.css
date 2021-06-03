@@ -1,1 +1,352 @@
+/* Custom Fonts */
+@font-face {
+	font-family: "elixiaregular";
+	src: url("../fonts/webfontkit-20210601-062142/elixia-webfont.woff2")
+			format("woff2"),
+		url("../fonts/webfontkit-20210601-062142/elixia-webfont.woff")
+			format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+
 /* this is for static styles */
+
+:root {
+	--midnightblack: black;
+	--lavender: rgb(158, 129, 158);
+	--lilac: rgb(176, 176, 240);
+	--purewhite: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "elixiaregular", sans-serif;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body,
+html {
+	height: 100%;
+	background-color: var(--midnightblack);
+}
+
+body {
+	font-size: 16px;
+}
+
+nav {
+	background: var(--midnightblack);
+	padding: 0 15px;
+}
+
+a {
+	color: var(--purewhite);
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.topNav {
+	display: flex;
+	justify-content: flex-end;
+	background-color: var(--midnightblack);
+	width: auto;
+}
+
+.loginButton {
+	display: inline-block;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 900;
+	width: auto;
+	padding: 0.5rem;
+}
+
+.loginButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.makeAccButton {
+	display: inline-block;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 900;
+	width: auto;
+	padding: 0.5rem;
+}
+
+.makeAccButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.mainBackground {
+	background-image: url("../images/background-image.jpeg");
+	height: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 90%;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	font-family: "elixiaregular", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+}
+
+.header h1 {
+	font-size: 3rem;
+}
+
+.typewriter h1 {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.15em solid var(--lilac); /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: 0.15em; /* Adjust as needed */
+	animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: var(--lilac);
+	}
+}
+
+.searchBar {
+	display: flex;
+	margin: 20% auto;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+}
+
+.search {
+	width: auto;
+}
+
+.input {
+	padding: 10px;
+	box-shadow: var(--midnightblack);
+	border-radius: 5px;
+	width: 100%;
+	font-family: monospace;
+}
+.searchButton {
+	width: auto;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: monospace;
+	background-color: var(--purewhite);
+}
+.searchButton:hover {
+	color: var(--lavender);
+	background-color: darkgray;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.trendingGallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "elixiaregular", sans-serif;
+	font-style: normal;
+	flex-wrap: wrap;
+	width: auto;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+}
+
+.trendingHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "elixiaregular", sans-serif;
+	font-style: normal;
+	flex-wrap: wrap;
+	width: auto;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+}
+
+.trendingHeader h4 {
+	font-size: 3rem;
+}
+
+.trendingGames {
+	flex-direction: column;
+}
+
+.trendingImg {
+	height: 200px;
+	padding-right: 0.5rem;
+}
+
+/* .trendingImg :hover {
+ 
+} */
+
+.trendingTitle,
+.trendingRating {
+	display: inline-block;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+	font-size: 2rem;
+}
+
+.row {
+	align-self: center;
+	justify-content: center;
+}
+/* GAME PROFILE CARD */
+.gameCard,
+.gameReviewCard
+.result-box {
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 0.1rem solid var(--purewhite);
+	border-radius: 10px;
+	width: 500px;
+}
+
+.cardHeader {
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 3rem;
+	font-style: normal;
+	flex-wrap: wrap;
+	width: auto;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+}
+
+.gameTitle {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-size: larger;
+	text-align: center;
+}
+
+.gameImg {
+	display: inline-block;
+	height: 500px;
+	padding: 0.5rem;
+}
+
+.gameImg img {
+	border-radius: 10px;
+}
+
+.gameProfile {
+	background-color: var(--midnightblack);
+}
+
+/* GAME REVIEW CARD */
+
+.reviewPost {
+	border: 2px solid var(--purewhite);
+	border-radius: 2px;
+	padding: 10px;
+}
+
+.reviewContent {
+}
+
+.reviewUsername,
+.reviewDateTime {
+	font-style: italic;
+	text-align: right;
+}
+
+/* Star Rating styling */
+.gameRate {
+	float: left;
+	justify-content: center;
+	height: 46px;
+	padding: 0 10px;
+}
+.gameRate:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+}
+.gameRate:not(:checked) > label {
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 30px;
+	color: #ccc;
+}
+.gameRate:not(:checked) > label:before {
+	content: "★ ";
+}
+.gameRate > input:checked ~ label {
+	color: #ffc700;
+}
+.gameRate:not(:checked) > label:hover,
+.gameRate:not(:checked) > label:hover ~ label {
+	color: #deb217;
+}
+.gameRate > input:checked + label:hover,
+.gameRate > input:checked + label:hover ~ label,
+.gameRate > input:checked ~ label:hover,
+.gameRate > input:checked ~ label:hover ~ label,
+.gameRate > label:hover ~ input:checked ~ label {
+	color: #c59b08;
+}

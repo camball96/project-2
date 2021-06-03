@@ -1,1 +1,51 @@
-{{!-- this is the main handlebars file --}}
+{{! this is the main handlebars file }}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gamer's Hideout - A Game Review Forum</title>
+		<link rel="stylesheet" href="../../public/css/jass.css" />
+		<link rel="stylesheet" href="../../public/css/style.css" />
+	</head>
+	<body>
+		<!-- Background image with some opacity -->
+		<div class="mainBackground">
+			<div class="topNav">
+				<div class="loginButton"><a>LOGIN</a></div>
+				<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
+			</div>
+			<div class="header">
+				<div><h1>G A M E R ' S H I D E O U T</h1></div>
+			</div>
+			<!-- This is where handlebars will affect page content -->
+			{{{ homepage }}}
+		</div>
+		<!-- Trending will remain static at the bottom of the webpage -->
+		<div class="trendingGallery">
+			<div class="trendingHeader">
+				<h4>T R E N D I N G</h4>
+			</div>
+			<div class="trendingImg">
+				title
+				<img src="../../public/images/game-placeholder-image.jpg" />
+			</div>
+			<div class="trendingImg">
+				title
+				<img src="../../public/images/game-placeholder-image.jpg" />
+			</div>
+			<div class="trendingImg">
+				title
+				<img src="../../public/images/game-placeholder-image.jpg" />
+			</div>
+			<div class="trendingImg">
+				title
+				<img src="../../public/images/game-placeholder-image.jpg" />
+			</div>
+		</div>
+	</body>
+</html>
+
+</html>
