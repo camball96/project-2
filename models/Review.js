@@ -5,6 +5,8 @@ class Review extends Model { }
 
 // review store.// updated
 
+
+
 Review.init(
     {
         id: {
@@ -14,7 +16,7 @@ Review.init(
             autoIncrement: true,
         },
         review_txt: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         review_score: {

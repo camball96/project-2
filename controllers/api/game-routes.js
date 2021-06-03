@@ -1,26 +1,17 @@
 const router = require('express').Router();
 
 const { User, Score, Game, Review } = require('../../models');
-// const Score = require('../models/score');
-
-//updated
-// Routes needed....
-// get all
-// get one - for when user clicks one
-// post - new user
-// post - new game
-// post - to submit a review to the db
-// update and delete routes.
 
 
-// GET some games reviews from homepage
+// GET 5 games, for the homepage -
 router.get('/', async (req, res) => {
     try {
         const gameData = await Game.findAll({
+            limit: 5,
             include: [
                 {
                     model: 'review',
-                    attributes: ['review_txt', 'user_id'],
+                    attributes: ['review_score'],
                 },
             ],
         });
@@ -28,7 +19,7 @@ router.get('/', async (req, res) => {
         const games = gameData.map((game) =>
             games.get({ plain: true })
         );
-
+        console.log(games)
         res.render('homepage', {
             games,
         });
@@ -38,6 +29,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+
 // GET one game - for when user drills down on a single game
 router.get('/:id', async (req, res) => {
     try {
@@ -46,24 +38,18 @@ router.get('/:id', async (req, res) => {
                 where: {
                     id: req.params.id
                 },
-
                 include: [
                     {
-                        model: 'review',
-                        attributes: ['review_txt', 'description'],
-                    },
-                    {
-                        model: 'score',
-                        attributes: ['rating'],
-                    },
+                        model: Review,
+                        attributes: ['review_txt', 'user_id', 'review_score'],
+                    }
                 ],
             });
 
-        const single_game_data = single_game.map((game) =>
-            game.get({ plain: true })
-        );
-
-        res.render('homepage', {
+        const single_game_data = single_game.get({ plain: true })
+        // the handlebars object is called 'single_game_data')
+        console.log(single_game_data)
+        res.render('search', {
             single_game_data,
         });
     } catch (err) {
@@ -77,25 +63,6 @@ router.post('/new', async (req, res) => {
     try {
         const addGame = await Game.create(req.body)
         res.status(200).json(addGame);
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
-// POST review - for adding review
-router.post('/review', async (req, res) => {
-    try {
-        const addReview = await Review.create(req.body)
-        const revID = addReview.id;
-        const addScore = await Score.create({
-            rating: req.body.rating,
-            game_id: req.body.game_id,
-            user_id: req.body.user_id,
-            review_id: revID
-        })
-        res.status(200).json(addScore);
     }
     catch (err) {
         console.log(err);
