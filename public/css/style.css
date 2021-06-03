@@ -77,7 +77,7 @@ a {
 .mainBackground {
 	background-image: url("../images/background-image.jpeg");
 	height: 100%;
-	background-position: center;
+	background-position:top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 90%;
@@ -100,13 +100,39 @@ a {
 	font-size: 3rem;
 }
 
-.search {
-	width: auto;
+.searchBar {
+	display: flex;
+	margin: 20% auto;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
 }
 
+.search {
+	width: auto;
+	
+}
+
+.input {
+	padding: 10px;
+	box-shadow: black;
+	border-radius: 5px;
+	width: 100%;
+	font-family:monospace;
+}
 .searchButton {
 	width: auto;
+	padding: 10px;
+	border-radius: 5px;
+	font-family:monospace;
+	background-color: white;
 }
+.searchButton:hover {
+	color: rgb(158, 129, 158);
+	background-color: darkgray;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
 
 .trendingGallery {
 	display: flex;
@@ -131,4 +157,49 @@ a {
 
 .trendingBox {
 	width: auto;
+}
+
+
+/* Results page css */
+
+
+
+
+
+
+/* this style is only for rating system */
+.gameRate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.gameRate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.gameRate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.gameRate:not(:checked) > label:before {
+    content: '★ ';
+}
+.gameRate > input:checked ~ label {
+    color: #ffc700;    
+}
+.gameRate:not(:checked) > label:hover,
+.gameRate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.gameRate > input:checked + label:hover,
+.gameRate > input:checked + label:hover ~ label,
+.gameRate > input:checked ~ label:hover,
+.gameRate > input:checked ~ label:hover ~ label,
+.gameRate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }
