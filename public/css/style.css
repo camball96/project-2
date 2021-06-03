@@ -248,7 +248,8 @@ img {
 }
 /* GAME PROFILE CARD */
 .gameCard,
-.gameReviewCard {
+.gameReviewCard
+.result-box {
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	display: flex;
@@ -313,17 +314,17 @@ img {
 }
 
 /* Star Rating styling */
-.gameRating {
+.gameRate {
 	float: left;
 	justify-content: center;
 	height: 46px;
 	padding: 0 10px;
 }
-.gameRating:not(:checked) > input {
+.gameRate:not(:checked) > input {
 	position: absolute;
 	top: -9999px;
 }
-.gameRating:not(:checked) > label {
+.gameRate:not(:checked) > label {
 	float: right;
 	width: 1em;
 	overflow: hidden;
@@ -332,20 +333,20 @@ img {
 	font-size: 30px;
 	color: #ccc;
 }
-.gameRating:not(:checked) > label:before {
+.gameRate:not(:checked) > label:before {
 	content: "★ ";
 }
-.gameRating > input:checked ~ label {
+.gameRate > input:checked ~ label {
 	color: #ffc700;
 }
-.gameRating:not(:checked) > label:hover,
-.gameRating:not(:checked) > label:hover ~ label {
+.gameRate:not(:checked) > label:hover,
+.gameRate:not(:checked) > label:hover ~ label {
 	color: #deb217;
 }
-.gameRating > input:checked + label:hover,
-.gameRating > input:checked + label:hover ~ label,
-.gameRating > input:checked ~ label:hover,
-.gameRating > input:checked ~ label:hover ~ label,
-.gameRating > label:hover ~ input:checked ~ label {
+.gameRate > input:checked + label:hover,
+.gameRate > input:checked + label:hover ~ label,
+.gameRate > input:checked ~ label:hover,
+.gameRate > input:checked ~ label:hover ~ label,
+.gameRate > label:hover ~ input:checked ~ label {
 	color: #c59b08;
 }
