@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { User, Score, Game, Review } = require('../models');
+const { User, Game, Review } = require('../models');
 // const Score = require('../models/score');
 
 //updated

@@ -1,6 +1,5 @@
 const router = require('express').Router();
-
-const { User, Score, Game, Review } = require('../../models');
+const { User, Game, Review } = require('../../models');
 
 
 // GET 5 games, for the homepage -
@@ -10,18 +9,20 @@ router.get('/', async (req, res) => {
             limit: 5,
             include: [
                 {
-                    model: 'review',
+                    model: Review,
                     attributes: ['review_score'],
-                },
+                }
             ],
         });
 
-        const games = gameData.map((game) =>
-            games.get({ plain: true })
-        );
+        const games = gameData.map((item) =>
+            item.get({ plain: true }))
+
+
         console.log(games)
+        // res.json(gameData)
         res.render('homepage', {
-            games,
+            games
         });
     } catch (err) {
         console.log(err);
@@ -45,7 +46,7 @@ router.get('/:id', async (req, res) => {
                     }
                 ],
             });
-
+        console.log(single_game)
         const single_game_data = single_game.get({ plain: true })
         // the handlebars object is called 'single_game_data')
         console.log(single_game_data)
@@ -58,7 +59,13 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// POST game - for adding game
+// POST game - for adding new game
+// JSON data body format for posting:
+// {
+// 	"game_name": "newgame",
+// 	"picture": "picplaceholder"
+// }
+
 router.post('/new', async (req, res) => {
     try {
         const addGame = await Game.create(req.body)

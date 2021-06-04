@@ -1,7 +1,7 @@
 const User = require('./user');
 const Game = require('./game');
 const Review = require('./review');
-const Score = require('./score');
+
 
 // updated
 // will add more as needed...just basic models
@@ -45,6 +45,5 @@ Game.hasMany(Review, {
 module.exports = {
     Game,
     User,
-    Review,
-    Score
+    Review
 };
