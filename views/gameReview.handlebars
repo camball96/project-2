@@ -1,10 +1,14 @@
+<!-- Loop over each object in the review array -->
+{{#each reviews as |review| }}
 <div class="gameReviewCard">
 	<div class="reviewTitle">
 		<h4>R E V I E W S</h4>
 	</div>
+	{{!-- call function to display each user's review --}}
 	<div class="reviewPost">
-		<p class="reviewContent">{{ reviewContent }}</p>
-		<h6 class="reviewUsername">{{ reviewUsername }}</h6>
+		<p class="reviewContent">{{ review.review_txt }}</p>
+		<h6 class="reviewUsername">{{ user.user_name }}</h6>
 		<p class="reviewDateTime">{{ reviewDateTime }}</p>
 	</div>
 </div>
+{{/each}}

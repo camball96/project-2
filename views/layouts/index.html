@@ -18,11 +18,15 @@
 		<!-- Background image with some opacity -->
 		<div class="mainBackground">
 			<div class="topNav">
+				<div class="header typewriter">
+					<h1>G A M E R ' S H I D E O U T</h1>
+				</div>
+				<!-- If logged in -->
+				<div class="userProfileButton"><a>PROFILE</a></div>
+				<div class="logoutButton"><a>LOGOUT</a></div>
+				<!-- If logged out -->
 				<div class="loginButton"><a>LOGIN</a></div>
 				<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
-			</div>
-			<div class="header">
-				<div class="typewriter"><h1>G A M E R ' S H I D E O U T</h1></div>
 			</div>
 			<!-- This is where handlebars will affect page content -->
 			<div class="searchBar">
@@ -32,6 +36,7 @@
 				<div><button class="searchButton">Search</button></div>
 			</div>
 		</div>
+
 		<!-- Trending will remain static at the bottom of the webpage -->
 		<div class="trendingSection">
 			<div class="trendingHeader">
@@ -42,39 +47,41 @@
 					<div class="trendingImg">
 						<img src="../../public/images/game-placeholder-image.jpg" />
 					</div>
-					<div class="trendingTitle">T I T L E</div>
-					<div class="trendingRating">R A T I N G</div>
+					<!-- Note: consider removing the trendingTitle div if game images will come with their titles default in the pic -->
+					<div class="trendingTitle"><a>T I T L E</a></div>
+					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
 					<div class="trendingImg">
 						<img src="../../public/images/game-placeholder-image.jpg" />
 					</div>
-					<div class="trendingTitle">T I T L E</div>
-					<div class="trendingRating">R A T I N G</div>
+					<div class="trendingTitle"><a>T I T L E</a></div>
+					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
 					<div class="trendingImg">
 						<img src="../../public/images/game-placeholder-image.jpg" />
 					</div>
-					<div class="trendingTitle">T I T L E</div>
-					<div class="trendingRating">R A T I N G</div>
+					<div class="trendingTitle"><a>T I T L E</a></div>
+					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
 					<div class="trendingImg">
 						<img src="../../public/images/game-placeholder-image.jpg" />
 					</div>
-					<div class="trendingTitle">T I T L E</div>
-					<div class="trendingRating">R A T I N G</div>
+					<div class="trendingTitle"><a>T I T L E</a></div>
+					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
 					<div class="trendingImg">
 						<img src="../../public/images/game-placeholder-image.jpg" />
 					</div>
-					<div class="trendingTitle">T I T L E</div>
-					<div class="trendingRating">R A T I N G</div>
+					<div class="trendingTitle"><a>T I T L E</a></div>
+					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 			</div>
 		</div>
+
 		<!-- This is the game profile review section -->
 		<div class="row">
 			<div class="gameCard">
@@ -106,6 +113,38 @@
 						This is the person's username who left that review
 					</p>
 					<p class="reviewDateTime">This is the datetime of the review</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- This is the user profile section -->
+		<div class="profileSection">
+			<div class="row">
+				<div class="profileCard">
+					<div class="profileHeader">
+						<h4>P R O F I L E</h4>
+					</div>
+					<div class="profileEmail">
+						<p class="profileDetails">Email: usertest@test.com</p>
+					</div>
+					<div class="updateEmail">
+						<p class="updateBtn">UPDATE EMAIL</p>
+					</div>
+					<div class="profileUsername">
+						<p>Username: gamershideout</p>
+					</div>
+					<div class="updateUsername">
+						<p class="updateBtn">UPDATE USERNAME</p>
+					</div>
+					<div class="profilePassword">
+						<p>Password: *************</p>
+					</div>
+					<div class="updatePassword">
+						<p class="updateBtn">UPDATE PASSWORD</p>
+					</div>
+					<div class="deleteProfile">
+						<p class="deleteBtn deleteProfile">DELETE PROFILE</p>
+					</div>
 				</div>
 			</div>
 		</div>

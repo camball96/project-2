@@ -18,6 +18,10 @@ Game.init(
             allowNull: false,
             unique: true
         },
+        game_desc: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         picture: {
             type: DataTypes.STRING,
             allowNull: true,

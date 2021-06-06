@@ -1,0 +1,31 @@
+{{! Handlebars for displaying user profile for them to view, update and delete their profile }}
+<div class="profileSection">
+	<div class="row">
+		<div class="profileCard">
+			<div class="profileHeader">
+				<h4>P R O F I L E</h4>
+			</div>
+			<div class="profileEmail">
+				<p class="profileDetails">Email: {{ user.user_email }}</p>
+			</div>
+			<div class="updateEmail">
+				<p class="updateBtn">UPDATE EMAIL</p>
+			</div>
+			<div class="profileUsername">
+				<p>Username: {{ user.user_name }}</p>
+			</div>
+			<div class="updateUsername">
+				<p class="updateBtn">UPDATE USERNAME</p>
+			</div>
+			<div class="profilePassword">
+				<p>Password: ************ </p>
+			</div>
+			<div class="updatePassword">
+				<p class="updateBtn">UPDATE PASSWORD</p>
+			</div>
+			<div class="deleteProfile">
+				<p class="deleteBtn deleteProfile">DELETE PROFILE</p>
+			</div>
+		</div>
+	</div>
+</div>

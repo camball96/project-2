@@ -57,6 +57,12 @@ nav {
 a {
 	color: var(--purewhite);
 	text-decoration: none;
+	cursor: pointer;
+}
+
+a :hover {
+	text-decoration: none;
+	color: var(--purewhite);
 }
 
 img {
@@ -66,58 +72,22 @@ img {
 
 .topNav {
 	display: flex;
-	justify-content: flex-end;
 	background-color: var(--midnightblack);
 	width: auto;
 }
 
-.loginButton {
-	display: inline-block;
-	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 900;
-	width: auto;
-	padding: 0.5rem;
-}
-
-.loginButton :hover {
-	color: var(--lavender);
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.5s;
-}
-
-.makeAccButton {
-	display: inline-block;
-	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 900;
-	width: auto;
-	padding: 0.5rem;
-}
-
-.makeAccButton :hover {
-	color: var(--lavender);
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.5s;
-}
-
-.mainBackground {
-	background-image: url("../images/background-image.jpeg");
-	height: 100%;
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 90%;
-}
-
 .header {
 	display: flex;
+	justify-content: flex-start;
+	align-self: flex-start;
+	align-content: flex-start;
+	/* align-self: center;
 	justify-content: center;
 	align-items: center;
-	padding: 0.5rem;
-	margin: 0.5rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-top: 3rem;  */
+	padding: 1rem 2rem;
 	font-family: "elixiaregular", sans-serif;
 	font-weight: 300;
 	font-style: normal;
@@ -159,6 +129,59 @@ img {
 	}
 }
 
+.loginButton,
+.makeAccButton,
+.userProfileButton,
+.logoutButton {
+	align-items: flex-end;
+	justify-content: flex-end;
+	align-self: flex-end;
+	justify-content: flex-end;
+	text-align: right;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 900;
+	width: auto;
+	padding: 0.5rem;
+}
+
+.loginButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.makeAccButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.userProfileButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.logoutButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.mainBackground {
+	background-image: url("../images/background-image.jpeg");
+	height: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 90%;
+}
+
 .searchBar {
 	display: flex;
 	margin: 20% auto;
@@ -178,6 +201,7 @@ img {
 	width: 100%;
 	font-family: monospace;
 }
+
 .searchButton {
 	width: auto;
 	padding: 10px;
@@ -185,6 +209,7 @@ img {
 	font-family: monospace;
 	background-color: var(--purewhite);
 }
+
 .searchButton:hover {
 	color: var(--lavender);
 	background-color: darkgray;
@@ -205,7 +230,8 @@ img {
 	color: var(--purewhite);
 }
 
-.trendingHeader {
+.trendingHeader,
+.profileHeader {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -222,33 +248,47 @@ img {
 }
 
 .trendingGames {
+	display: flex;
 	flex-direction: column;
+	padding-bottom: 2rem;
 }
 
 .trendingImg {
-	height: 200px;
-	padding-right: 0.5rem;
+	height: 250px;
+	padding-right: 1rem;
 }
 
-/* .trendingImg :hover {
- 
-} */
+.trendingImg:hover {
+	background: var(--lilac);
+	box-shadow: 0 0 50px var(--lilac);
+	transition: 0.5s;
+}
 
-.trendingTitle,
-.trendingRating {
+.trendingTitle {
 	display: inline-block;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-size: 2rem;
+	justify-content: center;
+	align-self: center;
+}
+
+.trendingTitle:hover {
+	text-decoration: none;
+	transition: 1s;
+	color: var(--lavender);
+	text-shadow: 0 5px 10px var(--purewhite);
 }
 
 .row {
 	align-self: center;
 	justify-content: center;
 }
-/* GAME PROFILE CARD */
+
+/* DEFAULT CARD STYLING */
 .gameCard,
-.gameReviewCard
+.gameReviewCard,
+.profileCard,
 .result-box {
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
@@ -300,16 +340,18 @@ img {
 
 .reviewPost {
 	border: 2px solid var(--purewhite);
-	border-radius: 2px;
+	border-radius: 10px;
 	padding: 10px;
 }
 
-.reviewContent {
-}
+/* .reviewContent {
+} */
 
 .reviewUsername,
+.reviewScore,
 .reviewDateTime {
 	font-style: italic;
+	font-size: small;
 	text-align: right;
 }
 
@@ -349,4 +391,74 @@ img {
 .gameRate > input:checked ~ label:hover ~ label,
 .gameRate > label:hover ~ input:checked ~ label {
 	color: #c59b08;
+}
+
+/* USER PROFILE CARD  */
+
+.profileSection {
+	display: flex;
+	margin: 2rem;
+	justify-content: center;
+}
+
+.profileHeader {
+	margin: 1rem;
+}
+
+.profileHeader h4 {
+	font-size: 3rem;
+}
+
+/* .profileMain {
+	display: flex;
+} */
+
+.profileEmail,
+.profileUsername,
+.profilePassword {
+	display: flex;
+	text-align: left;
+	justify-content: center;
+	align-self: center;
+	padding: 1rem;
+}
+
+.updateEmail,
+.updateUsername,
+.updatePassword {
+	cursor: pointer;
+	background-color: var(--midnightblack);
+	color: var(--lilac);
+}
+
+.updateBtn {
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.updateBtn:hover {
+	transition: 0.5s;
+	background-color: var(--lilac);
+	color: var(--midnightblack)
+}
+
+.deleteProfile {
+	display: flex;
+	font-size: small;
+	align-self: flex-end;
+	cursor: pointer;
+	color: grey;
+
+}
+
+
+.deleteBtn {
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.deleteBtn:hover {
+	transition: 0.5s;
+	background-color: rgb(252, 159, 159);
+	color: var(--midnightblack)
 }

@@ -14,14 +14,20 @@
 		<!-- Background image with some opacity -->
 		<div class="mainBackground">
 			<div class="topNav">
-				<div class="loginButton"><a>LOGIN</a></div>
-				<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
+				{{#if logged_in}}
+					<div class="userProfileButton"><a>PROFILE</a></div>
+					<div class="logoutButton"><a>LOGOUT</a></div>
+				{{else}}
+					<!-- Else, show login and create account-->
+					<div class="loginButton"><a>LOGIN</a></div>
+					<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
+				{{/if}}
 			</div>
 			<div class="header">
 				<div><h1>G A M E R ' S H I D E O U T</h1></div>
 			</div>
 			<!-- This is where handlebars will affect page content -->
-			{{{ homepage }}}
+			{{{ body }}}
 		</div>
 		<!-- Trending will remain static at the bottom of the webpage -->
 		<div class="trendingGallery">
