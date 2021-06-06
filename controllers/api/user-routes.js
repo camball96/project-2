@@ -22,7 +22,22 @@ router.post('/', async (req, res) => {
     }
 });
 
-
+// pseudo code for updating user details, need to link to frontend update button
+router.put('/:id', async (req, res) => {
+    const userData = await User.update(
+		{
+			user_name: req.body.user_name,
+            user_email: req.body.user_email,
+            password: req.body.password
+		},
+		{
+			where: {
+				id: req.params.id,
+			},
+		}
+	);
+  return res.status(200).json(userData);
+})
 
 
 module.exports = router;
