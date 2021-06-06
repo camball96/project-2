@@ -5,13 +5,26 @@ const Score = require('./score');
 
 // updated
 // will add more as needed...just basic models
-Game.hasMany(Review, {
-    foreignKey: 'review_ids'
+Review.belongsTo(Game, {
+    foreignKey: 'game_id'
 })
 
-Game.hasMany(Score, {
-    foreignKey: 'score_ids'
+Review.belongsTo(User, {
+    foreignKey: 'user_id'
 })
+
+Game.hasMany(Review, {
+    foreignKey: 'game_id'
+})
+
+
+// Game.hasMany(Review, {
+//     foreignKey: 'review_ids'
+// })
+
+// Game.hasMany(Score, {
+//     foreignKey: 'score_ids'
+// })
 
 // User.hasMany(Review, {
 //     foreignKey: 'review_ids'
