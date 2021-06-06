@@ -4,7 +4,7 @@ const resultsRoutes = require('./results-routes');
 const apiRoutes = require('./api')
 
 
-//updated
+//updated.
 
 router.use('/', homeRoutes)
 router.use('/results', resultsRoutes)

@@ -1,106 +1,157 @@
+
 const router = require('express').Router();
 
-const { User, Score, Game, Review } = require('../models');
-// const Score = require('../models/score');
+const { User, Game, Review } = require('../models');
 
-// GET ALL Games - you can manipulate the returned data as needed in the handlebar page
+
+// GET 5 games - you can manipulate the returned data as needed in the handlebar page
 router.get('/', async (req, res) => {
     try {
         const gameData = await Game.findAll({
+            limit: 5,
             include: [
                 {
-                    model: 'review',
-                    attributes: ['review_txt', 'user_id'],
-                },
-                {
-                    model: 'score',
-                    attributes: ['game_id', 'rating'],
+                    model: Review,
+                    attributes: ['review_score'],
                 }
             ],
         });
 
-        const games = gameData.map((game) =>
-            games.get({ plain: true })
-        );
+        const games = gameData.map((item) =>
+            item.get({ plain: true }))
 
-        console.log(games)
-        //remove below line when we have page name
-        res.json(gameData)
+        console.log(games) // remove once ready to submit
 
-        // waiting for handlebars page name...
-        // res.render('homepage', {
-        //     games,
-        // });
+        let loggedIn;
+        req.session.loggedIn
+            ? loggedIn = true
+            : loggedIn = false
+
+        res.render('testhomepage', {
+            games,
+            loggedIn
+        });
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
 
-// GET one game - for when user drills down on a single game
-router.get('/:id', async (req, res) => {
-    try {
-        const single_game = await Game.findOne(
-            {
-                where: {
-                    id: req.params.id
-                },
 
+// serve the registration page
+router.get('/register', (req, res) => {
+    let loggedIn;
+    req.session.loggedIn
+        ? loggedIn = true
+        : loggedIn = false
+
+    res.render('testregister', {
+        loggedIn
+    });
+});
+
+
+// serve login page
+router.get('/login', (req, res) => {
+
+    res.render('testlogin');
+
+});
+
+
+
+
+// goes to the gameReview view serve a page which has all reviews for a specific game
+
+router.get('/reviews/:id', async (req, res) => {
+
+    try {
+        const retrieveReviews = await Game.findByPk(
+            req.params.id,
+            {
                 include: [
                     {
-                        model: 'review',
-                        attributes: ['review_txt', 'description'],
+                        model: Review,
+                        attributes: ['user_id', 'user_name', 'review_score', 'review_txt', 'created_at']
                     },
+                ]
+            })
+
+        const allReviews = retrieveReviews.get({ plain: true })
+
+        console.log(allReviews) // remove once ready to submit
+
+        let loggedIn;
+        req.session.loggedIn
+            ? loggedIn = true
+            : loggedIn = false
+
+        res.render('gameReview', { allReviews, loggedIn });
+
+    }
+
+    catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+
+// goes to the gameprofile view
+router.get('/gameprofile/:id', async (req, res) => {
+
+    try {
+        const getGame = await Game.findByPk(
+            req.params.id,
+            {
+                include: [
                     {
-                        model: 'score',
-                        attributes: ['rating'],
+                        model: Review,
+                        attributes: ['review_score']
                     },
-                ],
-            });
+                ]
+            })
 
-        const single_game_data = single_game.map((game) =>
-            game.get({ plain: true })
-        );
+        const gameInfo = getGame.get({ plain: true })
 
-        res.render('homepage', {
-            single_game_data,
-        });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+        console.log(gameInfo) // remove once ready to submit
+
+        let loggedIn;
+        req.session.loggedIn
+            ? loggedIn = true
+            : loggedIn = false
+
+        res.render('gameProfile', { gameInfo, loggedIn });
+
     }
-});
 
-// POST game - for adding game
-router.post('/new', async (req, res) => {
-    try {
-        const addGame = await Game.create(req.body)
-        res.status(200).json(addGame);
-    }
     catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
 
+// I have moved this over to the API/Reviews section
 // POST review - for adding review
-router.post('/review', async (req, res) => {
-    try {
-        const addReview = await Review.create(req.body)
-        const revID = addReview.id;
-        const addScore = await Score.create({
-            rating: req.body.rating,
-            game_id: req.body.game_id,
-            user_id: req.body.user_id,
-            review_id: revID
-        })
-        res.status(200).json(addScore);
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+// router.post('/review', async (req, res) => {
+//     try {
+//         const addReview = await Review.create(req.body)
+//         const revID = addReview.id;
+//         const addScore = await Score.create({
+//             rating: req.body.rating,
+//             game_id: req.body.game_id,
+//             user_id: req.body.user_id,
+//             review_id: revID
+//         })
+//         res.status(200).json(addScore);
+//     }
+//     catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
+
 
 
 module.exports = router;
