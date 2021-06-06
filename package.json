@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seeds": "node seeds/index.js",
+    "seeds": "node db/seeds/index.js",
     "dev": "nodemon server.js"
   },
   "repository": {
@@ -32,4 +32,3 @@
     "nodemon": "^2.0.7"
   }
 }
-

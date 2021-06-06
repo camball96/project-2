@@ -57,6 +57,12 @@ nav {
 a {
 	color: var(--purewhite);
 	text-decoration: none;
+	cursor: pointer;
+}
+
+a :hover{
+	text-decoration: none;
+	color: var(--purewhite);
 }
 
 img {
@@ -178,6 +184,7 @@ img {
 	width: 100%;
 	font-family: monospace;
 }
+
 .searchButton {
 	width: auto;
 	padding: 10px;
@@ -185,6 +192,7 @@ img {
 	font-family: monospace;
 	background-color: var(--purewhite);
 }
+
 .searchButton:hover {
 	color: var(--lavender);
 	background-color: darkgray;
@@ -222,30 +230,43 @@ img {
 }
 
 .trendingGames {
+	display: flex;
 	flex-direction: column;
+	padding-bottom: 2rem;
 }
 
 .trendingImg {
-	height: 200px;
-	padding-right: 0.5rem;
+	height: 250px;
+	padding-right: 1rem;
 }
 
-/* .trendingImg :hover {
- 
-} */
+.trendingImg :hover {
+	background: var(--lilac); 
+    box-shadow: 0 0 50px var(--lilac); 
+	transition: 0.5s;
+}
 
-.trendingTitle,
-.trendingRating {
+.trendingTitle {
 	display: inline-block;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-size: 2rem;
+	justify-content: center;
+	align-self: center;
+}
+
+.trendingTitle :hover{
+	text-decoration: none;
+	transition: 1s;
+	color: var(--lavender);
+	text-shadow: 0 5px 10px var(--purewhite);
 }
 
 .row {
 	align-self: center;
 	justify-content: center;
 }
+
 /* GAME PROFILE CARD */
 .gameCard,
 .gameReviewCard,
