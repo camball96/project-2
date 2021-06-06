@@ -1,16 +1,16 @@
 <div class="gameCard">
 	<div class="cardHeader">
-		<h4>{{ gameName }}</h4>
+		<h4>{{ game.game_name }}</h4>
 	</div>
 	<div class="gameImg">
-		<img src="../../public/images/{{gameImage}}.jpg" />
+		<img src="../../public/images/{{game.game_picture}}.jpg" />
 	</div>
 	<div class="gameRating">
-		<h4>{{ gameRating }}</h4>
+		<h4>{{ review.review_score }}</h4>
 	</div>
 	<div class="gameProfile">
 		<p>
-			{{ gameProfile }}
+			{{ game.game_desc }}
 		</p>
 	</div>
 </div>

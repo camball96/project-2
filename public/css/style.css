@@ -248,7 +248,7 @@ img {
 }
 /* GAME PROFILE CARD */
 .gameCard,
-.gameReviewCard
+.gameReviewCard,
 .result-box {
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
@@ -300,16 +300,18 @@ img {
 
 .reviewPost {
 	border: 2px solid var(--purewhite);
-	border-radius: 2px;
+	border-radius: 10px;
 	padding: 10px;
 }
 
-.reviewContent {
-}
+/* .reviewContent {
+} */
 
 .reviewUsername,
+.reviewScore,
 .reviewDateTime {
 	font-style: italic;
+	font-size: small;
 	text-align: right;
 }
 
