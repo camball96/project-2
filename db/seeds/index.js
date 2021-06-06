@@ -11,9 +11,9 @@ const seedAll = async () => {
     await seedUsers();
     console.log('\n----- Users SEEDED -----\n');
     await seedGames();
-    console.log('\n----- Games SEEDED -----\n');
+    console.log('\n----- games SEEDED -----\n');
     await seedReviews();
-    console.log('\n----- Reviews SEEDED -----\n');
+    console.log('\n----- reviews SEEDED -----\n');
 
     process.exit(0);
 };

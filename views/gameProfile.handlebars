@@ -1,16 +1,27 @@
 <div class="gameCard">
 	<div class="cardHeader">
-		<h4>{{ game.game_name }}</h4>
+		<h4>{{ gameInfo.game_name }}</h4>
 	</div>
 	<div class="gameImg">
-		<img src="../../public/images/{{game.game_picture}}.jpg" />
+		<img src="../../public/images/{{gameInfo.game_picture}}.jpg" />
 	</div>
 	<div class="gameRating">
-		<h4>{{ review.review_score }}</h4>
+		<h4>
+			{{#if gameInfo.reviews}}
+			{{averageOut gameInfo.reviews}}
+			out of out of {{gameInfo.reviews.length}} reviews
+			{{else}}No reviews yet
+			{{/if}}
+		</h4>
 	</div>
 	<div class="gameProfile">
 		<p>
-			{{ game.game_desc }}
+			{{ gameInfo.game_desc }}
 		</p>
 	</div>
+
 </div>
+
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/register.js"></script>
+<script src="/js/logout.js"></script>

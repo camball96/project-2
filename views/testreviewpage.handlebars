@@ -1,0 +1,29 @@
+<div class="placehold">
+    <section>
+        {{#if allReviews}}
+
+        <div class='s'>
+            <div class='trendingTitle'>
+                <div class='cardHeader'>{{allReviews.game_name}}</div>
+                <div class='placeholder'>{{allReviews.picture}}</div>
+                <div id='avScore'>
+                    Average Score:
+                    {{#if allReviews.reviews}}
+                    {{averageOut allReviews.reviews}}
+                    out of {{allReviews.reviews.length}} reviews
+                    {{#each allReviews.reviews as |review|}}
+                    {{>reviews review}}
+                    {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+
+        </div>
+
+        {{/if}}
+    </section>
+
+
+</div>
+
+<link rel="stylesheet" href="/css/style.css" />

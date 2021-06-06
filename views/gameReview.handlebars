@@ -1,14 +1,9 @@
 <!-- Loop over each object in the review array -->
-{{#each reviews as |review| }}
-<div class="gameReviewCard">
-	<div class="reviewTitle">
-		<h4>R E V I E W S</h4>
-	</div>
-	{{!-- call function to display each user's review --}}
-	<div class="reviewPost">
-		<p class="reviewContent">{{ review.review_txt }}</p>
-		<h6 class="reviewUsername">{{ user.user_name }}</h6>
-		<p class="reviewDateTime">{{ reviewDateTime }}</p>
-	</div>
-</div>
+<h2>{{allReviews.game_name}}</h2>
+{{#each allReviews.reviews as |review| }}
+{{>reviews review}} {{!-- links to the 'partials' view --}}
 {{/each}}
+
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/register.js"></script>
+<script src="/js/logout.js"></script>
