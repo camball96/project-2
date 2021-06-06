@@ -3,7 +3,6 @@ const router = require('express').Router();
 
 const { User, Game, Review } = require('../models');
 
-
 // GET 5 games - you can manipulate the returned data as needed in the handlebar page
 router.get('/', async (req, res) => {
     try {

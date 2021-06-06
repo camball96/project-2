@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Game, Review } = require('../../models');
 
 
-// POST game - for adding new game
+// POST game - for adding new game.
 // JSON data body format expected:
 // {
 // 	"game_name": "newgame",

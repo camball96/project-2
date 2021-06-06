@@ -3,7 +3,6 @@ const router = require('express').Router();
 const { User, Game, Review } = require('../../models');
 // const Score = require('../models/score');
 
-
 // POST review - for adding review
 // Expects a POST request with body format as below::
 // {

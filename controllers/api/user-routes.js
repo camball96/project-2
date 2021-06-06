@@ -4,7 +4,7 @@ const { User, Game, Review } = require('../../models');
 
 
 // CREATE USER 
-// expects a POST request with body format as per below:
+// expects a POST request with body format as per below::
 // {
 // 	"user_name": "firstuser",
 // 	"user_email": "email@email.com",
