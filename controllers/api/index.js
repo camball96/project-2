@@ -4,7 +4,7 @@ const gameRoutes = require('./game-routes');
 const userRoutes = require('./user-routes');
 const reviewRoutes = require('./review-routes');
 
-//updated
+//updated..
 router.use('/game', gameRoutes);
 router.use('/user', userRoutes);
 router.use('/review', reviewRoutes);
