@@ -296,7 +296,7 @@ img {
 	margin-top: 12px;
 }
 
-.trendingTitle :hover {
+.trendingTitle:hover, .gameTitle:hover {
 	text-decoration: none;
 	transition: 0.5s;
 	color: var(--lavender);
@@ -369,7 +369,7 @@ img {
 	margin-top: 30px;
 }
 
-.gameTitle {
+.gameTitle, .gameRating {
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -411,6 +411,8 @@ img {
 
 .gameProfile {
 	background-color: var(--midnightblack);
+	font-style: italic;
+	text-align: left;
 }
 
 /* GAME REVIEW CARD */
@@ -431,6 +433,19 @@ img {
 	font-style: italic;
 	font-size: small;
 	text-align: right;
+}
+
+/* User Reviews */
+#review-comment {
+    background-color: var(--midnightblack);
+	color: var(--lavender);
+	padding: 5px;
+	font-family: "Roboto", sans-serif;
+
+}
+
+.form-label {
+	font-family: "elixiaregular", sans-serif;
 }
 
 /* Star Rating styling */
@@ -487,10 +502,6 @@ img {
 	font-size: 3rem;
 }
 
-/* .profileMain {
-	display: flex;
-} */
-
 .profileEmail,
 .profileUsername,
 .profilePassword {
@@ -501,13 +512,37 @@ img {
 	padding: 1rem;
 }
 
+/* CUSTOM BUTTONS */
+
 .updateEmail,
 .updateUsername,
-.updatePassword {
+.updatePassword,
+.submitReviewBtn {
 	cursor: pointer;
 	background-color: var(--midnightblack);
 	color: var(--lilac);
 }
+
+.submitReviewBtn:hover{
+	transition: 0.5s;
+	background-color: var(--lilac);
+	color: var(--midnightblack);
+}
+
+/* .submitReviewBtn {
+	margin: 5px 5px 5px 0;
+	background-color: transparent;
+	padding: 3px;
+	color: var(--lilac);
+	border: 0.5px solid var(--purewhite);
+	cursor: pointer;
+} */
+
+/* .submitReviewBtn:hover {
+	transition: 0.5s;
+	background-color: var(--lavender);
+	color: var(--midnightblack);
+} */
 
 .updateBtn {
 	border-radius: 5px;
