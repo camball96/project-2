@@ -69,6 +69,29 @@ router.post('/login', async (req, res) => {
 });
 
 
+
+// update user account details:
+router.put('/update', async (req, res) => {
+    console.log('arrived')
+
+    try {
+        const updateAcct = await User.update(req.body, {
+            where:
+            {
+                id: req.session.user_id
+            }
+        }
+        )
+        res.status(200).json(1)
+    }
+
+    catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+
 // LOG OUT 
 router.delete('/logout', (req, res) => {
     if (req.session.loggedIn) {
@@ -82,3 +105,19 @@ router.delete('/logout', (req, res) => {
 });
 
 module.exports = router;
+
+// DELETE user PROFILE
+router.delete('/delete/:id', async (req, res) => {
+    if (req.session.user_id === req.params.id) {
+        try {
+            const deleteUser = await User.destroy(req.params.id)
+
+            res.status(200).json(deleteUser)
+        }
+        catch (err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
+    }
+    res.redirect('/login')
+})

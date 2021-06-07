@@ -5,23 +5,27 @@
 			<div class="profileHeader">
 				<h4>P R O F I L E</h4>
 			</div>
+			<p class="profileDetails" id="messagesDiv" style="color:green"></p>
 			<div class="profileEmail">
-				<p class="profileDetails">Email: {{ user.user_email }}</p>
+				<p class="profileDetails">Email:</p><input class="profileDetails" id="email"
+					value="{{ profile.user_email }}"></input>
 			</div>
 			<div class="updateEmail">
-				<p class="updateBtn">UPDATE EMAIL</p>
+				<p class="updateBtn" id="updateEmail">UPDATE EMAIL</p>
 			</div>
 			<div class="profileUsername">
-				<p>Username: {{ user.user_name }}</p>
+				<p class="profileDetails">Username:</p> <input class="profileDetails" id="username"
+					value="{{ profile.user_name }}"></input>
 			</div>
 			<div class="updateUsername">
-				<p class="updateBtn">UPDATE USERNAME</p>
+				<p class="updateBtn" id="updateUser">UPDATE USERNAME</p>
 			</div>
 			<div class="profilePassword">
-				<p>Password: ************ </p>
+				<p class="profileDetails">Password:</p>
+				<input class="profileDetails" type="password" id="password" value="*************"></input>
 			</div>
 			<div class="updatePassword">
-				<p class="updateBtn">UPDATE PASSWORD</p>
+				<p class="updateBtn" id="updatePass">UPDATE PASSWORD</p>
 			</div>
 			<div class="deleteProfile">
 				<p class="deleteBtn deleteProfile">DELETE PROFILE</p>
@@ -29,3 +33,5 @@
 		</div>
 	</div>
 </div>
+<link rel="stylesheet" href="/css/style.css" />
+<script src="/js/userprofile.js"></script>

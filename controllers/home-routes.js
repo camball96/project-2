@@ -58,6 +58,33 @@ router.get('/login', (req, res) => {
 
 });
 
+// get data and serve the PROFILE page
+router.get('/profile', async (req, res) => {
+    if (req.session.loggedIn) {
+        try {
+            const getProfile = await User.findOne({
+                where:
+                {
+                    id: req.session.user_id
+                },
+                attributes: { exclude: ['password'] }
+            })
+
+            const profile = getProfile.get({ plain: true })
+            let loggedIn = true;
+
+            res.render('userProfile', { profile, loggedIn });
+
+        }
+        catch (err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
+        return
+    }
+    res.redirect('/login')
+
+});
 
 
 
