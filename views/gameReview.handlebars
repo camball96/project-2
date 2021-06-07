@@ -1,5 +1,8 @@
-<!-- Loop over each object in the review array -->
+{{!-- keeping a copy of the original gameReview.handlebars file below --}}
 <h2>{{allReviews.game_name}}</h2>
+<div class="gameReviewCard">
+    			<div class="reviewTitle">
+       				<h4>R E V I E W S</h4>
 {{#each allReviews.reviews as |review| }}
 {{>reviews review}} {{!-- links to the 'partials' view --}}
 {{/each}}

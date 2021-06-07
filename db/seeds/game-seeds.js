@@ -13,7 +13,12 @@ const gameData = [
         picture: "picplaceholder"
     },
     {
-        game_name: "Pokemon Sword and Shield",
+        game_name: "Pokemon Sword",
+        game_desc: "A new generation of Pokémon on the Nintendo Switch system. Embark on a journey in the new Galar region, where you’ll challenge the troublemakers of Team Yell, while unraveling the mystery behind the Legendary Pokémon Zacian and Zamazenta!",
+        picture: "picplaceholder"
+    },
+    {
+        game_name: "Pokemon Shield",
         game_desc: "A new generation of Pokémon on the Nintendo Switch system. Embark on a journey in the new Galar region, where you’ll challenge the troublemakers of Team Yell, while unraveling the mystery behind the Legendary Pokémon Zacian and Zamazenta!",
         picture: "picplaceholder"
     },
