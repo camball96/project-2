@@ -6,6 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Gamer's Hideout - A Game Review Forum</title>
 		<link rel="stylesheet" href="../../public/css/jass.css" />
+		<!-- <link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/> -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
@@ -19,8 +25,9 @@
 		<div class="mainBackground">
 			<div class="topNav">
 				<div class="header typewriter">
-					<h1>G A M E R ' S H I D E O U T</h1>
+					<h1>G A M E R S - H I D E O U T</h1>
 				</div>
+				<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
 				<!-- If logged in -->
 				<div class="userProfileButton"><a>PROFILE</a></div>
 				<div class="logoutButton"><a>LOGOUT</a></div>
@@ -33,7 +40,54 @@
 				<div class="search">
 					<input type="text" class="input" placeholder="Search Your Game" />
 				</div>
-				<div><button class="searchButton">Search</button></div>
+				<div class="searchButton"><button>Search</button></div>
+			</div>
+			</div>
+		</div>
+
+		<!-- About us page -->
+
+		<div class="profileSection">
+			<div class="row">
+				<div class="profileCard">
+					<div class="profileHeader">
+						<h4>ABOUT US</h4>
+					</div>
+					<div class="aboutUs">
+						<p class="aboutUsDetails">
+							Gamers Hideout is your one-stop shop to get the latest game
+							details, reviews and update information! Share your thoughts and
+							comments about each up and coming game with your fellow game
+							enthusiasts.
+						</p>
+					</div>
+				</div>
+
+				<div class="profileCard">
+					<div class="profileHeader">
+						<h4>DEVELOPERS</h4>
+					</div>
+					<div class="devDetails">
+						<p class="devName">Ty Saunders - <a class="github" href="https://github.com/genkidesu" target="_blank"
+							>GitHub Profile</a
+						></p>
+					</div>
+					<div class="devDetails">
+						<p class="devName">Cam Ball - <a class="github" href="https://github.com/camball96" target="_blank"
+							>GitHub Profile</a
+						></p>
+					</div>
+					<div class="devDetails">
+						<p class="devName">Nick Bainbridge - <a class="github" href="https://github.com/Frostwrath" target="_blank"
+							>GitHub Profile</a
+						></p>
+					</div>
+					<div class="devDetails">
+						<p class="devName">Aaron Au Yoong - <a class="github" href="http://github.com/aaronauyoong" target="_blank"
+							>GitHub Profile</a
+						></p>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -44,37 +98,37 @@
 			</div>
 			<div class="trendingGallery">
 				<div class="trendingGames">
-					<div class="trendingImg">
-						<img src="../../public/images/game-placeholder-image.jpg" />
+					<div class="trendingImg img-hover-zoom--colorize">
+						<img src="../../public/images/pokemon-sword.png" />
 					</div>
 					<!-- Note: consider removing the trendingTitle div if game images will come with their titles default in the pic -->
 					<div class="trendingTitle"><a>T I T L E</a></div>
 					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
-					<div class="trendingImg">
-						<img src="../../public/images/game-placeholder-image.jpg" />
+					<div class="trendingImg img-hover-zoom--colorize">
+						<img src="../../public/images/pokemon-sword.png" />
 					</div>
 					<div class="trendingTitle"><a>T I T L E</a></div>
 					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
-					<div class="trendingImg">
-						<img src="../../public/images/game-placeholder-image.jpg" />
+					<div class="trendingImg img-hover-zoom--colorize">
+						<img src="../../public/images/pokemon-sword.png" />
 					</div>
 					<div class="trendingTitle"><a>T I T L E</a></div>
 					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
-					<div class="trendingImg">
-						<img src="../../public/images/game-placeholder-image.jpg" />
+					<div class="trendingImg img-hover-zoom--colorize">
+						<img src="../../public/images/pokemon-sword.png" />
 					</div>
 					<div class="trendingTitle"><a>T I T L E</a></div>
 					<!-- <div class="trendingRating">R A T I N G</div> -->
 				</div>
 				<div class="trendingGames">
-					<div class="trendingImg">
-						<img src="../../public/images/game-placeholder-image.jpg" />
+					<div class="trendingImg img-hover-zoom--colorize">
+						<img src="../../public/images/pokemon-sword.png" />
 					</div>
 					<div class="trendingTitle"><a>T I T L E</a></div>
 					<!-- <div class="trendingRating">R A T I N G</div> -->
@@ -83,40 +137,38 @@
 		</div>
 
 		<!-- This is the game profile review section -->
-		<div class="row">
-			<div class="gameCard">
-				<div class="cardHeader">
-					<div class="gameTitle">
-						<h4>T I T L E</h4>
+		<div class="gameProfileSection">
+			<div class="row">
+				<div class="gameCard">
+					<div class="cardHeader">
+						<h4 class="gameTitle">T I T L E</h4>
+						<h4 class="gameRating">R A T I N G - - - X / 5 ★</h4>
 					</div>
-					<div class="gameRating">
-						<h4>R A T I N G - - - X / 5 ★</h4>
+					<div class="gameImg img-hover-zoom--colorize">
+						<img src="../../public/images/pokemon-sword.png" />
+					</div>
+					<div class="gameProfile">
+						<p>Description: Test</p>
 					</div>
 				</div>
-				<div class="gameImg">
-					<img src="../../public/images/game-placeholder-image.jpg" />
-				</div>
-				<div class="gameProfile">
-					<p>Description: Test</p>
-				</div>
-			</div>
-			<!-- This is the review/comment section -->
-			<div class="gameReviewCard">
-				<div class="cardHeader">
-					<h4>R E V I E W S</h4>
-				</div>
-				<div class="reviewPost">
-					<p class="reviewContent">
-						"This is a section for the users' game reviews."
-					</p>
-					<p class="reviewUsername">
-						This is the person's username who left that review
-					</p>
-					<p class="reviewDateTime">This is the datetime of the review</p>
+				<!-- This is the review/comment section -->
+				<div class="gameReviewCard">
+					<div class="cardHeader">
+						<h4>R E V I E W S</h4>
+					</div>
+					<div class="reviewPost">
+						<p class="reviewContent">
+							"This is a section for the users' game reviews."
+						</p>
+						<p class="reviewUsername">
+							This is the person's username who left that review
+						</p>
+						<p class="reviewDateTime">This is the datetime of the review</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- This is the user profile section -->
 		<div class="profileSection">
 			<div class="row">

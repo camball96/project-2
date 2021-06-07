@@ -1,25 +1,27 @@
-<div class="gameCard">
-	<div class="cardHeader">
-		<h4>{{ gameInfo.game_name }}</h4>
+{{!-- These will be the game cards that show up for each game  --}}
+<div class="gameProfileSection">
+	<div class="row">
+		<div class="gameCard">
+			<div class="cardHeader">
+				<h4 class="gameTitle"> {{game.game_name}} </h4>
+				<h4 class="gameRating">
+					{{#if game.reviews}}
+						{{averageOut game.reviews}}
+						out of out of
+						{{game.reviews.length}}
+						reviews ★
+					{{else}}No reviews yet
+					{{/if}}
+				</h4>
+			</div>
+			<div class="gameImg">
+				<img src="/images/{{game.game_picture}}.jpg" />
+			</div>
+			<div class="gameProfile">
+				<p>{{game.game_desc}}</p>
+			</div>
+		</div>
 	</div>
-	<div class="gameImg">
-		<img src="../../public/images/{{gameInfo.game_picture}}.jpg" />
-	</div>
-	<div class="gameRating">
-		<h4>
-			{{#if gameInfo.reviews}}
-			{{averageOut gameInfo.reviews}}
-			out of out of {{gameInfo.reviews.length}} reviews
-			{{else}}No reviews yet
-			{{/if}}
-		</h4>
-	</div>
-	<div class="gameProfile">
-		<p>
-			{{ gameInfo.game_desc }}
-		</p>
-	</div>
-
 </div>
 
 <link rel="stylesheet" href="/css/style.css" />

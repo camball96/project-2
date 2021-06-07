@@ -1,0 +1,13 @@
+{{!-- handlebars for search results (based off trending section) --}}
+<div class="trendingGallery">
+        <div class="trendingHeader">
+            <h4>SEARCH RESULTS</h4>
+        </div>
+{{#each games as |game| }}
+        <div class="trendingImg">
+            {{ game.game_title }}
+            {{ review.review_score }}
+            <img href="/review/{{game.id}}" src="/images/{{ game.game_picture }}.jpg" />
+        </div>
+{{/each}}
+</div>
