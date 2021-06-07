@@ -1,9 +1,10 @@
 
 async function login(e) {
     e.preventDefault();
-    console.log(e.target.className)
+
     const username = document.querySelector('#username').value;
     const password = document.querySelector('#password').value;
+    var errorMsg = document.querySelector('#problem')
 
     if (username && password) {
 
@@ -29,7 +30,7 @@ async function login(e) {
         return
     }
     // user only reaches this code if they left something blank
-    document.querySelector('#problem').innerText = 'Both username and password must be filled out'
+    errorMsg.innerText = 'Both username and password must be filled out'
 }
 
 
