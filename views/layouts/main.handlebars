@@ -14,8 +14,11 @@
 
 <body>
 	<!-- Background image with some opacity -->
-	{{#if landingPage}}{{#unless loggedIn}}
-	<div class="mainBackground">{{/unless}}
+	{{!-- Hiding the background image if logged in --}}
+	{{#if landingPage}}
+	{{#unless loggedIn}}
+	<div class="mainBackground">
+		{{/unless}}
 		{{/if}}
 
 		<div class="topNav">
@@ -32,7 +35,7 @@
 			<div class="makeAccButton"><a href='/register'>CREATE ACCOUNT</a></div>
 			{{/if}}
 		</div>
-		<!-- This is where handlebars will affect page content -->
+		<!-- Added logic to change the search bar depending on logged in/out and if they are at landing page or not. -->
 		{{#if landingPage}}
 		{{#if loggedIn}}
 		<div class="searchBar-lite">
