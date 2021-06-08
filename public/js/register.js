@@ -60,4 +60,4 @@ const errorLookup = (errors) => {
 }
 
 
-document.querySelector('.createAccount').addEventListener('click', formCheck);
+document.querySelector('#signup').addEventListener('click', formCheck);

@@ -97,5 +97,3 @@ const errorLookup = (errors) => {
 
 
 document.querySelector('#updateUser').addEventListener('click', constructRequest);
-document.querySelector('#updateEmail').addEventListener('click', constructRequest);
-document.querySelector('#password').addEventListener('click', constructRequest);
