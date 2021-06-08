@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
             ? loggedIn = true
             : loggedIn = false
 
-        res.render('testhomepage', {
+        res.render('homepage', {
             games,
             loggedIn
         });
@@ -45,7 +45,7 @@ router.get('/register', (req, res) => {
         ? loggedIn = true
         : loggedIn = false
 
-    res.render('testregister', {
+    res.render('register', {
         loggedIn
     });
 });
@@ -54,7 +54,7 @@ router.get('/register', (req, res) => {
 // serve login page
 router.get('/login', (req, res) => {
 
-    res.render('testlogin');
+    res.render('login');
 
 });
 

@@ -18,6 +18,7 @@ router.post('/review', async (req, res) => {
 
             res.status(200).json(addReview);
             // where to redirect user after completing this?
+            // refresh the page, and show the new review alongside all the reviews. 
         }
 
         catch (err) {

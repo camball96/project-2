@@ -65,6 +65,11 @@ a :hover {
 	color: var(--purewhite);
 }
 
+a :visited {
+	color: var(--purewhite);
+	text-decoration: none;
+}
+
 img {
 	max-width: 100%;
 	max-height: 100%;
@@ -132,7 +137,8 @@ img {
 .loginButton,
 .makeAccButton,
 .userProfileButton,
-.logoutButton {
+.logoutButton,
+.aboutUsButton {
 	align-items: flex-end;
 	justify-content: flex-end;
 	align-self: flex-end;
@@ -173,6 +179,13 @@ img {
 	transition: 0.5s;
 }
 
+.aboutUsButton :hover {
+	color: var(--lavender);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
 .mainBackground {
 	background-image: url("../images/background-image.jpeg");
 	height: 100%;
@@ -207,7 +220,7 @@ img {
 	padding: 10px;
 	border-radius: 5px;
 	font-family: monospace;
-	background-color: var(--purewhite);
+	/* background-color: var(--purewhite); */
 }
 
 .searchButton:hover {
@@ -231,7 +244,8 @@ img {
 }
 
 .trendingHeader,
-.profileHeader {
+.profileHeader,
+.cardHeader {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -247,6 +261,10 @@ img {
 	font-size: 3rem;
 }
 
+.cardHeader h4 {
+	font-size: 3rem;
+}
+
 .trendingGames {
 	display: flex;
 	flex-direction: column;
@@ -254,14 +272,19 @@ img {
 }
 
 .trendingImg {
+	display: block;
 	height: 250px;
-	padding-right: 1rem;
+	margin-right: 1rem;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
 }
 
 .trendingImg:hover {
-	background: var(--lilac);
+	background: transparent;
 	box-shadow: 0 0 50px var(--lilac);
 	transition: 0.5s;
+	z-index: 1;
 }
 
 .trendingTitle {
@@ -271,11 +294,12 @@ img {
 	font-size: 2rem;
 	justify-content: center;
 	align-self: center;
+	margin-top: 12px;
 }
 
-.trendingTitle:hover {
+.trendingTitle:hover, .gameTitle:hover {
 	text-decoration: none;
-	transition: 1s;
+	transition: 0.5s;
 	color: var(--lavender);
 	text-shadow: 0 5px 10px var(--purewhite);
 }
@@ -283,6 +307,35 @@ img {
 .row {
 	align-self: center;
 	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+/* ABOUT US PAGE */
+.aboutUs {
+	font-family: "Roboto", sans-serif;
+	text-align: left;
+	margin: 10px;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.devDetails {
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+}
+
+.github {
+	color: var(--purewhite);
+}
+
+.github:hover {
+	transition: 0.5s;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: var(--lilac);
+	color: var(--midnightblack);
 }
 
 /* DEFAULT CARD STYLING */
@@ -299,6 +352,8 @@ img {
 	border: 0.1rem solid var(--purewhite);
 	border-radius: 10px;
 	width: 500px;
+	margin: 10px;
+	padding: 50px;
 }
 
 .cardHeader {
@@ -312,9 +367,10 @@ img {
 	width: auto;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
+	margin-top: 30px;
 }
 
-.gameTitle {
+.gameTitle, .gameRating {
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -332,8 +388,32 @@ img {
 	border-radius: 10px;
 }
 
+/* Colorize-zoom Container */
+.img-hover-zoom--colorize img {
+	transition: transform 0.5s, filter 0.3s ease-in;
+	filter: grayscale(100%);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+/* Just Colorize Container */
+.img-colorize img {
+	filter: grayscale(100%);
+}
+
+.img-colorize:hover img {
+	transition: 0.2s;
+	filter: grayscale(0);
+}
+
 .gameProfile {
 	background-color: var(--midnightblack);
+	font-style: italic;
+	text-align: left;
 }
 
 /* GAME REVIEW CARD */
@@ -342,6 +422,7 @@ img {
 	border: 2px solid var(--purewhite);
 	border-radius: 10px;
 	padding: 10px;
+	margin: 30px;
 }
 
 /* .reviewContent {
@@ -353,6 +434,19 @@ img {
 	font-style: italic;
 	font-size: small;
 	text-align: right;
+}
+
+/* User Reviews */
+#review-comment {
+    background-color: var(--midnightblack);
+	color: var(--lavender);
+	padding: 5px;
+	font-family: "Roboto", sans-serif;
+
+}
+
+.form-label {
+	font-family: "elixiaregular", sans-serif;
 }
 
 /* Star Rating styling */
@@ -409,10 +503,6 @@ img {
 	font-size: 3rem;
 }
 
-/* .profileMain {
-	display: flex;
-} */
-
 .profileEmail,
 .profileUsername,
 .profilePassword {
@@ -423,13 +513,37 @@ img {
 	padding: 1rem;
 }
 
+/* CUSTOM BUTTONS */
+
 .updateEmail,
 .updateUsername,
-.updatePassword {
+.updatePassword,
+.submitReviewBtn {
 	cursor: pointer;
 	background-color: var(--midnightblack);
 	color: var(--lilac);
 }
+
+.submitReviewBtn:hover{
+	transition: 0.5s;
+	background-color: var(--lilac);
+	color: var(--midnightblack);
+}
+
+/* .submitReviewBtn {
+	margin: 5px 5px 5px 0;
+	background-color: transparent;
+	padding: 3px;
+	color: var(--lilac);
+	border: 0.5px solid var(--purewhite);
+	cursor: pointer;
+} */
+
+/* .submitReviewBtn:hover {
+	transition: 0.5s;
+	background-color: var(--lavender);
+	color: var(--midnightblack);
+} */
 
 .updateBtn {
 	border-radius: 5px;
@@ -439,7 +553,7 @@ img {
 .updateBtn:hover {
 	transition: 0.5s;
 	background-color: var(--lilac);
-	color: var(--midnightblack)
+	color: var(--midnightblack);
 }
 
 .deleteProfile {
@@ -448,9 +562,7 @@ img {
 	align-self: flex-end;
 	cursor: pointer;
 	color: grey;
-
 }
-
 
 .deleteBtn {
 	border-radius: 5px;
@@ -460,5 +572,5 @@ img {
 .deleteBtn:hover {
 	transition: 0.5s;
 	background-color: rgb(252, 159, 159);
-	color: var(--midnightblack)
+	color: var(--midnightblack);
 }
