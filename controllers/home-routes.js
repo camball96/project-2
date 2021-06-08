@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const { User, Game, Review } = require('../models');
 
-// GET 5 games - you can manipulate the returned data as needed in the handlebar page
+// GET 5 games for the landing page- you can manipulate the returned data as needed in the handlebar page
 router.get('/', async (req, res) => {
 	try {
 		const gameData = await Game.findAll({
@@ -20,6 +20,8 @@ router.get('/', async (req, res) => {
 
 		console.log(games) // remove once ready to submit
 
+		let landingPage = true
+
 		let loggedIn;
 		req.session.loggedIn
 			? loggedIn = true
@@ -27,7 +29,8 @@ router.get('/', async (req, res) => {
 
 		res.render('homepage', {
 			games,
-			loggedIn
+			loggedIn,
+			landingPage
 		});
 
 	} catch (err) {

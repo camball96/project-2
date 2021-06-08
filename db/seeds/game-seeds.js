@@ -5,7 +5,7 @@ const gameData = [
     {
         game_name: "Resident Evil 4",
         game_desc: "Six years after the events in Raccoon City, Leon Kennedy, now a federal agent, is sent to a rural part of Spain to rescue the U.S. President's kidnapped daughter, Ashley Graham from a sinister cult.",
-        picture: "fortnite.jpeg"
+        picture: "resident-evil4.jpeg"
     },
     {
         game_name: "Call Of Duty",

@@ -14,7 +14,10 @@
 
 <body>
 	<!-- Background image with some opacity -->
-	<div class="mainBackground">
+	{{#if landingPage}}{{#unless loggedIn}}
+	<div class="mainBackground">{{/unless}}
+		{{/if}}
+
 		<div class="topNav">
 			<div class="header typewriter">
 				<h1><a href="/">G A M E R S - H I D E O U T</a></h1>
@@ -30,17 +33,29 @@
 			{{/if}}
 		</div>
 		<!-- This is where handlebars will affect page content -->
-		<div class="searchBar">
-			<div class="search">
-				<input type="text" class="input" id="searchBar" placeholder="Search Your Game" />
-			</div>
-			<div class="searchButton"><button>Search</button></div>
-		</div>
-	</div>
-	</div>
-	<!-- This is where handlebasrs willdaffect page content -->
-	{{{ body }}}
-	</div>
+		{{#if landingPage}}
+		{{#if loggedIn}}
+		<div class="searchBar-lite">
+			<div class="search-lite">
+				{{else}}
+				<div class="searchBar">
+					<div class="search">
+						{{/if}}
+						{{else}}
+						<div class="searchBar-lite">
+							<div class="search-lite">
+								{{/if}}
+
+
+								<input type="text" class="input" id="searchBar" placeholder="Search Your Game" />
+							</div>
+							<div class="searchButton"><button>Search</button></div>
+						</div>
+					</div>
+				</div>
+				<!-- This is where handlebasrs willdaffect page content -->
+				{{{ body }}}
+
 
 </body>
 {{#if loggedIn}}

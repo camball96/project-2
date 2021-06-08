@@ -1,4 +1,4 @@
-<div class="placehold">
+{{!-- <div class="placehold">
 
     <section>
         <div>Username : </div>
@@ -11,8 +11,40 @@
         <button class='createAccount' id='signup'>Login</button>
     </section>
 
-</div>
+</div> --}}
 
 <link rel="stylesheet" href="./css/style.css" />
 <script src="/js/register.js"></script>
-<script src="/js/logout.js"></script>
+
+
+{{!-- This is the handlebars file for user login --}}
+<div class="placehold">
+
+    <div class="profileSection">
+        <div class="row">
+            <div class="profileCard">
+                <div class="profileHeader">
+                    <h4>C R E A T E A C C O U N T</h4>
+                </div>
+                <p class="profileDetails" id="problem" style="color:green"></p>
+
+                <div class="profileUsername">
+                    <p class="profileDetails">Username : </p> <input class="profileDetails" id="username"></input>
+                </div>
+                <div class="profileUsername">
+                    <p class="profileDetails">Email : </p> <input class="profileDetails" id="email"></input>
+                </div>
+
+                <div class="profilePassword">
+                    <p class="profileDetails">Password:</p>
+                    <input class="profileDetails" type="password" id="password"></input>
+                </div>
+                <div class="updatePassword">
+                    <p class="createAccount" id="join">CREATE</p>
+                    {{!-- id update pass ....class= updateBtn--}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/register.js"></script>

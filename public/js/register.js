@@ -59,4 +59,7 @@ const errorLookup = (errors) => {
 }
 
 // listeners.
-document.querySelector('.createAccount').addEventListener('click', formCheck);
+
+window.onload = function () {
+    document.querySelector('#join').addEventListener('click', formCheck);
+}

@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+const { beforeBulkUpdate } = require('./game');
 
 class User extends Model {
     checkPassword(loginPw) {
@@ -45,11 +46,21 @@ User.init(
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
             },
+
+            // async beforeUpdate(newUserData) {
+            //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            //     return newUserData;
+            // },
+            // async beforeBulkUpdate(newUserData) {
+            //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            //     return newUserData;
+            // },
         },
         sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
+        individualHooks: true
     }
 );
 

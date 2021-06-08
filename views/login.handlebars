@@ -1,16 +1,28 @@
 {{!-- This is the handlebars file for user login --}}
 <div class="placehold">
 
-    <section>
-        <div>Username : </div>
-        <input id='username' type='text'></input>
-        <div>Password : </div>
-        <input id='password' type='text'></input>
-        <div id='problem' style='color:white'> </div>
-        <button class='loginButton' id='login'>Login</button>
-    </section>
+    <div class="profileSection">
+        <div class="row">
+            <div class="profileCard">
+                <div class="profileHeader">
+                    <h4>L O G I N</h4>
+                </div>
+                <p class="profileDetails" id="problem" style="color:green"></p>
 
-</div>
+                <div class="profileUsername">
+                    <p class="profileDetails">Username : </p> <input class="profileDetails" id="username"></input>
+                </div>
 
-<link rel="stylesheet" href="/css/style.css" />
-<script src="/js/login.js"></script>
+                <div class="profilePassword">
+                    <p class="profileDetails">Password:</p>
+                    <input class="profileDetails" type="password" id="password"></input>
+                </div>
+                <div class="updatePassword">
+                    <p class="updateBtn" id="login">LOG IN</p>
+                    {{!-- id update pass --}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/login.js"></script>

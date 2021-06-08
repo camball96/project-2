@@ -219,9 +219,22 @@ img {
 	justify-content: center;
 }
 
+.searchBar-lite {
+	display: flex;
+	margin: 30px;
+	width: 50%;
+	align-items: left;
+	justify-content: flex-start;
+}
+
 .search {
 	width: auto;
 }
+
+.search-lite {
+	width: 50%;
+}
+
 
 .input {
 	padding: 10px;
@@ -577,7 +590,8 @@ img {
 	color: var(--midnightblack);
 } */
 
-.updateBtn {
+.updateBtn,
+.createAccount {
 	border-radius: 5px;
 	padding: 5px;
 }
