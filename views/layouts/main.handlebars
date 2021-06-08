@@ -2,46 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gamer's Hideout - A Game Review Forum</title>
-    <link rel="stylesheet" href="css/jass.css" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Gamer's Hideout - A Game Review Forum</title>
+	<link rel="stylesheet" href="css/jass.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
-		rel="stylesheet"
-	/>
-    <link rel="stylesheet" href="/css/style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
-    <!-- Background image with some opacity -->
-    <div class="mainBackground">
-			<div class="topNav">
-				<div class="header typewriter">
-					<h1>G A M E R S - H I D E O U T</h1>
-				</div>
-				<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
-				<!-- If logged in -->
-				<div class="userProfileButton"><a>PROFILE</a></div>
-				<div class="logoutButton"><a>LOGOUT</a></div>
-				<!-- If logged out -->
-				<div class="loginButton"><a>LOGIN</a></div>
-				<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
+	<!-- Background image with some .opacity -->
+	<div class="mainBackground">
+		<div class="topNav">
+			<div class="header typewriter">
+				<h1>G A M E R S - H I D E O U T</h1>
 			</div>
-			<!-- This is where handlebars will affect page content -->
-			<div class="searchBar">
-				<div class="search">
-					<input type="text" class="input" placeholder="Search Your Game" />
-				</div>
-				<div class="searchButton"><button>Search</button></div>
-			</div>
-			</div>
+			<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
+			<!-- If logged in -->
+			<div class="userProfileButton"><a>PROFILE</a></div>
+			<div class="logoutButton"><a>LOGOUT</a></div>
+			<!-- If logged out -->
+			<div class="loginButton"><a>LOGIN</a></div>
+			<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
 		</div>
-        <!-- This is where handlebars will affect page content -->
-        {{{ body }}}
-    </div>
+		<!-- This is where handlebars will affect page content -->
+		<div class="searchBar">
+			<div class="search">
+				<input type="text" class="input" placeholder="Search Your Game" />
+			</div>
+			<div class="searchButton"><button>Search</button></div>
+		</div>
+	</div>
+	</div>
+	<!-- This is where handlebars will affect page content -->
+	{{{ body }}}
+	</div>
 
 </body>
 {{#if loggedIn}}
