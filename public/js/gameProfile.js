@@ -1,25 +1,21 @@
 
 function formCheck(e) {
     e.preventDefault();
-    const username = document.querySelector('#username').value;
-    const password = document.querySelector('#password').value;
-    const email = document.querySelector('#email').value;
+    const reviewTxt = document.querySelector('#username').value;
+    const reviewScore = document.querySelector('#password').value;
+
     var errorMsg = document.querySelector('#problem');
 
-    if (!email || !username) {
-        errorMsg.innerText = 'Both email and password need to be filled out'
-        return
-    }
-    if (email.length > 50 || username.length > 50) {
-        errorMsg.innerText = 'username and email should be below 50 characters'
-        return
-    }
-    if (password.length < 5) {
-        errorMsg.innerText = 'password must be at least 6 characters'
+    if (!reviewTxt || !review_score) {
+        errorMsg.innerText = 'Both review score and review text need to be filled out'
         return
     }
 
-    register(username, password, email)
+    var body = { game_id: this.id, review_txt: reviewTxt, review_score: reviewScore }
+
+    // user_name: '', user_id: '',
+
+    createReview(username, password, email)
 }
 
 async function register(username, password, email) {
@@ -60,4 +56,4 @@ const errorLookup = (errors) => {
 }
 
 
-document.querySelector('.createAccount').addEventListener('click', formCheck);
+document.querySelector('#signup').addEventListener('click', formCheck);
