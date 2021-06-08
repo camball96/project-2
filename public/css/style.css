@@ -113,6 +113,22 @@ img {
 	animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+.header a {
+	color: var(--purewhite);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.header a :hover {
+	text-decoration: none;
+	color: var(--purewhite);
+}
+
+.header a :visited {
+	color: var(--purewhite);
+	text-decoration: none;
+}
+
 /* The typing effect */
 @keyframes typing {
 	from {
