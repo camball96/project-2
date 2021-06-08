@@ -1,8 +1,5 @@
 
 const router = require('express').Router();
-const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
-
 
 const { User, Game, Review } = require('../models');
 
@@ -41,42 +38,42 @@ router.get('/', async (req, res) => {
 });
 
 // search for a single game
-router.get('/search/:game', async (req, res) => {
-    try {
-        console.log('ok')
-        const gameSearch = await Game.findOne({
-            where:
-            {
-                game_name: req.params.game
-            },
+// router.get('/search/:game', async (req, res) => {
+//     try {
+//         console.log('ok')
+//         const gameSearch = await Game.findOne({
+//             where:
+//             {
+//                 game_name: req.params.game
+//             },
 
-            include: [
-                {
-                    model: Review,
-                    attributes: ['user_id', 'user_name', 'review_score', 'review_txt', 'created_at'],
-                }
-            ],
-        });
+//             include: [
+//                 {
+//                     model: Review,
+//                     attributes: ['user_id', 'user_name', 'review_score', 'review_txt', 'created_at'],
+//                 }
+//             ],
+//         });
 
-        const searchResult = gameSearch.get({ plain: true })
+//         const searchResult = gameSearch.get({ plain: true })
 
-        console.log(searchResult) // remove once ready to submit
+//         console.log(searchResult) // remove once ready to submit
 
-        let loggedIn;
-        req.session.loggedIn
-            ? loggedIn = true
-            : loggedIn = false
+//         let loggedIn;
+//         req.session.loggedIn
+//             ? loggedIn = true
+//             : loggedIn = false
 
-        res.render('testsearch', {
-            searchResult,
-            loggedIn
-        });
+//         res.render('testsearch', {
+//             searchResult,
+//             loggedIn
+//         });
 
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
 
 
 // serve the registration page
@@ -127,42 +124,6 @@ router.get('/profile', async (req, res) => {
 
 });
 
-
-
-// goes to the gameReview view serve a page which has all reviews for a specific game
-// do we still need this if we are putting reviews in game profile??
-router.get('/reviews/:id', async (req, res) => {
-
-    try {
-        const retrieveReviews = await Game.findByPk(
-            req.params.id,
-            {
-                include: [
-                    {
-                        model: Review,
-                        attributes: ['user_id', 'user_name', 'review_score', 'review_txt', 'created_at']
-                    },
-                ]
-            })
-
-        const allReviews = retrieveReviews.get({ plain: true })
-
-        console.log(allReviews) // remove once ready to submit
-
-        let loggedIn;
-        req.session.loggedIn
-            ? loggedIn = true
-            : loggedIn = false
-
-        res.render('gameProfile', { allReviews, loggedIn });
-
-    }
-
-    catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
 
 
 // goes to the gameprofile view
