@@ -45,5 +45,4 @@ For contributions, you may follow the industry standard: [Contributor Covenant](
 * express-handlebars
 * express-session
 * sequelize
-* passport 
 * CSS Hover Images with Grayscale - inspired by https://w3bits.com/css-image-hover-zoom/
