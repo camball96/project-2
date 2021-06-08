@@ -126,7 +126,7 @@ router.get('/profile', async (req, res) => {
 
 
 
-// goes to the gameprofile view
+// goes to the gameprofile views
 router.get('/gameprofile/:id', async (req, res) => {
 
     try {

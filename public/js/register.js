@@ -59,5 +59,5 @@ const errorLookup = (errors) => {
 
 }
 
-
+// listeners
 document.querySelector('.createAccount').addEventListener('click', formCheck);

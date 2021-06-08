@@ -9,7 +9,7 @@ const gameData = [
     },
     {
         game_name: "Call Of Duty",
-        game_desc: "A first-person shooter game franchise published by Activision. Starting out in 2003, it first focused on games set in World War II. Over time, the series has seen games set in the midst of the Cold War, futuristic worlds, and outer space.",
+        game_desc: "A first-person shooter franchise published by Activision. Starting out in 2003, it first focused on games set in World War II. Over time, the series has seen games set in the midst of the Cold War, futuristic worlds, and outer space.",
         picture: "cod-cold-war.jpeg"
     },
     {

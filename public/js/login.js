@@ -29,7 +29,7 @@ async function login(e) {
             })
         return
     }
-    // user only reaches this code if they left something blank
+    // user only reaches this code if they left something blank.
     errorMsg.innerText = 'Both username and password must be filled out'
 }
 
