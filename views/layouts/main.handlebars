@@ -13,30 +13,32 @@
 </head>
 
 <body>
-	<!-- Background image with some .opacity -->
+	<!-- Background image with some opacity -->
 	<div class="mainBackground">
 		<div class="topNav">
 			<div class="header typewriter">
-				<h1>G A M E R S - H I D E O U T</h1>
+				<h1><a href="/">G A M E R S - H I D E O U T</a></h1>
 			</div>
 			<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
-			<!-- If logged in -->
-			<div class="userProfileButton"><a>PROFILE</a></div>
+			{{!-- display login/out depending on login statuss --}}
+			{{#if loggedIn}}
+			<div class="userProfileButton"><a href='/profile'>PROFILE</a></div>
 			<div class="logoutButton"><a>LOGOUT</a></div>
-			<!-- If logged out -->
-			<div class="loginButton"><a>LOGIN</a></div>
-			<div class="makeAccButton"><a>CREATE ACCOUNT</a></div>
+			{{else}}
+			<div class="loginButton"><a href='/login'>LOGIN</a></div>
+			<div class="makeAccButton"><a href='/register'>CREATE ACCOUNT</a></div>
+			{{/if}}
 		</div>
 		<!-- This is where handlebars will affect page content -->
 		<div class="searchBar">
 			<div class="search">
-				<input type="text" class="input" placeholder="Search Your Game" />
+				<input type="text" class="input" id="searchBar" placeholder="Search Your Game" />
 			</div>
 			<div class="searchButton"><button>Search</button></div>
 		</div>
 	</div>
 	</div>
-	<!-- This is where handlebars will affect page content -->
+	<!-- This is where handlebasrs willdaffect page content -->
 	{{{ body }}}
 	</div>
 
