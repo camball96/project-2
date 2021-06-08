@@ -1,4 +1,4 @@
-# PROJECT 2
+# Gamers-Hideout
 
 Project Owners - Cam, Ty, Nick, Aaron
 
@@ -9,16 +9,16 @@ Project Owners - Cam, Ty, Nick, Aaron
 ## Table of Contents
 * [Description](#Description)
 * [License](#License)
-* [Installation](#Installation)
-* [Usage](#Usage)
 * [Contributions](#Contributions)
 * [Credits](#Credits)
-* [Tests](#Tests)
-* [Questions](#Questions)
 
 ## Description
-With your team, you’ll conceive and execute a design that solves a real-world problem. In creating your first collaborative full-stack application, you’ll combine a robust back end--with servers, databases, advanced APIs, and user authentication—-to an intuitive front end. You’ll continue to build on the agile development methodologies you’ve used throughout this course, like storing your project code in GitHub, managing your work with a project management tool, and implementing feature and bug fixes using the Git branch workflow and pull requests.
+The web application allows users to create an account and leave reviews for games, with the ability to add a game to the site if there are no existing reviews for it.
 
+Below are some features of the site:
+- Authentication for reviewers, to ensure quality of reviews
+- Game Search
+- Display of most popular games (WIP)
 
 
 ## License
@@ -26,12 +26,6 @@ MIT License
 <br>
 Copyright © 2021-Present 
 <br>
-
-## Installation
- 
-
-## Usage
-
 
 ## Contributions
 For contributions, you may follow the industry standard: [Contributor Covenant](https://www.contributor-covenant.org/).
@@ -52,7 +46,4 @@ For contributions, you may follow the industry standard: [Contributor Covenant](
 * express-session
 * sequelize
 * passport 
-
-## Tests
-
-## Questions
+* CSS Hover Images with Grayscale - inspired by https://w3bits.com/css-image-hover-zoom/
