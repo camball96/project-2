@@ -1,0 +1,54 @@
+{{!-- These will be the game cards that show up for each game --}}
+<div class="gameProfileSection">
+    <div class="row">
+        <div class="gameCard">
+            <div class="cardHeader">
+                <h4 class="gameTitle"> {{searchResult.game_name}} </h4>
+                <h4 class="gameRating">
+                    {{#if searchResult.reviews}}
+                    {{averageOut searchResult.reviews}}
+                    out of out of
+                    {{searchResult.reviews.length}}
+                    reviews ★
+                    {{else}}No reviews yet
+                    {{/if}}
+                </h4>
+            </div>
+            <div class="gameImg">
+                <img src="/images/{{searchResult.game_picture}}.jpg" />
+            </div>
+            <div class="gameProfile">
+                <p>{{searchResult.game_desc}}</p>
+            </div>
+        </div>
+
+        <div class="gameRating">
+            <h4>
+                {{#if searchResult.reviews}}
+                {{averageOut searchResult.reviews}}
+                out of out of {{searchResult.reviews.length}} reviews
+                {{else}}No reviews yet
+                {{/if}}
+            </h4>
+        </div>
+        <div class="gameProfile">
+            <p>
+                {{ searchResult.game_desc }}
+            </p>
+        </div>
+        <div class="reviewTitle">
+            <h4>R E V I E W S</h4>
+        </div>
+        {{#if searchResult.reviews}}
+        {{#each searchResult.reviews as |review| }}
+        {{>reviews review}} {{!-- links to the 'partials' view --}}
+        {{/each}}
+        {{/if}}
+    </div>
+
+    {{!-- Commenting out this stylesheet because it should already be loaded in as part of the main.handlebars. Delete
+    this once finalised project --}}
+    {{!--
+    <link rel="stylesheet" href="/css/style.css" /> --}}
+    <script src="/js/register.js"></script>
+    <script src="/js/logout.js"></script>

@@ -1,0 +1,37 @@
+<div class="gameProfileSection">
+	<div class="row">
+		<div class="gameCard">
+			<div class="cardHeader">
+				<h4 class="gameTitle"> {{gameInfo.game_name}} </h4>
+				<h4 class="gameRating">
+					{{#if gameInfo.reviews}}
+					{{averageOut gameInfo.reviews}}
+					out of out of
+					{{gameInfo.reviews.length}}
+					reviews ★
+					{{else}}No reviews yet
+					{{/if}}
+				</h4>
+			</div>
+			<div class="gameImg">
+				<img src="/images/{{gameInfo.game_picture}}.jpg" />
+			</div>
+			<div class="gameProfile">
+				<p>{{gameInfo.game_desc}}</p>
+			</div>
+			<div class="gameReviewCard">
+				<div class="reviewTitle">
+					<h4>R E V I E W S</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2>{{gameInfo.game_name}}</h2>
+	{{#each gameInfo.reviews as |review| }}
+	{{>reviews review}} {{!-- links to the 'partials' .view --}}
+	{{/each}}
+
+
+	<link rel="stylesheet" href="/css/style.css" />
+	<script src="/js/register.js"></script>
+	<script src="/js/logout.js"></script>
