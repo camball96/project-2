@@ -89,7 +89,7 @@ router.get('/profile', async (req, res) => {
 
 
 // goes to the gameReview view serve a page which has all reviews for a specific game
-
+// do we still need this if we are putting reviews in game profile??
 router.get('/reviews/:id', async (req, res) => {
 
     try {
@@ -134,7 +134,7 @@ router.get('/gameprofile/:id', async (req, res) => {
                 include: [
                     {
                         model: Review,
-                        attributes: ['review_score']
+                        attributes: ['user_id', 'user_name', 'review_score', 'review_txt', 'created_at']
                     },
                 ]
             })
