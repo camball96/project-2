@@ -5,22 +5,22 @@ const gameData = [
     {
         game_name: "Resident Evil 4",
         game_desc: "Six years after the events in Raccoon City, Leon Kennedy, now a federal agent, is sent to a rural part of Spain to rescue the U.S. President's kidnapped daughter, Ashley Graham from a sinister cult.",
-        picture: "picplaceholder"
+        picture: "fortnite.jpeg"
     },
     {
         game_name: "Call Of Duty",
-        game_desc: "A first-person shooter video game franchise published by Activision. Starting out in 2003, it first focused on games set in World War II. Over time, the series has seen games set in the midst of the Cold War, futuristic worlds, and outer space.",
-        picture: "picplaceholder"
+        game_desc: "A first-person shooter game franchise published by Activision. Starting out in 2003, it first focused on games set in World War II. Over time, the series has seen games set in the midst of the Cold War, futuristic worlds, and outer space.",
+        picture: "cod-cold-war.jpeg"
     },
     {
         game_name: "Pokemon Sword",
         game_desc: "A new generation of Pokémon on the Nintendo Switch system. Embark on a journey in the new Galar region, where you’ll challenge the troublemakers of Team Yell, while unraveling the mystery behind the Legendary Pokémon Zacian!",
-        picture: "picplaceholder"
+        picture: "pokemon-sword.png"
     },
     {
         game_name: "Pokemon Shield",
         game_desc: "A new generation of Pokémon on the Nintendo Switch system. Embark on a journey in the new Galar region, where you’ll challenge the troublemakers of Team Yell, while unraveling the mystery behind the Legendary Pokémon Zamazenta!",
-        picture: "picplaceholder"
+        picture: "pokemon-shield.jpeg"
     },
     {
         game_name: "Fortnite",
@@ -30,12 +30,7 @@ const gameData = [
     {
         game_name: "Mortal Kombat 11",
         game_desc: "The long awaited eleventh main installment in the Mortal Kombat series, and a sequel to 2015's Mortal Kombat X.",
-        picture: "picplaceholder"
-    },
-    {
-        game_name: "HALO",
-        game_desc: "The long awaited eleventh main installment in the Mortal Kombat series, and a sequel to 2015's Mortal Kombat X.",
-        picture: "picplaceholder"
+        picture: "Mortal-Kombat-11.jpg"
     },
 ];
 

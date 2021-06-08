@@ -28,8 +28,8 @@ router.post('/register', async (req, res) => {
 });
 
 
-// LOGIN route
-// expects a POST request with body format as per below:
+// LOGIN route.
+// expects a POST requests with body format as per below:
 // {
 // 	"user_name": "firstuser",
 // 	"password": "passwerd"

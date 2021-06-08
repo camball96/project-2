@@ -13,5 +13,5 @@ const logOut = function leave() {
 }
 
 
-// // --------Listeners-----------// WAITING PAGE DATA
+// // --------Listeners------------// 
 document.querySelector('.logoutButton').addEventListener('click', logOut)

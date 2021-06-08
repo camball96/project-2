@@ -1,4 +1,3 @@
-
 function formCheck(e) {
     e.preventDefault();
     const username = document.querySelector('#username').value;
@@ -59,5 +58,5 @@ const errorLookup = (errors) => {
 
 }
 
-
-document.querySelector('#signup').addEventListener('click', formCheck);
+// listeners.
+document.querySelector('.createAccount').addEventListener('click', formCheck);
