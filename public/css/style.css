@@ -219,6 +219,8 @@ img {
 	opacity: 90%;
 }
 
+/* SEARCH BAR */
+
 .searchBar {
 	display: flex;
 	margin: 20% auto;
@@ -230,37 +232,40 @@ img {
 .searchBar-lite {
 	display: inline-flex;
 	margin: 30px;
-	width: 100%;
+	width: 80%;
 	align-items: center;
 	justify-content: center;
 }
 
 .search {
-	width: auto;
+	width: 100%;
 }
 
 .search-lite {
 	display: inline-flex;
-	width: 20%;
+	/* width: 20%; */
 	font-family: monospace;
-	
 }
-
 
 .input {
 	padding: 10px;
 	box-shadow: var(--midnightblack);
 	border-radius: 5px;
-	width: 100%;
 	font-family: monospace;
 }
 
 .searchButton {
-	width: auto;
+	width: 20%;
 	padding: 10px;
 	border-radius: 5px;
 	font-family: monospace;
-	/* background-color: var(--purewhite); */
+	background-color: var(--purewhite);
+	background: var(--purewhite);
+	color: var(--midnightblack);
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer;
 }
 
 .searchButton:hover {
@@ -337,7 +342,8 @@ img {
 	margin-top: 12px;
 }
 
-.trendingTitle:hover, .gameTitle:hover {
+.trendingTitle:hover,
+.gameTitle:hover {
 	text-decoration: none;
 	transition: 0.5s;
 	color: var(--lavender);
@@ -399,7 +405,7 @@ img {
 .cardHeader {
 	display: inline-block;
 	justify-content: center;
-	
+
 	align-items: center;
 	font-family: "elixiaregular", sans-serif;
 	font-size: 3rem;
@@ -411,7 +417,8 @@ img {
 	margin-top: 30px;
 }
 
-.gameTitle, .gameRating {
+.gameTitle,
+.gameRating {
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -486,11 +493,10 @@ img {
 
 /* User Reviews */
 #review-comment {
-    background-color: var(--midnightblack);
+	background-color: var(--midnightblack);
 	color: var(--lavender);
 	padding: 5px;
 	font-family: "Roboto", sans-serif;
-
 }
 
 .reviewCard {
@@ -500,7 +506,6 @@ img {
 .reviewCard label {
 	display: inline-block;
 	margin-right: 10px;
-
 }
 
 .reviewCard textarea {
@@ -562,14 +567,13 @@ img {
 	margin: 1rem;
 }
 
-.profileCard  {
+.profileCard {
 	height: 50vh;
 	width: 50vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
 }
-
 
 .profileHeader h4 {
 	font-size: 3rem;
@@ -586,7 +590,6 @@ img {
 	align-self: center;
 	padding-right: 5rem;
 	height: 30px;
-
 }
 
 .profileDetails {
@@ -595,7 +598,6 @@ img {
 	width: auto;
 	margin-left: 20px;
 	justify-content: start;
-	
 }
 
 /* CUSTOM BUTTONS */
@@ -609,7 +611,7 @@ img {
 	color: var(--lilac);
 }
 
-.submitReviewBtn:hover{
+.submitReviewBtn:hover {
 	transition: 0.5s;
 	background-color: var(--lilac);
 	color: var(--midnightblack);
@@ -635,7 +637,6 @@ img {
 	font-family: monospace;
 	border-radius: 5px;
 	padding: 5px;
-
 }
 
 .updateBtn:hover {
