@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Gamer's Hideout - A Game Review Forum</title>
 	<link rel="stylesheet" href="css/jass.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="/css/style.css" />
 </head>
@@ -15,54 +16,63 @@
 <body>
 	<!-- Background image with some opacity -->
 	{{!-- Hiding the background image if logged in --}}
+
 	{{#if landingPage}}
-	{{#unless loggedIn}}
 	<div class="mainBackground">
-		{{/unless}}
 		{{/if}}
 
 		<div class="topNav">
+
 			{{#if loggedIn}}
+
 			<div class="welcomeMsg">
-				<div class="welcomeUser"><p>WELCOME {{user_name}}</p></div>
+				<div class="welcomeUser">
+					<p>WELCOME {{user_name}}</p>
+				</div>
 			</div>
+
 			{{/if}}
+
 			<div class="header typewriter">
 				<h1><a href="/">G A M E R S - H I D E O U T</a></h1>
 			</div>
-			<div class="navButtons"> 
+			<div class="navButtons">
 				<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
+
 				{{!-- display login/out depending on login statuss --}}
+
 				{{#if loggedIn}}
 				<div class="userProfileButton"><a href='/profile'>PROFILE</a></div>
 				<div class="logoutButton"><a>LOGOUT</a></div>
+
 				{{else}}
 				<div class="loginButton"><a href='/login'>LOGIN</a></div>
 				<div class="makeAccButton"><a href='/register'>CREATE ACCOUNT</a></div>
+
 				{{/if}}
+
 			</div>
 		</div>
-		<!-- Added logic to change the search bar depending on logged in/out and if they are at landing page or not. -->
+
+		<!-- Added logic to change the search bar placement depending on if they are at landing page or not. -->
+
 		{{#if landingPage}}
-		{{#if loggedIn}}
-		<div class="searchBar-lite">
-			<div class="search-lite">
+		<div class="searchBar">
+			<div class="search">
 				{{else}}
-				<div class="searchBar">
-					<div class="search">
+				<div class="searchBar-lite">
+					<div class="search-lite">
 						{{/if}}
-						{{else}}
-						<div class="searchBar-lite">
-							<div class="search-lite">
-								{{/if}}
-								<input type="text" class="input" id="searchBar" placeholder="Search..." />
-								<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
-							</div>
-						</div>
+
+
+						<input type="text" class="input" id="searchBar" placeholder="Search..." />
+						<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
 					</div>
 				</div>
-				<!-- This is where handlebasrs willdaffect page content -->
-				{{{ body }}}
+			</div>
+		</div>
+		<!-- This is where handlebasrs willdaffect page content -->
+		{{{ body }}}
 
 
 </body>
