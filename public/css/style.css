@@ -85,11 +85,11 @@ img {
 
 .welcomeMsg {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-self: flex-start;
-    width: 15%;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-self: flex-start;
+	width: 15%;
 }
 
 .welcomeUser {
@@ -403,6 +403,25 @@ img {
 	flex-direction: column;
 }
 
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+/* .registerRow:after {
+	content: "";
+	display: table;
+	clear: both;
+  } */
+
 /* ABOUT US PAGE */
 .aboutUs {
 	font-family: "Roboto", sans-serif;
@@ -614,7 +633,7 @@ img {
 }
 
 .profileCard {
-	height: 50vh;
+	height: 100%;
 	width: 50vw;
 	display: flex;
 	flex-direction: column;
@@ -630,7 +649,7 @@ img {
 .profilePassword {
 	font-family: monospace;
 	display: flex;
-	text-align: end;
+	text-align: start;
 	padding-bottom: 40px;
 	justify-content: start;
 	align-self: center;
@@ -644,6 +663,7 @@ img {
 	width: auto;
 	margin-left: 20px;
 	justify-content: start;
+	padding: 5px;
 }
 
 /* CUSTOM BUTTONS */
