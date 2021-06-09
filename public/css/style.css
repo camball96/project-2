@@ -368,7 +368,7 @@ img {
 }
 
 /* DEFAULT CARD STYLING */
-.gameCard,
+
 .gameReviewCard,
 .profileCard,
 .result-box {
@@ -377,7 +377,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-direction: row;
 	border: 0.1rem solid var(--purewhite);
 	border-radius: 10px;
 	width: 80vw;
@@ -388,6 +388,7 @@ img {
 .cardHeader {
 	display: inline-block;
 	justify-content: center;
+	
 	align-items: center;
 	font-family: "elixiaregular", sans-serif;
 	font-size: 3rem;
@@ -407,10 +408,12 @@ img {
 	text-align: center;
 }
 
-.gameImg {
-	display: inline-block;
-	height: 500px;
+.gameImg .gameCard {
+	display: flex;
+	flex-direction: row;
+	height: 200px;
 	padding: 0.5rem;
+	width: 50%;
 }
 
 .gameImg img {
@@ -541,8 +544,18 @@ img {
 }
 
 .profileHeader {
+	display: flex;
 	margin: 1rem;
 }
+
+.profileCard  {
+	height: 50vh;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
 
 .profileHeader h4 {
 	font-size: 3rem;
@@ -552,10 +565,21 @@ img {
 .profileUsername,
 .profilePassword {
 	display: flex;
-	text-align: left;
-	justify-content: center;
+	text-align: end;
+	padding-bottom: 40px;
+	justify-content: start;
 	align-self: center;
-	padding: 1rem;
+	padding-right: 5rem;
+	height: 30px;
+
+}
+
+.profileDetails {
+	height: 30px;
+	width: auto;
+	margin-left: 20px;
+	justify-content: start;
+	
 }
 
 /* CUSTOM BUTTONS */
