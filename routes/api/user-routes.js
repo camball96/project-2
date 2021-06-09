@@ -98,10 +98,9 @@ router.delete('/logout', (req, res) => {
         req.session.destroy(() => {
             res.status(200).end();
         });
-        return
+    } else {
+        res.status(420).end();
     }
-
-    res.json(2)
 });
 
 module.exports = router;
