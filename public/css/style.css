@@ -181,6 +181,14 @@ img {
 	transition: 0.5s;
 }
 
+#join:hover {
+	color: black;
+	background-color: var(--lilac);
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
 .userProfileButton :hover {
 	color: var(--lavender);
 	text-decoration: none;
@@ -220,11 +228,11 @@ img {
 }
 
 .searchBar-lite {
-	display: flex;
+	display: inline-flex;
 	margin: 30px;
-	width: 50%;
-	align-items: left;
-	justify-content: flex-start;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .search {
@@ -232,7 +240,10 @@ img {
 }
 
 .search-lite {
-	width: 50%;
+	display: inline-flex;
+	width: 20%;
+	font-family: monospace;
+	
 }
 
 
@@ -451,7 +462,10 @@ img {
 
 /* GAME REVIEW CARD */
 
-
+.gameReviewCard {
+	display: flex;
+	flex-direction: column;
+}
 .reviewPost {
 	border: 2px solid var(--purewhite);
 	border-radius: 10px;
