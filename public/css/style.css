@@ -484,7 +484,8 @@ img {
 
 .gameReviewCard,
 .profileCard,
-.result-box {
+.result-box, 
+.addReview {
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	display: flex;
@@ -493,9 +494,15 @@ img {
 	flex-direction: row;
 	border: 0.1rem solid var(--purewhite);
 	border-radius: 10px;
-	width: 80vw;
-	margin: 10px;
+	width: fit-content;
 	padding: 50px;
+	margin: auto;
+}
+
+.addReview {
+	border: transparent;
+	margin-top: 30px;
+	width: fit-content;
 }
 
 .cardHeader {
@@ -520,6 +527,7 @@ img {
 	width: 100%;
 	font-size: larger;
 	text-align: center;
+	color: var(--purewhite);
 }
 
 .gameImg .gameCard {
@@ -559,6 +567,7 @@ img {
 .gameProfile {
 	margin: 30px 30px 10px;
 	background-color: var(--midnightblack);
+	color: var(--purewhite);
 	font-style: italic;
 	text-align: left;
 }
@@ -569,6 +578,18 @@ img {
 	display: flex;
 	flex-direction: column;
 }
+
+.reviewTitle {
+	font-family: "elixiaregular", sans-serif;
+	font-size: 3rem;
+	color: var(--purewhite);
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+
+}
+
 .reviewPost {
 	border: 2px solid var(--purewhite);
 	border-radius: 10px;
@@ -597,6 +618,7 @@ img {
 
 .reviewCard {
 	display: flex;
+	align-items: center;
 }
 
 .reviewCard label {
@@ -708,26 +730,22 @@ img {
 	color: var(--lilac);
 }
 
+.submitReviewBtn {
+	margin: 5px 5px 5px 0;
+	padding: 5px;
+	font-family: "elixiaregular", sans-serif;
+	color: var(--lilac);
+	font-weight: 900;
+	font-size: larger;
+	border: 0.5px solid var(--purewhite);
+	border-radius: 5px;
+}
+
 .submitReviewBtn:hover {
 	transition: 0.5s;
 	background-color: var(--lilac);
 	color: var(--midnightblack);
 }
-
-/* .submitReviewBtn {
-	margin: 5px 5px 5px 0;
-	background-color: transparent;
-	padding: 3px;
-	color: var(--lilac);
-	border: 0.5px solid var(--purewhite);
-	cursor: pointer;
-} */
-
-/* .submitReviewBtn:hover {
-	transition: 0.5s;
-	background-color: var(--lavender);
-	color: var(--midnightblack);
-} */
 
 .updateBtn,
 .createAccount {
