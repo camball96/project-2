@@ -55,6 +55,15 @@ nav {
 	margin: 0;
 }
 
+footer h6 {
+	color: var(--purewhite);
+	font-family: "Roboto", sans-serif;
+	font-size: small;
+	font-weight: lighter;
+	text-align: end;
+	padding: 20px 10px 0px;
+}
+
 a {
 	color: var(--purewhite);
 	text-decoration: none;
