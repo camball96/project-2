@@ -1,13 +1,13 @@
 {{!-- These will be the game cards that show up for each game --}}
-<div class="gameProfileSection">
+<div class="gameProfileSection" id="{{gameInfo.id}}">
 	{{!-- <div class="row"> --}}
 		<div class="gameCard">
 			<div class="cardHeader">
-				
+
 				<div class="row">
 					<div class="gameImg">
 						<img src="/images/{{gameInfo.picture}}" />
-					</div> 
+					</div>
 					<h4 class="gameTitle"> {{gameInfo.game_name}} </h4>
 					<h4 class="gameRating">
 						{{#if gameInfo.reviews}}
@@ -19,49 +19,52 @@
 					<h6 class="totalReviews">Total reviews: {{gameInfo.reviews.length}}</h6>
 				</div>
 			</div>
-			
+
 			<div class="gameProfile">
 				<p>{{gameInfo.game_desc}}</p>
 			</div>
 		</div>
-		</div>
-		
-		<div class="gameReviewCard">
-			<div class="reviewTitle">
-				<h4>R E V I E W S</h4>
-			</div>
+	</div>
 
-			{{#if gameInfo.reviews}}
-			{{#each gameInfo.reviews as |review| }}
-			{{>reviews review}} {{!-- links to the 'partials' view --}}
-			{{/each}}
-			{{/if}}
+	<div class="gameReviewCard">
+		<div class="reviewTitle">
+			<h4>R E V I E W S</h4>
 		</div>
-		<!-- Area where users can add their game reviews -->
-		<div class="addReview">
+
+		{{#if gameInfo.reviews}}
+		{{#each gameInfo.reviews as |review| }}
+		{{>reviews review}} {{!-- links to the 'partials' view --}}
+		{{/each}}
+		{{/if}}
+	</div>
+	<!-- Area where users can add their game reviews -->
+	<div class="addReview">
+
+		<div class="gameRate" id="default">
 			<form class="review-form">
 				<div class="reviewCard">
 					<label for="review-comment" class="form-label review-form">
 						YOUR REVIEW HERE
 						<div>
 							<button type="submit" class="submitReviewBtn">ADD REVIEW</button>
-						</div>	
+						</div>
 					</label>
 					<textarea id="review-comment" name="user-review" rows="4" cols="50">
 					</textarea>
-				</div>					
+				</div>
 			</form>
-			<div class="gameRate">
-				<input type="radio" id="star5" name="rate" value="5" />
-				<label for="star5" title="text">5 stars</label>
-				<input type="radio" id="star4" name="rate" value="4" />
-				<label for="star4" title="text">4 stars</label>
-				<input type="radio" id="star3" name="rate" value="3" />
-				<label for="star3" title="text">3 stars</label>
-				<input type="radio" id="star2" name="rate" value="2" />
-				<label for="star2" title="text">2 stars</label>
-				<input type="radio" id="star1" name="rate" value="1" />
-				<label for="star1" title="text">1 star</label>
-			</div>
+			<p class="profileDetails" id="problem" style="color:green"></p>
+			<input type="radio" visibility="hidden" class="star" id="star5" name="rate" value="5" />
+			<label for="star5" title="text">5 stars</label>
+			<input type="radio" class="star" id="star4" name="rate" value="4" />
+			<label for="star4" title="text">4 stars</label>
+			<input type="radio" class="star" id="star3" name="rate" value="3" />
+			<label for="star3" title="text">3 stars</label>
+			<input type="radio" class="star" id="star2" name="rate" value="2" />
+			<label for="star2" title="text">2 stars</label>
+			<input type="radio" class="star" id="star1" name="rate" value="1" />
+			<label for="star1" title="text">1 star</label>
 		</div>
-<script src="/js/register.js"></script>
+	</div>
+
+	<script src="/js/addReview.js"></script>

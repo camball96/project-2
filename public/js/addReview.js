@@ -1,30 +1,53 @@
 // front-end code to listen to submit review/comment under each game
 
-const newFormHandler = async (event) => {
+const reviewForm = async (event) => {
   event.preventDefault();
 
-  // need an input to collect the review_score on the page.
-  const newReview = document.querySelector("#review-comment")
-  const submitReview = document.querySelector(".submitReviewBtn");
+  // collect the input data from the page.
+  const newReview = document.querySelector("#review-comment").value
+  var rating = document.querySelector('.gameRate').id
+  var game = document.querySelector('.gameProfileSection').id
+  var errorMsg = document.querySelector("#problem")
 
-  if (newReview) {
-    const response = await fetch("/api/review", {
-      method: "POST",
-      // Note: might need to trim extra whitespace at the front of the review
-      body: JSON.stringify({ newReview }),
-      headers: {
-        "Content-Type": "application/json",
-      }
-    });
-
-    if (response.ok) {
-      document.location.add("/review");
-    } else {
-      alert("Failed to add review!");
-    }
+  // Do not call the DB if they have an incomplete request
+  if (rating === 'default') {
+    errorMsg.innerText = "Score is required"
+    console.log('hit')
+    return
   }
-};
 
-document
-  .querySelector(".review-form")
-  .addEventListener("submit", newFormHandler);
+  // post data to database
+  const createReview = await fetch("/api/review/add", {
+    method: "POST",
+    body: JSON.stringify({
+      review_txt: newReview,
+      review_score: rating,
+      game_id: game
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+  console.log(createReview)
+  createReview.ok
+    ? window.location.reload()
+    : errorMsg.innerText = "create failed"
+
+}
+
+
+// listeners for submit button and for each star button
+window.onload = function () {
+  var stars = document.querySelectorAll('.star')
+  var rating = document.querySelector('.gameRate')
+
+  stars.forEach(item => {
+
+    item.addEventListener('click', () => {
+      rating.id = item.value
+    })
+  });
+
+  document.querySelector(".review-form").addEventListener("submit", reviewForm);
+
+}
