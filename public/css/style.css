@@ -564,6 +564,7 @@ img {
 .profileEmail,
 .profileUsername,
 .profilePassword {
+	font-family: monospace;
 	display: flex;
 	text-align: end;
 	padding-bottom: 40px;
@@ -575,6 +576,7 @@ img {
 }
 
 .profileDetails {
+	font-family: monospace;
 	height: 30px;
 	width: auto;
 	margin-left: 20px;
@@ -616,8 +618,10 @@ img {
 
 .updateBtn,
 .createAccount {
+	font-family: monospace;
 	border-radius: 5px;
 	padding: 5px;
+
 }
 
 .updateBtn:hover {
