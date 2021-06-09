@@ -85,44 +85,6 @@ img {
 	justify-content: center;
 }
 
-/* .welcomeMsg {
-	display: flex;
-	flex-wrap: wrap;
-	align-self: flex-end;
-	width: 15%;
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    width: 20%;
-}
-
-.welcomeUser {
-	color: var(--purewhite);
-	justify-content: flex-end;
-	align-self: flex-end;
-	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 900;
-	width: auto;
-	align-items: flex-end;
-    justify-content: flex-end;
-    align-self: flex-end;
-    justify-content: flex-end;
-}
-
-.welcomeUser p {
-	align-items: flex-start;
-	justify-content: flex-start;
-	align-self: flex-start;
-	justify-content: flex-start;
-	text-align: left;
-	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 900;
-	width: auto;
-	padding: 0.5rem;
-} */
-
 .header {
 	display: flex;
 	justify-content: center;
@@ -499,47 +461,47 @@ img {
 	margin: auto;
 }
 
+.gameReviewCard {
+	margin-top: 30px;
+}
+
 .addReview {
 	border: transparent;
-	margin-top: 30px;
+	margin-top: 10px;
 	width: fit-content;
 }
 
 .cardHeader {
-	display: inline-block;
-	justify-content: center;
-
-	align-items: center;
-	font-family: "elixiaregular", sans-serif;
 	font-size: 3rem;
 	font-style: normal;
-	flex-wrap: wrap;
-	width: auto;
-	background-color: var(--midnightblack);
-	color: var(--purewhite);
 	margin-top: 30px;
+}
+
+.gameCard {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border: 0.5px solid var(--purewhite);
+	border-radius: 10px;
+}
+
+.gameImg {
+	height: 300px;
+}
+
+.gameImg img {
+	border-radius: 10px;
 }
 
 .gameTitle,
 .gameRating {
-	display: flex;
-	justify-content: center;
-	width: 100%;
 	font-size: larger;
 	text-align: center;
 	color: var(--purewhite);
 }
 
-.gameImg .gameCard {
-	display: flex;
-	flex-direction: row;
-	height: 200px;
-	padding: 0.5rem;
-	width: 50%;
-}
-
-.gameImg img {
-	border-radius: 10px;
+.totalReviews {
+	text-align: center;
 }
 
 /* Colorize-zoom Container */
@@ -566,10 +528,12 @@ img {
 
 .gameProfile {
 	margin: 30px 30px 10px;
+	padding: 10px;
+	width: auto;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-style: italic;
-	text-align: left;
+	text-align: center;
 }
 
 /* GAME REVIEW CARD */
