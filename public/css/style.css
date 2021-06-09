@@ -580,6 +580,7 @@ img {
 	color: var(--lavender);
 	padding: 5px;
 	font-family: "Roboto", sans-serif;
+	resize: none;
 }
 
 .reviewCard {
