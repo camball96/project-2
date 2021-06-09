@@ -55,6 +55,15 @@ nav {
 	margin: 0;
 }
 
+footer h6 {
+	color: var(--purewhite);
+	font-family: "Roboto", sans-serif;
+	font-size: small;
+	font-weight: lighter;
+	text-align: end;
+	padding: 20px 10px 0px;
+}
+
 a {
 	color: var(--purewhite);
 	text-decoration: none;
@@ -330,8 +339,7 @@ img {
 
 .trendingHeader,
 .profileHeader,
-.cardHeader,
-.resultsHeader {
+.cardHeader {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -774,7 +782,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 2rem;
-	padding: 10px;
+	padding: 20px;
 }
 
 .searchImg {
@@ -793,8 +801,14 @@ img {
 	justify-content: center;
 	align-self: center;
 	margin-top: 12px;
+	margin-bottom: 12px;
+	cursor: pointer;
 }
 
+.searchTitle :hover{
+	transition: 0.5s;
+	color: var(--lavender);
+}
 
 /* ADDING NEW GAME  */
 #buttonID {
