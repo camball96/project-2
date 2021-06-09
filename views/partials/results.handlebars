@@ -1,9 +1,9 @@
-{{!-- Helper function to load in each review --}}
-
-
-<div class="trendingImg">
-
-    <div class="results-title"> {{ game_name }}</div>
-
-    <a href="/gameprofile/{{id}}"> <img src="/images/{{ picture }}" /></a>
+{{! Helper function to load in each review }}
+<div class="trendingImg img-hover-zoom--colorize">
+	<a href="/gameProfile/{{id}}"><img
+			src="/images/{{picture}}"
+		/></a>
+</div>
+<div class="searchTitle">
+	<a href="/gameProfile/{{id}}">{{game_name}}</a>
 </div>

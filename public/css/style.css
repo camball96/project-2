@@ -330,7 +330,8 @@ img {
 
 .trendingHeader,
 .profileHeader,
-.cardHeader {
+.cardHeader,
+.resultsHeader {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -719,6 +720,7 @@ img {
 	font-family: monospace;
 	border-radius: 5px;
 	padding: 5px;
+	text-align: center;
 }
 
 .updateBtn:hover {
@@ -743,5 +745,90 @@ img {
 .deleteBtn:hover {
 	transition: 0.5s;
 	background-color: rgb(252, 159, 159);
+	color: var(--midnightblack);
+}
+
+/* SEARCH RESULTS SECTION */
+.searchGallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "elixiaregular", sans-serif;
+	font-style: normal;
+	flex-wrap: wrap;
+	width: auto;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+	margin: 50px;
+}
+
+.searchHeader {
+	font-size: larger;
+	width: 100%;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+.searchResults {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 2rem;
+	padding: 10px;
+}
+
+.searchImg {
+	display: flex;
+	height: 250px;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.searchTitle {
+	display: inline-block;
+	background-color: var(--midnightblack);
+	color: var(--purewhite);
+	font-size: 2rem;
+	justify-content: center;
+	align-self: center;
+	margin-top: 12px;
+}
+
+
+/* ADDING NEW GAME  */
+#buttonID {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+
+}
+.addNewGame {
+	display: flex;
+	justify-content: center;
+}
+
+.addGameForm {
+	justify-content: center;
+	border: 0.1px solid var(--purewhite);
+	border-radius: 10px;
+	width: fit-content;
+	padding: 30px;
+	font-family: "Roboto", sans-serif;
+	color: var(--purewhite);
+}
+
+.addGameBtn {
+	color: var(--lilac);
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.addGameBtn:hover{
+	transition: 0.5s;
+	background-color: var(--lilac);
 	color: var(--midnightblack);
 }

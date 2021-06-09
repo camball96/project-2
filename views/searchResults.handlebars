@@ -1,32 +1,37 @@
 {{!-- handlebars for search results (based off trending section) --}}
-<div class="trendingGallery">
-    <div class="trendingHeader">
-        <h4>SEARCH RESULTS</h4>
+<div class="searchGallery">
+    <div class="searchHeader">
+        <h1>SEARCH RESULTS</h1>
     </div>
-    {{#if searchResult}}
-    {{!-- placeholder code --}}
-    {{#each searchResult as |game| }}
-    {{>results game}}
-
-
-    {{/each}}
+    <div class="searchResults">
+        {{#if searchResult}}
+        {{!-- placeholder code --}}
+        {{#each searchResult as |game| }}
+        {{>results game}}
+        {{/each}}
+    </div>
 </div>
 {{else}}
-<div class="trendingImg">
-    no results found - you can add a new game here
-    <img src="/images/placeholder" />
+<div class="searchImg">
+    <p>No results found - you can add a new game below!</p>
+    <img src="/images/game-placeholder-image.jpg" />
 </div>
 {{/if}}
 
 &nbsp;
-<div class="needsCSS">
-    <div class="needsCSS" style="color: white;">
-        Didn't find a match? Click to add new game :
+<div class="addNewGame">
+    <div class="addGameForm">
+        <div>
+            <p>
+                Didn't find a match?
+                Click the button below to add a new game:
+            </p>
+        </div>
+        <div id="buttonID">
+            <p class="addGameBtn">ADD GAME</p>
+        </div>
     </div>
-    <div name="needCSS" class="updatePassword" id="buttonID">
-        <p class="updateBtn">
-            ADD GAME</p>
-    </div>
+    
 </div>
 
 </div>
