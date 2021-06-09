@@ -10,6 +10,12 @@
 		<h4>T R E N D I N G</h4>
 	</div>
 	<div class="trendingGallery">
+		{{#each games as |game|}}
+		{{>trending game}}
+		{{/each}}
+
+	</div>
+	{{!-- <div class="trendingGallery">
 		<div class="trendingGames">
 			<div class="trendingImg img-hover-zoom--colorize">
 				<a href="/gameProfile/3"><img src="/images/pokemon-sword.png"
@@ -38,7 +44,7 @@
 		<div class="trendingGames">
 			<div class="trendingImg img-hover-zoom--colorize">
 				<a href="/gameProfile/4"><img src="/images/pokemon-shield.jpeg"
-					alt="This is an image of the Pokemon Shield game cover" /></a>
+						alt="This is an image of the Pokemon Shield game cover" /></a>
 			</div>
 			<div class="trendingTitle"><a href="/gameProfile/4">POKEMON SHIELD</a></div>
 			<!-- <div class="trendingRating">R A T I N G</div> -->
@@ -51,5 +57,5 @@
 			<div class="trendingTitle"><a href="/gameProfile/2">CALL OF DUTY - COLD WAR</a></div>
 			<!-- <div class="trendingRating">R A T I N G</div> -->
 		</div>
-	</div>
+	</div> --}}
 </div>
