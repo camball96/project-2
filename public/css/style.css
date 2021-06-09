@@ -78,14 +78,52 @@ img {
 .topNav {
 	display: flex;
 	background-color: var(--midnightblack);
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.welcomeMsg {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: 15%;
+}
+
+.welcomeUser {
+	color: var(--purewhite);
+	align-items: flex-start;
+	justify-content: flex-start;
+	align-self: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 900;
 	width: auto;
+	padding: 0.5rem;
+}
+
+.welcomeUser p {
+	align-items: flex-start;
+	justify-content: flex-start;
+	align-self: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+	font-family: "elixiaregular", sans-serif;
+	font-size: 1.5rem;
+	font-weight: 900;
+	width: auto;
+	padding: 0.5rem;
 }
 
 .header {
 	display: flex;
-	justify-content: flex-start;
-	align-self: flex-start;
-	align-content: flex-start;
+	justify-content: center;
+	align-self: center;
+	align-content: center;
 	/* align-self: center;
 	justify-content: center;
 	align-items: center;
@@ -148,6 +186,13 @@ img {
 	50% {
 		border-color: var(--lilac);
 	}
+}
+
+.navButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+	width: 20%;
 }
 
 .loginButton,
@@ -232,7 +277,7 @@ img {
 .searchBar-lite {
 	display: inline-flex;
 	margin: 30px;
-	width: 80%;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
 }

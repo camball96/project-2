@@ -22,18 +22,25 @@
 		{{/if}}
 
 		<div class="topNav">
+			{{#if loggedIn}}
+			<div class="welcomeMsg">
+				<div class="welcomeUser"><p>WELCOME {{user_name}}</p></div>
+			</div>
+			{{/if}}
 			<div class="header typewriter">
 				<h1><a href="/">G A M E R S - H I D E O U T</a></h1>
 			</div>
-			<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
-			{{!-- display login/out depending on login statuss --}}
-			{{#if loggedIn}}
-			<div class="userProfileButton"><a href='/profile'>PROFILE</a></div>
-			<div class="logoutButton"><a>LOGOUT</a></div>
-			{{else}}
-			<div class="loginButton"><a href='/login'>LOGIN</a></div>
-			<div class="makeAccButton"><a href='/register'>CREATE ACCOUNT</a></div>
-			{{/if}}
+			<div class="navButtons"> 
+				<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
+				{{!-- display login/out depending on login statuss --}}
+				{{#if loggedIn}}
+				<div class="userProfileButton"><a href='/profile'>PROFILE</a></div>
+				<div class="logoutButton"><a>LOGOUT</a></div>
+				{{else}}
+				<div class="loginButton"><a href='/login'>LOGIN</a></div>
+				<div class="makeAccButton"><a href='/register'>CREATE ACCOUNT</a></div>
+				{{/if}}
+			</div>
 		</div>
 		<!-- Added logic to change the search bar depending on logged in/out and if they are at landing page or not. -->
 		{{#if landingPage}}
