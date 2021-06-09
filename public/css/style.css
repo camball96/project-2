@@ -15,6 +15,7 @@
 
 :root {
 	--midnightblack: black;
+	--stormgrey: rgb(165, 160, 160);
 	--lavender: rgb(158, 129, 158);
 	--lilac: rgb(176, 176, 240);
 	--purewhite: white;
@@ -353,6 +354,7 @@ img {
 
 .trendingHeader h4 {
 	font-size: 3rem;
+	font-weight: 900;
 }
 
 .cardHeader h4 {
@@ -386,6 +388,7 @@ img {
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-size: 2rem;
+	font-weight: 900;
 	justify-content: center;
 	align-self: center;
 	margin-top: 12px;
@@ -396,7 +399,7 @@ img {
 	text-decoration: none;
 	transition: 0.5s;
 	color: var(--lavender);
-	text-shadow: 0 5px 10px var(--purewhite);
+	text-shadow: 0 5px 15px var(--stormgrey);
 }
 
 .row {
