@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Game extends Model { }
 
-// game table.// updated
+// game table.// updated.
 
 Game.init(
     {
@@ -19,7 +19,7 @@ Game.init(
             unique: true
         },
         game_desc: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         picture: {
