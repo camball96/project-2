@@ -96,12 +96,11 @@ router.put('/update', async (req, res) => {
 router.delete('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
-            res.status(200).end();
+            res.status(204).end();
         });
-        return
+    } else {
+        res.status(404).end();
     }
-
-    res.json(2)
 });
 
 module.exports = router;
