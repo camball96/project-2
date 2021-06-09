@@ -506,41 +506,34 @@ img {
 }
 
 .cardHeader {
-	display: inline-block;
-	justify-content: center;
-
-	align-items: center;
-	font-family: "elixiaregular", sans-serif;
 	font-size: 3rem;
 	font-style: normal;
-	flex-wrap: wrap;
-	width: auto;
-	background-color: var(--midnightblack);
-	color: var(--purewhite);
 	margin-top: 30px;
 }
 
-.gameTitle,
-.gameRating {
+.gameCard {
 	display: flex;
 	justify-content: center;
-	width: 100%;
-	font-size: larger;
-	text-align: center;
-	color: var(--purewhite);
+	flex-direction: column;
+	border: 0.5px solid var(--purewhite);
+	border-radius: 10px;
 }
 
-.gameImg .gameCard {
-	display: flex;
-	flex-direction: row;
-	height: 200px;
-	padding: 0.5rem;
-	width: 50%;
+.gameImg {
+	height: 250px;
 }
 
 .gameImg img {
 	border-radius: 10px;
 }
+
+.gameTitle,
+.gameRating {
+	font-size: larger;
+	text-align: center;
+	color: var(--purewhite);
+}
+
 
 /* Colorize-zoom Container */
 .img-hover-zoom--colorize img {
@@ -566,6 +559,8 @@ img {
 
 .gameProfile {
 	margin: 30px 30px 10px;
+	padding: 10px;
+	width: 80%;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-style: italic;
