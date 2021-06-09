@@ -33,12 +33,13 @@ router.get("/", async (req, res) => {
 
 		let landingPage = true
 
-		let loggedIn;
-		req.session.loggedIn ? (loggedIn = true) : (loggedIn = false);
+		let loggedIn = req.session.loggedIn
+		let user_name = req.session.user_name
 
 		res.render("homepage", {
 			games,
 			loggedIn,
+			user_name,
 			landingPage
 		});
 	} catch (err) {
