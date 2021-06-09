@@ -750,8 +750,6 @@ img {
 
 /* SEARCH RESULTS SECTION */
 .searchGallery {
-	flex-direction: column;
-	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -774,8 +772,17 @@ img {
 
 .searchResults {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding-bottom: 2rem;
+	padding: 10px;
+}
+
+.searchImg {
+	display: flex;
+	height: 250px;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
 }
 
 .searchTitle {
@@ -787,6 +794,7 @@ img {
 	align-self: center;
 	margin-top: 12px;
 }
+
 
 /* ADDING NEW GAME  */
 #buttonID {
