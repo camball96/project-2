@@ -85,44 +85,6 @@ img {
 	justify-content: center;
 }
 
-/* .welcomeMsg {
-	display: flex;
-	flex-wrap: wrap;
-	align-self: flex-end;
-	width: 15%;
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    width: 20%;
-}
-
-.welcomeUser {
-	color: var(--purewhite);
-	justify-content: flex-end;
-	align-self: flex-end;
-	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 900;
-	width: auto;
-	align-items: flex-end;
-    justify-content: flex-end;
-    align-self: flex-end;
-    justify-content: flex-end;
-}
-
-.welcomeUser p {
-	align-items: flex-start;
-	justify-content: flex-start;
-	align-self: flex-start;
-	justify-content: flex-start;
-	text-align: left;
-	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
-	font-weight: 900;
-	width: auto;
-	padding: 0.5rem;
-} */
-
 .header {
 	display: flex;
 	justify-content: center;
@@ -499,9 +461,13 @@ img {
 	margin: auto;
 }
 
+.gameReviewCard {
+	margin-top: 30px;
+}
+
 .addReview {
 	border: transparent;
-	margin-top: 30px;
+	margin-top: 10px;
 	width: fit-content;
 }
 
@@ -520,7 +486,7 @@ img {
 }
 
 .gameImg {
-	height: 250px;
+	height: 300px;
 }
 
 .gameImg img {
@@ -534,6 +500,9 @@ img {
 	color: var(--purewhite);
 }
 
+.totalReviews {
+	text-align: center;
+}
 
 /* Colorize-zoom Container */
 .img-hover-zoom--colorize img {
@@ -560,11 +529,11 @@ img {
 .gameProfile {
 	margin: 30px 30px 10px;
 	padding: 10px;
-	width: 80%;
+	width: auto;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
 	font-style: italic;
-	text-align: left;
+	text-align: center;
 }
 
 /* GAME REVIEW CARD */
