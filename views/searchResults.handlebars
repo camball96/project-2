@@ -3,14 +3,19 @@
     <div class="trendingHeader">
         <h4>SEARCH RESULTS</h4>
     </div>
-
+    {{#if searchResult}}
     {{!-- placeholder code --}}
+    {{#each searchResult as |game| }}
+    {{>results game}}
+    {{/each}}
+    {{else}}
     <div class="trendingImg">
-        {{ gameInfo.game_name }}
+        no results found - you can add a new game here
 
-        <img href="/gameprofile/{{gameInfo.id}}" src="/images/{{ gameInfo.picture }}" />
+
+        <img src="/images/placeholder" />
     </div>
-
+    {{/if}}
 
     {{!-- this needs refactoring once we get search working --}}
     {{!-- {{#each gameInfo as |game| }}

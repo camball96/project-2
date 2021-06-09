@@ -1,21 +1,13 @@
-
 // search for a game by name
 
-async function searchGame() {
+function searchGame() {
 
     criteria = document.querySelector("#searchBar").value
 
-    const searchResult = await fetch(`/api/game/search/${criteria}`, {
-        method: 'get',
-        credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/json' }
-    })
-        .then((searchResult) => {
-            searchResult.redirected
-                ? window.location.replace(searchResult.url)
-                : console.log('no results were found')
-        })
+    window.location.replace(`${window.location.origin}/search/${criteria}`)
+
 }
-// Listeners.
+
+// Listener.
 
 document.querySelector('.searchButton').addEventListener('click', searchGame);
