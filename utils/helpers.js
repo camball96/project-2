@@ -1,5 +1,3 @@
-const { INTEGER } = require("sequelize/types");
-
 // helper functions for iterating over returned data
 module.exports = {
     averageOut: reviews => {
