@@ -32,6 +32,11 @@ const gameData = [
         game_desc: "The long awaited eleventh main installment in the Mortal Kombat series, and a sequel to 2015's Mortal Kombat X.",
         picture: "Mortal-Kombat-11.jpg"
     },
+    {
+        game_name: "Halo Infinite",
+        game_desc: "The legendary Halo series returns. When all hope is lost and humanity’s fate hangs in the balance, the Master Chief is ready to confront the most ruthless foe he’s ever faced.",
+        picture: "Halo-inf.jpeg"
+    },
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);
