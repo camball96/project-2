@@ -96,10 +96,10 @@ router.put('/update', async (req, res) => {
 router.delete('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
-            res.status(204).end();
+            res.status(200).end();
         });
     } else {
-        res.status(404).end();
+        res.status(420).end();
     }
 });
 
