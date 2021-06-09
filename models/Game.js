@@ -19,7 +19,7 @@ Game.init(
             unique: true
         },
         game_desc: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         picture: {
