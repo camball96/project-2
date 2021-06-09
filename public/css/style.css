@@ -263,7 +263,8 @@ img {
 
 .searchBar-lite {
 	display: inline-flex;
-	margin: 30px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
@@ -481,8 +482,9 @@ img {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	border: 0.5px solid var(--purewhite);
-	border-radius: 10px;
+	border-top: 0.5px solid var(--purewhite);
+	padding-top: 30px;
+	/* border-radius: 10px; */
 }
 
 .gameImg {
