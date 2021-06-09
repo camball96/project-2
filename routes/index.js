@@ -1,12 +1,15 @@
 const router = require('express').Router();
+const homeRoutes = require('./home-routes');
+const searchRoutes = require('./search-routes');
+const apiRoutes = require('./api/')
 
-const gameRoutes = require('./api/game-routes');
-const userRoutes = require('./api/user-routes');
-const reviewRoutes = require('./api/review-routes');
 
 //updated..
-router.use('/game', gameRoutes);
-router.use('/user', userRoutes);
-router.use('/review', reviewRoutes);
+
+router.use('/', homeRoutes)
+router.use('/search', searchRoutes)
+router.use('/api', apiRoutes)
+
+
 
 module.exports = router;

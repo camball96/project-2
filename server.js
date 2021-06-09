@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const controllers = require('./controllers');
+const routes = require('./routes');
 const sequelize = require('./config/connection')
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sesh))
-app.use(controllers);
+app.use(routes);
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

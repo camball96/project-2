@@ -1,7 +1,8 @@
 const router = require("express").Router();
 
 const { User, Game, Review } = require("../models");
-
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op
 
 
 // Get aboutUs page
@@ -18,14 +19,16 @@ router.get("/aboutUs", (req, res) => {
 router.get("/", async (req, res) => {
 	try {
 		const gameData = await Game.findAll({
-			limit: 5,
 			include: [
 				{
 					model: Review,
 					attributes: ["review_score"],
 				},
 			],
-		});
+			order: Sequelize.literal('rand()'),
+			limit: 5
+		}
+		);
 
 		const games = gameData.map((item) => item.get({ plain: true }));
 
