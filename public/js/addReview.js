@@ -3,7 +3,7 @@
 const reviewForm = async (event) => {
   event.preventDefault();
 
-  // collect the input data from the page.
+  // collect the input data from the page
   const newReview = document.querySelector("#review-comment").value
   var rating = document.querySelector('.gameRate').id
   var game = document.querySelector('.gameProfileSection').id

@@ -7,18 +7,18 @@ const { User, Game, Review } = require('../../models');
 // Expects a POST request with body format as below::
 // {
 // 	"game_id": (selected game's ID),
-// 	"user_id": (logged in user's ID) - req.session.,
+// 	"user_id": (logged in user's ID) - req.sessio,
 // 	"review_score": 4,
 // 	"review_txt": "review written by user"
 // }
 router.post('/add', async (req, res) => {
     if (req.session.loggedIn) {
 
-        console.log('here')
+
         req.body.user_name = req.session.user_name
         req.body.user_id = req.session.user_id
 
-        console.log('here')
+
 
         try {
             const addReview = await Review.create(req.body)
