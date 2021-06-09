@@ -37,6 +37,47 @@ const gameData = [
         game_desc: "The legendary Halo series returns. When all hope is lost and humanity’s fate hangs in the balance, the Master Chief is ready to confront the most ruthless foe he’s ever faced.",
         picture: "Halo-inf.jpeg"
     },
+    {
+        game_name: "Final Fantasy VII",
+        game_desc: "Final Fantasy VII Remake is a 2020 action role-playing game developed and published by Square Enix. It is the first in a planned series of games remaking the 1997 PlayStation game Final Fantasy VII. ",
+        picture: "ff7.jpg"
+    },
+    {
+        game_name: "Persona 5",
+        game_desc: "Persona 5 is a 2016 role-playing video game developed by Atlus. It is the sixth installment in the Persona series, which is part of the larger Megami Tensei franchise.",
+        picture: "persona 5.jpg"
+    },
+    {
+        game_name: "The Witcher 3",
+        game_desc: "The Witcher 3: Wild Hunt is an action role-playing game developed and published by Polish developer CD Projekt Red and is based on The Witcher series of fantasy novels written by Andrzej Sapkowski.",
+        picture: "the-witcher-3.jpg"
+    },
+    {
+        game_name: "Grand Theft Auto V",
+        game_desc: "Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV.",
+        picture: "gta-v.jpg"
+    },
+    {
+        game_name: "Assassins Creed Valhalla",
+        game_desc: "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft. It is the twelfth major installment and the twenty-second release in the Assassin's Creed series, and a successor to the 2018's Assassin's Creed Odyssey.",
+        picture: "assassins-creed-val.jpg"
+    },
+    {
+        game_name: "Cyberpunk 2077",
+        game_desc: "Cyberpunk 2077 is a 2020 action role-playing video game developed and published by CD Projekt. The story takes place in Night City, an open world set in the Cyberpunk universe",
+        picture: "cyberpunk-2077.jpg"
+    },
+    {
+        game_name: "The Elder Scrolls V: Skyrim",
+        game_desc: "The Elder Scrolls V: Skyrim is an open world action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks.",
+        picture: "skyrim.jpg"
+    },
+    {
+        game_name: "Star Wars Jedi Fallen Order",
+        game_desc: "Star Wars Jedi: Fallen Order is an action-adventure game developed by Respawn Entertainment and published by Electronic Arts. It was released for Windows, PlayStation 4, and Xbox One",
+        picture: "jedi-fallen-order.jpg"
+    },
+
 ];
 
 const seedGames = () => Game.bulkCreate(gameData);
