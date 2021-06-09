@@ -1,21 +1,11 @@
 
-// search for a game by name
 
-async function searchGame() {
 
-    criteria = document.querySelector("#searchBar").value
+function newGameAdd() {
 
-    const searchResult = await fetch(`/search/${criteria}`, {
-        method: 'get',
-        credentials: 'same-origin',
-        headers: { 'Content-Type': 'application/json' }
-    })
-        .then((searchResult) => {
-            searchResult.redirected
-                ? window.location.replace(searchResult.url)
-                : console.log('no results were found')
-        })
+    window.location.replace(`${window.location.origin}/review/newgame`)
+
 }
 // Listeners.
 
-document.querySelector('.searchButton').addEventListener('click', searchGame);
+document.querySelector('#buttonID').addEventListener('click', newGameAdd);

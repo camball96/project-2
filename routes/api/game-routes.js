@@ -9,22 +9,40 @@ const { User, Game, Review } = require('../../models');
 // 	"game_name": "newgame",
 //  "game_desc": "description"
 // 	"picture": "picplaceholder"
+//  "review"
 // }
 router.post('/new', async (req, res) => {
-    if (req.session.loggedIn) {
 
-        try {
-            const addGame = await Game.create(req.body)
+    try {
+        const addGame = await Game.create(req.body.game)
 
-            res.status(200).json(addGame);
-            // where should user be redirected to after adding game?
-        }
 
-        catch (err) {
-            console.log(err);
-            res.status(500).json(err);
-        }
+        const newGame = addGame.get({ plain: true })
+
+        console.log(newGame)
+
+        const addReview = await Review.create({
+            review_txt: req.body.review_txt,
+            review_score: req.body.review_score,
+            user_name: req.session.user_name,
+            user_id: req.session.user_id,
+            game_id: newGame.id
+
+        })
+
+        const newReview = addReview.get({ plain: true })
+
+        console.log(newReview)
+
+        res.redirect(`/gameProfile/${newReview.game_id}`)
+
     }
+
+    catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+
 });
 
 

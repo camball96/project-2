@@ -121,6 +121,14 @@ router.get("/gameprofile/:id", async (req, res) => {
 });
 
 
+// serve the new game page
+router.get("/review/newgame", (req, res) => {
+
+	res.render("reviewnewgame")
+})
+
+
+
 
 
 module.exports = router;

@@ -7,22 +7,27 @@
     {{!-- placeholder code --}}
     {{#each searchResult as |game| }}
     {{>results game}}
+
+
     {{/each}}
-    {{else}}
-    <div class="trendingImg">
-        no results found - you can add a new game here
-
-
-        <img src="/images/placeholder" />
-    </div>
-    {{/if}}
-
-    {{!-- this needs refactoring once we get search working --}}
-    {{!-- {{#each gameInfo as |game| }}
-    <div class="trendingImg">
-        {{ game.game_title }}
-
-        <img href="/review/{{game.id}}" src="/images/{{ game.picture }}.jpg" />
-    </div>
-    {{/each}} --}}
 </div>
+{{else}}
+<div class="trendingImg">
+    no results found - you can add a new game here
+    <img src="/images/placeholder" />
+</div>
+{{/if}}
+
+&nbsp;
+<div class="needsCSS">
+    <div class="needsCSS" style="color: white;">
+        Didn't find a match? Click to add new game :
+    </div>
+    <div name="needCSS" class="updatePassword" id="buttonID">
+        <p class="updateBtn">
+            ADD GAME</p>
+    </div>
+</div>
+
+</div>
+<script src="/js/searchresults.js"></script>
