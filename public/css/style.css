@@ -691,7 +691,7 @@ img {
 }
 
 .profileDetails {
-	font-family: monospace;
+	font-family: "Roboto", sans-serif;
 	height: 30px;
 	width: auto;
 	margin-left: 20px;

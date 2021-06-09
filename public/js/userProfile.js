@@ -70,10 +70,31 @@ const errorLookup = (errors) => {
 
 }
 
+// Function for users to delete their profile
+async function deleteProfile(event) {
+    console.log("Delete button was clicked.");    
+    event.preventDefault();
+
+    const response = await fetch(`/api/user/delete`, {
+        method: 'DELETE',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' }
+    });
+
+
+    if (response.ok) {
+        window.alert("Profile deleted.");
+        document.location.replace('/dashboard');
+    } else {
+        alert(response.statusText);
+    };
+}
 
 // Listeners.
 
 document.querySelector('#updateUser').addEventListener('click', constructRequest);
 document.querySelector('#updateEmail').addEventListener('click', constructRequest);
 document.querySelector('#updatePass').addEventListener('click', constructRequest);
+document.querySelector('#deleteProfileBtn').addEventListener('click', deleteProfile);
+
 
