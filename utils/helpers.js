@@ -1,3 +1,5 @@
+const { INTEGER } = require("sequelize/types");
+
 // helper functions for iterating over returned data
 module.exports = {
     averageOut: reviews => {
@@ -12,5 +14,10 @@ module.exports = {
         var mod = str.slice(4, 24)
         return mod
     },
+    upperCase: item => {
+        var upper = item.toUpperCase()
+        return upper
+    }
+
 }
 
