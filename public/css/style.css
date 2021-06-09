@@ -588,7 +588,7 @@ img {
 }
 
 /* User Reviews */
-#review-comment {
+#reviewComment {
 	background-color: var(--midnightblack);
 	color: var(--lavender);
 	padding: 5px;
@@ -814,7 +814,7 @@ img {
 	color: var(--lavender);
 }
 
-/* ADDING NEW GAME  */
+/* ADDING NEW GAME MINI SECTION (will appear below search results) */
 #buttonID {
 	display: flex;
 	justify-content: center;
@@ -846,6 +846,64 @@ img {
 }
 
 .addGameBtn:hover{
+	transition: 0.5s;
+	background-color: var(--lilac);
+	color: var(--midnightblack);
+}
+
+/* ADDING NEW GAME PAGE */
+.newGameForm  {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: "elixiaregular", "roboto", sans-serif;
+	padding: 10px;
+	font-size: larger;
+}
+
+.newGameInput label{
+	display: flex;
+	padding: 10px;
+}
+
+#gameName {
+	background-color: var(--midnightblack);
+	color: var(--lavender);
+	padding: 5px;
+	font-family: "Roboto", sans-serif;
+	resize: none;
+	padding: 10px;
+}
+
+#gameDesc {
+	background-color: var(--midnightblack);
+	color: var(--lavender);
+	padding: 5px;
+	font-family: "Roboto", sans-serif;
+	resize: none;
+	padding: 10px;
+}
+
+.addNewGameBtn {
+	color: var(--purewhite)
+	
+}
+
+.addNewGameBtn {
+	cursor: pointer;
+	background-color: var(--purewhite);
+	color: var(--midnightblack);
+	margin: 5px 5px 5px 0;
+	padding: 5px;
+	font-family: "elixiaregular", sans-serif;
+	font-weight: 900;
+	font-size: larger;
+	border: 0;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+
+.addNewGameBtn:hover {
 	transition: 0.5s;
 	background-color: var(--lilac);
 	color: var(--midnightblack);

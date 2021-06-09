@@ -1,33 +1,48 @@
 <!-- THIS IS THE SUBMIT GAME SECTION-->
-<section class="game-submit-section">
-    <h1 class="submit-header">Submit a game you love!</h1>
-    <form class="game-submission">
-        <label for="gameName">Game name:</label><br>
-        <input type="text" id="gameName" name="gameName"><br>
-
-        <label for="gameDesc">Game Description:</label><br>
-        <textarea id="review-comment" name="user-review" rows="4" cols="50" aria-setsize="fixed">
-					</textarea>
-
-        <label for="review-comment" class="form-label review-form">YOUR REVIEW HERE</label><br>
-        <textarea id="review-comment" name="user-review" rows="4" cols="50" aria-setsize="fixed">
-					</textarea>
-        <!-- Stars review html-->
-
-        <div class="gameRate">
-            <input type="radio" id="star5" name="rate" value="5" />
-            <label for="star5" title="text">5 stars</label>
-            <input type="radio" id="star4" name="rate" value="4" />
-            <label for="star4" title="text">4 stars</label>
-            <input type="radio" id="star3" name="rate" value="3" />
-            <label for="star3" title="text">3 stars</label>
-            <input type="radio" id="star2" name="rate" value="2" />
-            <label for="star2" title="text">2 stars</label>
-            <input type="radio" id="star1" name="rate" value="1" />
-            <label for="star1" title="text">1 star</label>
+<div class="profileSection">
+	<div class="row">
+		<div class="profileCard">
+			<div class="profileHeader">
+				<h4>Submit a game you love!</h4>
+			</div>
+            <div class="newGameForm">
+                <form class="gameSubmission">
+                    <div class="newGameInput">
+                        <label for="gameName" class="form-label review-form">GAME NAME</label>
+                        <textarea id="gameName" name="gameName" rows="4" cols="50" aria-setsize="fixed">
+                        </textarea>
+                    </div>
+                    <div class="newGameInput">
+                        <label for="gameDesc" class="form-label review-form">GAME DESCRIPTION</label>
+                        <textarea id="gameDesc" name="gameDesc" rows="4" cols="50" aria-setsize="fixed">
+                        </textarea>
+                    </div>
+                    <div class="newGameInput">
+                        <label for="reviewComment" class="form-label review-form">YOUR REVIEW</label>
+                        <textarea id="reviewComment" name="user-review" rows="4" cols="50" aria-setsize="fixed">
+                        </textarea>
+                    </div>
+            <!-- Stars review html-->
+                    <div class="gameRate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                    <div>
+                        <button type="submit" class="addNewGameBtn">ADD GAME</button>
+			        </div>
+                </form>
+            </div>
         </div>
-    </form>
-</section>
+    </div>
+</div>
 
 
 
