@@ -322,6 +322,12 @@ img {
 	transition: 0.5s;
 }
 
+
+.trendingHeader {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
 .trendingGallery {
 	display: flex;
 	justify-content: center;
