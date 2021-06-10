@@ -102,17 +102,48 @@ router.delete('/delete', async (req, res) => {
     if (req.session.loggedIn) {
         try {
             console.log('try')
+
+            const updateDependencies = await Review.findAll({
+                where: {
+                    user_id: req.session.user_id
+                }
+            })
+
+            const reviews = updateDependencies.map(item => item.get({ plain: true }))
+            const updateReviews = reviews.map(item => { return item = { id: item.id, user_id: 1, user_name: "Deleted Account" } })
+            console.log(reviews)
+            console.log(updateReviews)
+
+
+            updateReviews.forEach(async (item) => {
+                try { await Review.update(item, { where: { id: item.id } }) }
+                catch (err) {
+                    console.log(err)
+                }
+            })
+
+            // hackish solution to bypass bug -will fix later
+            const findUser = await User.findByPk(req.session.user_id)
+
             const deleteUser = await User.destroy({
                 where: { id: req.session.user_id }
             })
 
-            res.status(200).json(deleteUser)
+            req.session.destroy()
+
+            res.json(deleteUser)
+
         }
+
+        // res.status(200).json(deleteUser)
+
         catch (err) {
             console.log(err);
             res.status(500).json(err);
         }
+        return
     }
+
     res.redirect('/login')
 })
 

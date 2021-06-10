@@ -26,7 +26,7 @@ function validateForm(e) {
     body.game_name = gameName;
     body.review_txt = reviewText;
     body.review_score = reviewScore;
-
+    console.log(body)
     // Call fetch function
 
     addGameForm(body)

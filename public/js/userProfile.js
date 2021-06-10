@@ -72,7 +72,7 @@ const errorLookup = (errors) => {
 
 // Function for users to delete their profile
 async function deleteProfile(event) {
-    console.log("Delete button was clicked.");    
+    console.log("Delete button was clicked.");
     event.preventDefault();
 
     const response = await fetch(`/api/user/delete`, {
@@ -84,7 +84,7 @@ async function deleteProfile(event) {
 
     if (response.ok) {
         window.alert("Profile deleted.");
-        document.location.replace('/dashboard');
+        document.location.replace('/');
     } else {
         alert(response.statusText);
     };

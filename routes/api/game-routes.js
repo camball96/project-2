@@ -14,15 +14,18 @@ router.post('/new', async (req, res) => {
         })
 
         const newGame = addGame.get({ plain: true })
-
+        console.log(newGame)
         const addReview = await Review.create({
+            game_id: newGame.id,
             review_txt: req.body.review_txt,
             review_score: req.body.review_score,
             user_name: req.session.user_name,
             user_id: req.session.user_id,
-            game_id: newGame.id
+
 
         })
+
+        console.log(addReview)
 
         const newReview = addReview.get({ plain: true })
 
