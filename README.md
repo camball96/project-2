@@ -9,7 +9,7 @@ Project Owners - Cam, Ty, Nick, Aaron
 ## Table of Contents
 * [Description](#Description)
 * [License](#License)
-* [Directions for Future Development](#Directions for Future Development)
+* [Directions for Future Development](#Directions)
 * [Contributions](#Contributions)
 * [Credits](#Credits)
 
