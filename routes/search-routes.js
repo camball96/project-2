@@ -26,8 +26,11 @@ router.get('/:game', async (req, res) => {
 
         const searchResult = gameSearch.map((item) => item.get({ plain: true }));
 
+        let loggedIn = req.session.loggedIn
+        let user_name = req.session.user_name
+
         return res.render('searchResults', {
-            searchResult
+            searchResult, loggedIn, user_name
         })
 
     } catch (err) {

@@ -8,7 +8,9 @@ const Op = Sequelize.Op
 // Get aboutUs page
 router.get("/aboutUs", (req, res) => {
 	try {
-		res.render("aboutUs");
+		let user_name = req.session.user_name
+		let loggedIn = req.session.loggedIn
+		res.render("aboutUs", { loggedIn, user_name });
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
@@ -54,8 +56,8 @@ router.get("/", async (req, res) => {
 
 // serve the registration page
 router.get("/register", (req, res) => {
-	let loggedIn;
-	req.session.loggedIn ? (loggedIn = true) : (loggedIn = false);
+
+	let loggedIn = req.session.loggedIn
 
 	res.render("register", {
 		loggedIn,
@@ -79,9 +81,10 @@ router.get("/profile", async (req, res) => {
 			});
 
 			const profile = getProfile.get({ plain: true });
-			let loggedIn = true;
+			let loggedIn = req.session.loggedIn
+			let user_name = req.session.user_name
 
-			res.render("userProfile", { profile, loggedIn });
+			res.render("userProfile", { profile, loggedIn, user_name });
 		} catch (err) {
 			console.log(err);
 			res.status(500).json(err);
@@ -113,10 +116,10 @@ router.get("/gameprofile/:id", async (req, res) => {
 
 		console.log(gameInfo); // remove once ready to submit
 
-		let loggedIn;
-		req.session.loggedIn ? (loggedIn = true) : (loggedIn = false);
+		let loggedIn = req.session.loggedIn
+		let user_name = req.session.user_name
 
-		res.render("gameProfile", { gameInfo, loggedIn });
+		res.render("gameProfile", { gameInfo, loggedIn, user_name });
 	} catch (err) {
 		console.log(err);
 		res.status(500).json(err);
@@ -126,8 +129,9 @@ router.get("/gameprofile/:id", async (req, res) => {
 
 // serve the new game page
 router.get("/review/newgame", (req, res) => {
-
-	res.render("reviewnewgame")
+	let loggedIn = req.session.loggedIn
+	let user_name = req.session.user_name
+	res.render("reviewnewgame", { loggedIn, user_name })
 })
 
 

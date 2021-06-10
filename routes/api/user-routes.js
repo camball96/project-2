@@ -98,10 +98,13 @@ router.delete('/logout', (req, res) => {
 module.exports = router;
 
 // DELETE user PROFILE
-router.delete('/delete/:id', async (req, res) => {
-    if (req.session.user_id === req.params.id) {
+router.delete('/delete', async (req, res) => {
+    if (req.session.loggedIn) {
         try {
-            const deleteUser = await User.destroy(req.params.id)
+            console.log('try')
+            const deleteUser = await User.destroy({
+                where: { id: req.session.user_id }
+            })
 
             res.status(200).json(deleteUser)
         }
@@ -112,3 +115,4 @@ router.delete('/delete/:id', async (req, res) => {
     }
     res.redirect('/login')
 })
+
