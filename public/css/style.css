@@ -11,8 +11,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 
-/* this is for static styles */
-
 :root {
 	--midnightblack: black;
 	--stormgrey: rgb(165, 160, 160);
@@ -62,7 +60,6 @@ footer h6 {
 	font-size: small;
 	font-weight: lighter;
 	text-align: end;
-	padding: 20px 10px 0px;
 }
 
 a {
@@ -100,12 +97,6 @@ img {
 	justify-content: center;
 	align-self: center;
 	align-content: center;
-	/* align-self: center;
-	justify-content: center;
-	align-items: center;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	margin-top: 3rem;  */
 	padding: 1rem 2rem;
 	font-family: "elixiaregular", sans-serif;
 	font-weight: 300;
@@ -178,8 +169,6 @@ img {
 .navButtons {
 	justify-content: flex-end;
 }
-
-
 
 .loginButton,
 .makeAccButton,
@@ -261,6 +250,57 @@ img {
 	opacity: 90%;
 }
 
+/* WEBSITE FOOTER */
+.mainFooter {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: var(--midnightblack);
+	border-top: 1px solid var(--purewhite);
+	height: 10%;
+	margin-top: 25px;
+	width: 100%;
+}
+
+.contactUsTitle, 
+.contactUsIcons,
+.webDesigners {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.contactUs {
+	display: flex;
+	padding-left: 20px;
+	justify-content: center;
+	text-align: center;
+	align-self: center;
+	align-content: center;
+	flex-grow: 1;
+	color: var(--purewhite);
+}
+
+.contactUs h2 {
+	font-family: "elixiaregular", sans-serif;
+	color: var(--purewhite);
+}
+
+.contactUsIcons {
+	text-align: left;
+	align-self: left;
+	font-size: 30px;
+	flex-grow: 1
+
+}
+
+.webDesigners {
+	justify-content: flex-end;
+	text-align: end;
+	align-self: flex-end;
+	align-content: flex-end;
+	flex-grow: 1;
+}
+
 /* SEARCH BAR */
 
 .searchBar {
@@ -325,6 +365,7 @@ img {
 	font-weight: 600;
 	font-size: larger;
 }
+
 
 .searchGameButton {
 	background-color: var(--lilac);
@@ -471,13 +512,6 @@ img {
 	width: 75%;
 	margin-top: 6px;
 }
-
-/* Clear floats after the columns */
-/* .registerRow:after {
-	content: "";
-	display: table;
-	clear: both;
-  } */
 
 /* ABOUT US PAGE */
 .aboutUs {
