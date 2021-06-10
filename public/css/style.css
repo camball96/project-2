@@ -1010,3 +1010,29 @@ img {
 	background-color: var(--lilac);
 	color: var(--midnightblack);
 }
+
+@media only screen and (max-width: 768px) {
+	.mainBackground{
+		height: 80%;
+		background-position-x: center;
+		background-position-y: 200px;
+	}
+	.welcomeMsg {
+		justify-content: center;
+    	text-align: center;
+    	align-self: center;
+    	align-content: center;  
+	}
+	.navButtons{
+		justify-content: center;
+	}
+	.searchBar{
+		padding-top: 200px;
+	}
+	.searchButton {
+		width:10%;
+	}
+	.searchGameButton {
+		width:20%;
+	}
+}
