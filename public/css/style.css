@@ -272,44 +272,90 @@ img {
 }
 
 .searchBar-lite {
-	display: inline-flex;
+	display: flex;
+	padding: auto;
 	margin-top: 50px;
 	margin-bottom: 50px;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
+	border: none;
+	border-radius: 5px;
 }
 
 .search {
 	width: 40%;
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
+	align-items: center;
+	margin: auto;
 }
 
 .search-lite {
-	display: inline-flex;
-	width: 20%;
+	margin: auto;
+	display: flex;
+	width: 40%;
 	font-family: monospace;
+	justify-content: center;
+	align-items: center;
+	border: none;
+}
+
+#searchBar.input {
+	background-color: var(--lilac);
+	border: none;
+	border-radius: 5px;
+} 
+
+#searchBar.input[type="text"]:focus {
+	background-color: var(--lilac);
+	border: none;
+	border-radius: 5px;
+    outline : none;
 }
 
 .input {
 	padding: 10px;
 	box-shadow: var(--midnightblack);
 	border-radius: 5px;
-	font-family: monospace;
+	font-family: "elixiaregular", sans-serif;
+	font-weight: 600;
+	color: var(--midnightblack);
+	font-size: larger;
+}
+.fa-search {
+	/*margin-left: -200px; */
+
 }
 
-.searchButton {
-	width: 15%;
+
+.searchGameButton {
+	background-color: turquoise;
+	width: 25%;
 	padding: 10px;
+	margin-right: 10px;
 	border-radius: 5px;
-	font-family: monospace;
-	background-color: var(--purewhite);
-	background: var(--purewhite);
+	font-family: "elixiaregular", sans-serif;
+	font-weight: 600;
+
 	color: var(--midnightblack);
-	font-size: 14px;
+	font-size: larger;
 	border: 1px solid grey;
+	border-left: none;
+	cursor: pointer; 
+}
+.searchButton {
+	background-color: var(--lilac);
+	width: 5%;
+	padding: 10px;
+	margin-left: -8px;
+	margin-right: 10px;
+	border-radius: 5px;
+	font-family: "elixiaregular", sans-serif;
+	font-weight: 600;
+	color: var(--midnightblack);
+	font-size: larger;
+	border: none;
 	border-left: none;
 	cursor: pointer;
 }
