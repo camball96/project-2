@@ -711,6 +711,7 @@ img {
 	justify-content: center;
 	height: 46px;
 	padding: 0 10px;
+	margin-bottom: 40px;
 }
 .gameRate:not(:checked) > input {
 	position: absolute;
