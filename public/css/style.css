@@ -281,9 +281,10 @@ img {
 }
 
 .search {
-	width: 20%;
+	width: 40%;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .search-lite {
@@ -300,14 +301,14 @@ img {
 }
 
 .searchButton {
-	width: 100%;
+	width: 15%;
 	padding: 10px;
 	border-radius: 5px;
 	font-family: monospace;
 	background-color: var(--purewhite);
 	background: var(--purewhite);
 	color: var(--midnightblack);
-	font-size: 17px;
+	font-size: 14px;
 	border: 1px solid grey;
 	border-left: none;
 	cursor: pointer;
