@@ -2,24 +2,18 @@ const router = require('express').Router();
 const { User, Game, Review } = require('../../models');
 
 
+// POST game - for adding new game and then adding a review
 
-// POST game - for adding new game.
-// JSON data body format expected:
-// {
-// 	"game_name": "newgame",
-//  "game_desc": "description"
-// 	"picture": "picplaceholder"
-//  "review"
-// }
 router.post('/new', async (req, res) => {
 
     try {
-        const addGame = await Game.create(req.body.game)
-
+        const addGame = await Game.create({
+            game_name: req.body.game_name,
+            game_desc: req.body.game_desc,
+            picture: 'game-placeholder-image.jpg'
+        })
 
         const newGame = addGame.get({ plain: true })
-
-        console.log(newGame)
 
         const addReview = await Review.create({
             review_txt: req.body.review_txt,
@@ -32,8 +26,7 @@ router.post('/new', async (req, res) => {
 
         const newReview = addReview.get({ plain: true })
 
-        console.log(newReview)
-
+        // redirect them to the new game page
         res.redirect(`/gameProfile/${newReview.game_id}`)
 
     }
@@ -44,7 +37,6 @@ router.post('/new', async (req, res) => {
     }
 
 });
-
 
 
 module.exports = router;

@@ -19,7 +19,7 @@ async function login(e) {
         })
 
         // converts the response to useable data then sends them to home if log in success other wise it displays an error.
-        console.log(verification)
+
         verification.text()
             .then((response) => {
                 response == 1

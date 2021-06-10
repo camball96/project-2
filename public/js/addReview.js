@@ -1,10 +1,10 @@
-// front-end code to listen to submit review/comment under each game
+// Run a fetch to add a new review to a game. 
 
 const reviewForm = async (event) => {
   event.preventDefault();
 
   // collect the input data from the page
-  const newReview = document.querySelector("#review-comment").value
+  const newReview = document.querySelector("#reviewComment").value
   var rating = document.querySelector('.gameRate').id
   var game = document.querySelector('.gameProfileSection').id
   var errorMsg = document.querySelector("#problem")
@@ -12,7 +12,6 @@ const reviewForm = async (event) => {
   // Do not call the DB if they have an incomplete request
   if (rating === 'default') {
     errorMsg.innerText = "Score is required"
-    console.log('hit')
     return
   }
 
@@ -28,10 +27,16 @@ const reviewForm = async (event) => {
       "Content-Type": "application/json",
     }
   })
-  console.log(createReview)
+
+
+  if (createReview.redirected) {
+    document.location.replace(createReview.url)
+    return
+  }
+
   createReview.ok
     ? window.location.reload()
-    : errorMsg.innerText = "create failed"
+    : errorMsg.innerText = "create failed - try later"
 
 }
 
@@ -48,6 +53,6 @@ window.onload = function () {
     })
   });
 
-  document.querySelector(".review-form").addEventListener("submit", reviewForm);
+  document.querySelector(".submitReviewBtn").addEventListener("click", reviewForm);
 
 }

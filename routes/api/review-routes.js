@@ -1,31 +1,18 @@
 const router = require('express').Router();
 
 const { User, Game, Review } = require('../../models');
-// const Score = require('../models/score');
 
-// POST review - for adding review
-// Expects a POST request with body format as below::
-// {
-// 	"game_id": (selected game's ID),
-// 	"user_id": (logged in user's ID) - req.sessio,
-// 	"review_score": 4,
-// 	"review_txt": "review written by user"
-// }
 router.post('/add', async (req, res) => {
     if (req.session.loggedIn) {
 
-
         req.body.user_name = req.session.user_name
         req.body.user_id = req.session.user_id
-
-
 
         try {
             const addReview = await Review.create(req.body)
 
             res.status(200).json(addReview);
-            // where to redirect user after completing this?
-            // refresh the page, and show the new review alongside all the reviews. 
+
         }
 
         catch (err) {
@@ -33,9 +20,7 @@ router.post('/add', async (req, res) => {
             res.status(500).json(err);
         }
 
-        return
     }
-
     res.redirect('/login')
 })
 

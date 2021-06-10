@@ -3,13 +3,8 @@ const router = require('express').Router();
 const { User, Game, Review } = require('../../models');
 
 
-// CREATE USER 
-// expects a POST request with body format as per below::
-// {
-// 	"user_name": "firstuser",
-// 	"user_email": "email@email.com",
-// 	"password": "passwerd"
-// }
+// CREATE USER & establish a session for them
+
 router.post('/register', async (req, res) => {
     try {
         const addUser = await User.create(req.body)
@@ -29,11 +24,7 @@ router.post('/register', async (req, res) => {
 
 
 // LOGIN route.
-// expects a POST requests with body format as per below:
-// {
-// 	"user_name": "firstuser",
-// 	"password": "passwerd"
-// }
+
 router.post('/login', async (req, res) => {
     try {
         const verify = await User.findOne({
@@ -45,6 +36,7 @@ router.post('/login', async (req, res) => {
         })
         if (verify) {
 
+            // double check this...why change to readable???
             const readable = verify.get({ plain: true })
             const verified = verify.checkPassword(req.body.password);
 
