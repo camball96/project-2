@@ -9,6 +9,7 @@ Project Owners - Cam, Ty, Nick, Aaron
 ## Table of Contents
 * [Description](#Description)
 * [License](#License)
+* [Directions for Future Development](#Directions for Future Development)
 * [Contributions](#Contributions)
 * [Credits](#Credits)
 
@@ -26,6 +27,15 @@ MIT License
 <br>
 Copyright © 2021-Present 
 <br>
+
+## Directions for Future Development
+- Continue to add more games to the database & encourage users to add potential games (potentially API link to our database?) 
+- Have a faster vetting system for user game submissions.
+- Add functionality for users to recover lost accounts (email/sms codes). 
+- Compress game cover art images to decrease load speeds.
+- Build a bigger forum extension for games that allow for users to add walkthroughs etc (integration with YouTube API).
+- Work with online retailers to link games over for purchasing (If possible).
+
 
 ## Contributions
 For contributions, you may follow the industry standard: [Contributor Covenant](https://www.contributor-covenant.org/).
