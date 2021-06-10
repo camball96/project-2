@@ -405,6 +405,7 @@ img {
 
 .row {
 	align-self: center;
+	text-align: center;
 	justify-content: center;
 	align-content: center;
 	flex-direction: column;
@@ -577,14 +578,20 @@ img {
 	margin: 30px;
 }
 
-/* .reviewContent {
-} */
+.reviewContent {
+	font-size: larger;
+	line-height: 1.5;
+	text-align: center;
+}
 
 .reviewUsername,
 .reviewScore,
 .reviewDateTime {
 	font-style: italic;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
 	font-size: small;
+	line-height: 1.5;
 	text-align: right;
 }
 
