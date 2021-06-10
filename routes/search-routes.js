@@ -41,4 +41,39 @@ router.get('/:game', async (req, res) => {
 
 
 
+// GET ALL games 
+router.get("/games/all", async (req, res) => {
+    try {
+        const gameData = await Game.findAll({
+            include: [
+                {
+                    model: Review,
+                    attributes: ["review_score"],
+                },
+            ],
+
+
+        }
+        );
+
+        const games = gameData.map((item) => item.get({ plain: true }));
+
+        console.log(games); // remove once ready to submit
+
+
+        let loggedIn = req.session.loggedIn
+        let user_name = req.session.user_name
+
+        res.render("viewAllGames", {
+            games,
+            loggedIn,
+            user_name
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+
 module.exports = router;

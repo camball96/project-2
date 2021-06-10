@@ -4,9 +4,9 @@
         <h1>VIEW ALL GAMES </h1>
     </div>
     <div class="searchResults">
-        {{#if searchResult}}
+        {{#if allGames}}
         {{!-- placeholder code --}}
-        {{#each searchResult as |game| }}
+        {{#each allGames as |game| }}
         {{>games game}}
         {{/each}}
     </div>

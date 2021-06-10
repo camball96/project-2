@@ -8,6 +8,15 @@ function searchGame() {
 
 }
 
+function searchAllGames() {
+
+    window.location.replace(`${window.location.origin}/all/games`)
+
+}
+// Listeners.
+
+document.querySelector('.searchGameButton').addEventListener('click', searchAllGames);
+
 // Listener.
 
 document.querySelector('.searchButton').addEventListener('click', searchGame);
