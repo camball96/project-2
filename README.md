@@ -9,7 +9,7 @@ Project Owners - Cam, Ty, Nick, Aaron
 ## Table of Contents
 * [Description](#Description)
 * [License](#License)
-* [Directions for Future Development](#Directions)
+* [Development](#Development)
 * [Contributions](#Contributions)
 * [Credits](#Credits)
 
@@ -28,7 +28,8 @@ MIT License
 Copyright © 2021-Present 
 <br>
 
-## Directions for Future Development
+## Development
+In future we hope to add the below functionality to the site:
 - Continue to add more games to the database & encourage users to add potential games (potentially API link to our database?) 
 - Have a faster vetting system for user game submissions.
 - Add functionality for users to recover lost accounts (email/sms codes). 
