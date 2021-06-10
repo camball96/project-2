@@ -324,17 +324,18 @@ img {
 }
 
 .search {
-	width: 40%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: auto;
+	margin-top: -40px;
 }
 
 .search-lite {
 	margin: auto;
 	display: flex;
-	width: 40%;
+	width: 100%;
 	font-family: monospace;
 	justify-content: center;
 	align-items: center;
@@ -342,13 +343,15 @@ img {
 }
 
 #searchBar.input {
-	background-color: var(--lilac);
+	width: 20%;
+	background-color: white;
 	border: none;
 	border-radius: 5px;
+	box-shadow: 0 0 50px var(--midnightblack);
 } 
 
 #searchBar.input[type="text"]:focus {
-	background-color: var(--lilac);
+	background-color: white;
 	border: none;
 	border-radius: 5px;
     outline : none;
@@ -360,31 +363,37 @@ img {
 	border-radius: 5px;
 	font-family: "elixiaregular", sans-serif;
 	font-weight: 600;
-	color: var(--midnightblack);
 	font-size: larger;
 }
 
 
 .searchGameButton {
-	background-color: turquoise;
-	width: 25%;
+	background-color: var(--lilac);
+	width: 7%;
 	padding: 10px;
 	margin-right: 10px;
 	border-radius: 5px;
 	font-family: "elixiaregular", sans-serif;
 	font-weight: 600;
-
 	color: var(--midnightblack);
 	font-size: larger;
-	border: 1px solid grey;
+	border: none;
 	border-left: none;
 	cursor: pointer; 
+	box-shadow: 0 0 50px var(--midnightblack);
+}
+.searchGameButton:hover {
+	color: var(--midnightblack);
+	cursor: pointer;
+	transition: 0.5s;
+	transform: scale(1.1);
+	margin-left: 5px;
 }
 .searchButton {
-	background-color: var(--lilac);
-	width: 5%;
+	background-color: white;
+	width: 2%;
 	padding: 10px;
-	margin-left: -8px;
+	margin-left: -7px;
 	margin-right: 10px;
 	border-radius: 5px;
 	font-family: "elixiaregular", sans-serif;
@@ -397,12 +406,11 @@ img {
 }
 
 .searchButton:hover {
-	color: var(--purewhite);
-	background-color: var(--midnightblack);
+	color: var(--midnightblack);
 	cursor: pointer;
 	transition: 0.5s;
+	
 }
-
 
 .trendingHeader {
 	margin-top: 35px;
@@ -868,6 +876,8 @@ img {
 .searchResults {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	padding-bottom: 2rem;
 	padding: 20px;
 }
@@ -878,6 +888,15 @@ img {
 	position: relative;
 	z-index: 1;
 	cursor: pointer;
+}
+
+.noResults {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 50%;
+	width: 50%;
 }
 
 .searchTitle {
