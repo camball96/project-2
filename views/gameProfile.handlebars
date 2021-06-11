@@ -1,9 +1,6 @@
-{{!-- These will be the game cards that show up for each game --}}
 <div class="gameProfileSection" id="{{gameInfo.id}}">
-	{{!-- <div class="row"> --}}
 		<div class="gameCard">
 			<div class="cardHeader">
-
 				<div class="row">
 					<div class="gameImg">
 						<img src="/images/{{gameInfo.picture}}" />
@@ -19,27 +16,22 @@
 					<h6 class="totalReviews">Total reviews: {{gameInfo.reviews.length}}</h6>
 				</div>
 			</div>
-
 			<div class="gameProfile">
 				<p>{{gameInfo.game_desc}}</p>
 			</div>
 		</div>
 	</div>
-
 	<div class="gameReviewCard">
 		<div class="reviewTitle">
 			<h4>R E V I E W S</h4>
 		</div>
-
 		{{#if gameInfo.reviews}}
 		{{#each gameInfo.reviews as |review| }}
-		{{>reviews review}} {{!-- links to the 'partials' view --}}
+		{{>reviews review}} 
 		{{/each}}
 		{{/if}}
 	</div>
-	<!-- Area where users can add their game reviews -->
 	<div class="addReview">
-
 		<div class="gameRate" id="default">
 			<div class="review-form">
 				<div class="reviewCard">
@@ -66,6 +58,4 @@
 			<label for="star1" title="text">1 star</label>
 		</div>
 	</div>
-
-	<script src="/js/addReview.js"></script>
-	{{!-- comments to add --}}
+<script src="/js/addReview.js"></script>

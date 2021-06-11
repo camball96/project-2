@@ -3,8 +3,6 @@ const sequelize = require('../config/connection');
 
 class Game extends Model { }
 
-// game table.// updated.
-
 Game.init(
     {
         id: {

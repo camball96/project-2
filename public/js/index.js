@@ -1,22 +1,15 @@
-// search for a game by name
+// Searching for game by name.
 
 function searchGame() {
-
-    criteria = document.querySelector("#searchBar").value
-
-    window.location.replace(`${window.location.origin}/search/${criteria}`)
-
+	criteria = document.querySelector("#searchBar").value;
+	window.location.replace(`${window.location.origin}/search/${criteria}`);
 }
 
 function searchAllGames() {
-
-    window.location.replace(`${window.location.origin}/all/games`)
-
+	window.location.replace(`${window.location.origin}/all/games`);
 }
-// Listeners.
 
-document.querySelector('.searchGameButton').addEventListener('click', searchAllGames);
-
-// Listener.
-
-document.querySelector('.searchButton').addEventListener('click', searchGame);
+document
+	.querySelector(".searchGameButton")
+	.addEventListener("click", searchAllGames);
+document.querySelector(".searchButton").addEventListener("click", searchGame);

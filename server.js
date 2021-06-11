@@ -1,17 +1,16 @@
-const path = require('path');
-const express = require('express');
-const routes = require('./routes');
-const sequelize = require('./config/connection')
-const exphbs = require('express-handlebars');
-const helpers = require('./utils/helpers');
+const path = require("path");
+const express = require("express");
+const routes = require("./routes");
+const sequelize = require("./config/connection")
+const exphbs = require("express-handlebars");
+const helpers = require("./utils/helpers");
 const session = require("express-session");
 const SequlizeStore = require("connect-session-sequelize")(session.Store);
 
-// session
 const sesh = {
   secret: "secretsecretsecret",
   cookie: {
-    path: '/',
+    path: "/",
   },
   resave: false,
   saveUninitialized: true,
@@ -27,15 +26,12 @@ const hbs = exphbs.create({ helpers });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(session(sesh))
 app.use(routes);
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
-// sync sequelize models to the database, then turn on the server
-// updated
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {

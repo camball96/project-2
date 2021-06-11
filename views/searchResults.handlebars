@@ -1,11 +1,9 @@
-{{!-- handlebars for search results (based off trending section) --}}
 <div class="searchGallery">
     <div class="searchHeader">
         <h1>SEARCH RESULTS</h1>
     </div>
     <div class="searchResults">
         {{#if searchResult}}
-        {{!-- placeholder code --}}
         {{#each searchResult as |game| }}
         {{>games game}}
         {{/each}}
@@ -13,11 +11,9 @@
 </div>
 {{else}}
 <div class="noResults">
-    <p>No results found - you can add a new game below!</p>
-    <img src="/images/game-placeholder-image.jpg" />
+    <h2>NO RESULTS FOUND - you can add a new game below!</h2>
 </div>
 {{/if}}
-
 &nbsp;
 <div class="addNewGame">
     <div class="addGameForm">
@@ -31,8 +27,6 @@
             <p class="addGameBtn">ADD GAME</p>
         </div>
     </div>
-
 </div>
-
 </div>
 <script src="/js/searchresults.js"></script>

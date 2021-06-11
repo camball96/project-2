@@ -16,6 +16,7 @@
 	--stormgrey: rgb(165, 160, 160);
 	--lavender: rgb(158, 129, 158);
 	--lilac: rgb(176, 176, 240);
+	--lightpink: rgb(241, 173, 173);
 	--purewhite: white;
 }
 
@@ -97,7 +98,7 @@ img {
 	justify-content: center;
 	align-self: center;
 	align-content: center;
-	padding: 1rem 2rem;
+	padding: 20px;
 	font-family: "elixiaregular", sans-serif;
 	font-weight: 300;
 	font-style: normal;
@@ -106,15 +107,16 @@ img {
 }
 
 .header h1 {
-	font-size: 3rem;
+	font-size: 48px;
 }
 
+/* Typewriter effect */
 .typewriter h1 {
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: 0.15em solid var(--lilac); /* The typwriter cursor */
+	border-right: 2.4px solid var(--lilac); /* The typewriter cursor */
 	white-space: nowrap; /* Keeps the content on a single line */
 	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	letter-spacing: 0.15em; /* Adjust as needed */
+	letter-spacing: 2.4px; 
 	animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -134,7 +136,7 @@ img {
 	text-decoration: none;
 }
 
-/* The typing effect */
+/* The typing keyframes */
 @keyframes typing {
 	from {
 		width: 0;
@@ -182,10 +184,10 @@ img {
 	justify-content: flex-end;
 	text-align: right;
 	font-family: "elixiaregular", sans-serif;
-	font-size: 1.5rem;
+	font-size: 24px;
 	font-weight: 900;
 	width: auto;
-	padding: 0.5rem;
+	padding: 10px;
 }
 
 .loginUsername {
@@ -302,7 +304,6 @@ img {
 }
 
 /* SEARCH BAR */
-
 .searchBar {
 	display: flex;
 	margin: 20% auto;
@@ -444,24 +445,24 @@ img {
 }
 
 .trendingHeader h4 {
-	font-size: 3rem;
+	font-size: 48px;
 	font-weight: 900;
 }
 
 .cardHeader h4 {
-	font-size: 3rem;
+	font-size: 48px;
 }
 
 .trendingGames {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 2rem;
+	padding-bottom: 32px;
 }
 
 .trendingImg {
 	display: block;
 	height: 250px;
-	margin-right: 1rem;
+	margin-right: 15px;
 	position: relative;
 	z-index: 1;
 	cursor: pointer;
@@ -541,7 +542,6 @@ img {
 }
 
 /* DEFAULT CARD STYLING */
-
 .gameReviewCard,
 .profileCard,
 .result-box, 
@@ -552,7 +552,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	border: 0.1rem solid var(--purewhite);
+	border: 1.6px solid var(--purewhite);
 	border-radius: 10px;
 	width: fit-content;
 	padding: 50px;
@@ -570,7 +570,7 @@ img {
 }
 
 .cardHeader {
-	font-size: 3rem;
+	font-size: 48px;
 	font-style: normal;
 	margin-top: 30px;
 }
@@ -581,12 +581,10 @@ img {
 	flex-direction: column;
 	border-top: 0.5px solid var(--purewhite);
 	padding-top: 30px;
-	/* border-radius: 10px; */
 }
 
 .gameImg {
 	height: 300px;
-	text-align: centre;
 }
 
 .gameImg img {
@@ -637,7 +635,6 @@ img {
 }
 
 /* GAME REVIEW CARD */
-
 .gameReviewCard {
 	display: flex;
 	flex-direction: column;
@@ -645,7 +642,7 @@ img {
 
 .reviewTitle {
 	font-family: "elixiaregular", sans-serif;
-	font-size: 3rem;
+	font-size: 48px;
 	color: var(--purewhite);
 	text-align: center;
 	margin-top: 10px;
@@ -719,7 +716,7 @@ img {
 }
 .gameRate:not(:checked) > label {
 	float: right;
-	width: 1em;
+	width: 16px;
 	overflow: hidden;
 	white-space: nowrap;
 	cursor: pointer;
@@ -745,16 +742,15 @@ img {
 }
 
 /* USER PROFILE CARD  */
-
 .profileSection {
 	display: flex;
-	margin: 2rem;
+	margin: 32px;
 	justify-content: center;
 }
 
 .profileHeader {
 	display: flex;
-	margin: 1rem;
+	margin: 15px;
 }
 
 .profileCard {
@@ -766,7 +762,7 @@ img {
 }
 
 .profileHeader h4 {
-	font-size: 3rem;
+	font-size: 48px;
 }
 
 .profileEmail,
@@ -778,7 +774,7 @@ img {
 	padding-bottom: 40px;
 	justify-content: start;
 	align-self: center;
-	padding-right: 5rem;
+	padding-right: 80px;
 	height: 30px;
 }
 
@@ -792,7 +788,6 @@ img {
 }
 
 /* CUSTOM BUTTONS */
-
 .updateEmail,
 .updateUsername,
 .updatePassword,
@@ -879,7 +874,7 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 2rem;
+	padding-bottom: 32px;
 	padding: 20px;
 }
 
@@ -893,18 +888,23 @@ img {
 
 .noResults {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	height: 50%;
-	width: 50%;
+	height: 80%;
+	width: 100%;
+	padding: 30px;
+	margin: 30px;
+	border-top: 0.1px solid var(--purewhite);
+	border-bottom: 0.1px solid var(--purewhite);
+	color: var(--lightpink);
 }
 
 .searchTitle {
 	display: inline-block;
 	background-color: var(--midnightblack);
 	color: var(--purewhite);
-	font-size: 2rem;
+	font-size: 32px;
 	justify-content: center;
 	align-self: center;
 	margin-top: 12px;
@@ -1012,7 +1012,29 @@ img {
 	color: var(--midnightblack);
 }
 
+@media only screen and (max-width: 1440px) {
+	.mainBackground {
+		height: 100%;
+		background-position-x: center;
+		background-position-y: top;
+	}
+	.search{
+		margin-top: -60px;
+		margin-right: 30px;
+	}
+	.searchButton {
+		width: 5%;
+    	padding: 10px;
+    	margin-left: -12px;
+    	margin-right: 15px;
+	}
+}
+
 @media only screen and (max-width: 768px) {
+	.header {
+		padding: 10px;
+		margin: 0px;
+	}
 	.mainBackground{
 		height: 80%;
 		background-position-x: center;
@@ -1028,7 +1050,7 @@ img {
 		justify-content: center;
 	}
 	.searchBar{
-		padding-top: 200px;
+		padding-top: 350px;
 	}
 	.searchButton {
 		width:10%;

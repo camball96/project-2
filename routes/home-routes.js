@@ -53,7 +53,6 @@ router.get("/", async (req, res) => {
 	}
 });
 
-
 // serve the registration page
 router.get("/register", (req, res) => {
 
@@ -94,7 +93,7 @@ router.get("/profile", async (req, res) => {
 	res.redirect("/login");
 });
 
-// goes to the gameprofile views..
+// goes to the gameprofile views
 router.get("/gameprofile/:id", async (req, res) => {
 	try {
 		const getGame = await Game.findByPk(req.params.id, {

@@ -15,46 +15,29 @@
 </head>
 
 <body>
-	<!-- Background image with some opacity -->
-	{{!-- Hiding the background image if logged in --}}
-
 	{{#if landingPage}}
 	<div class="mainBackground">
 		{{/if}}
-
 		<div class="topNav">
-
 			{{#if loggedIn}}
-
 			<div class="welcomeMsg">
 				<div class="welcomeUser"><a>WELCOME, <span class="loginUsername">{{user_name}}</span></a></div>
 			</div>
-
 			{{/if}}
-
 			<div class="header typewriter">
 				<h1><a href="/">G A M E R S - H I D E O U T</a></h1>
 			</div>
 			<div class="navButtons">
 				<div class="aboutUsButton"><a href="/aboutUs">ABOUT US</a></div>
-
-				{{!-- display login/out depending on login statuss --}}
-
 				{{#if loggedIn}}
 				<div class="userProfileButton"><a href='/profile'>PROFILE</a></div>
 				<div class="logoutButton"><a>LOGOUT</a></div>
-
 				{{else}}
 				<div class="loginButton"><a href='/login'>LOGIN</a></div>
 				<div class="makeAccButton"><a href='/register'>CREATE ACCOUNT</a></div>
-
 				{{/if}}
-
 			</div>
 		</div>
-
-		<!-- Added logic to change the search bar placement depending on if they are at landing page or not. -->
-
 		{{#if landingPage}}
 		<div class="searchBar">
 			<div class="search">
@@ -62,20 +45,14 @@
 				<div class="searchBar-lite">
 					<div class="search-lite">
 						{{/if}}
-
-
 						<input type="text" class="input" id="searchBar" placeholder="Search..."  />
 						<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
 						<button type="all-games" class="searchGameButton">All Games <i class="fa fa-gamepad" aria-hidden="true"></i></button>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- This is where handlebars willdaffect page content -->
-		
+		</div>		
 		{{{ body }}}
-
-
 		<footer class="mainFooter">
 			<div class="contactUs">
 				<h2 class="contactUsTitle">CONTACT US</h2>
@@ -88,12 +65,9 @@
 				<h6>© Designed by Ty, Cam, Aaron, Nick</h6>
 			</div>
 		</footer>
-
-
 </body>
 {{#if loggedIn}}
 <script src="/js/logout.js"></script>
 {{/if}}
 <script src="/js/index.js"></script>
-
 </html>

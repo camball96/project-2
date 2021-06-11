@@ -1,35 +1,26 @@
 
 // Functions in this file are for sending a request to update user profile details
 
-// below function constructs the request depending on what the user wants to update
-
 function constructRequest() {
 
     const usernameVal = document.querySelector('#username').value;
     const emailVal = document.querySelector('#email').value;
     const passwordVal = document.querySelector('#password').value;
-
     var body = {}
-
     if (this.id === 'updatePass') {
         // body.password?
         body = { password: passwordVal }
         updateProfile(body)
         return
-
     }
-
     this.id === 'updateUser'
         ? body = { user_name: usernameVal }
         : body = { user_email: emailVal }
-
     updateProfile(body)
-
 }
 
 
 // this function goes to /api/user/update to modify user account details
-
 async function updateProfile(body) {
 
     const accountUpdate = await fetch('/api/user/update', {
@@ -40,22 +31,16 @@ async function updateProfile(body) {
     })
 
     // converts the response to useable data then sends them to home if log in success other wise it displays an error.
-    // console.log(accountUpdate)
     accountUpdate.text()
-
         .then((response) => {
-
             var readable = JSON.parse(response)
             var errorMsg = document.querySelector("#messagesDiv");
 
             response == 1
                 ? errorMsg.innerText = 'Updated!'
-                : errorLookup(readable) //If it fails goes to error Lookup to get error message
+                : errorLookup(readable) // If it fails goes to error Lookup to get error message
         })
 }
-
-
-// will decide which error to display. 
 
 const errorLookup = (errors) => {
     var errorMsg = document.querySelector("#messagesDiv");
@@ -72,7 +57,6 @@ const errorLookup = (errors) => {
 
 // Function for users to delete their profile
 async function deleteProfile(event) {
-
     event.preventDefault();
 
     const response = await fetch(`/api/user/delete`, {
@@ -81,16 +65,12 @@ async function deleteProfile(event) {
         headers: { 'Content-Type': 'application/json' }
     });
 
-
     if (response.ok) {
-
         document.location.replace('/');
     } else {
         alert(response.statusText);
     };
 }
-
-// Listeners.
 
 document.querySelector('#updateUser').addEventListener('click', constructRequest);
 document.querySelector('#updateEmail').addEventListener('click', constructRequest);
