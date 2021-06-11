@@ -49,14 +49,17 @@ Copyright © 2021-Present
 ## Development
 Our main goal was to build a full stack application that helps users find reviews on games they may want to try out. 
 We wanted to fill a gap in the market between a reddit forum page and an IGN game review site.
+<br>
+
 `Minimum Viable Product - Users to add game reviews to their favourite games!`
 
 
 ## Future
+Due to the time constraints given for completion of this project, we had to scale back a lot of potential features. Moving foward, we would like to add some of these features in the future. 
 
 1. Continue to add more games to the database & encourage users to add potential games. Looking at potentially linking an API to our database, so we can store all existing games (e.g. from Steam) in our database. 
 2. Have a faster vetting system for user game submissions.
-3. Functionality for users to recover lost accounts (through using email - npm package nodemailer). 
+3. Functionality for users to recover lost accounts (through using email - npm package `nodemailer`). 
 4. Compress game cover art images to decrease load speeds.
 5. Build a bigger forum extension for games that allow for users to add other features such as video walkthroughs (integration with YouTube API).
 6. Work with online retailers to link games over for purchasing.
@@ -80,4 +83,5 @@ For contributions, you may follow the industry standard: [Contributor Covenant](
 * express-handlebars
 * express-session
 * sequelize
+* Typewriter effect - inspired by [Geoff](https://css-tricks.com/snippets/css/typewriter-effect/).
 * CSS Hover Images with Grayscale - inspired by [Rahul](https://w3bits.com/css-image-hover-zoom/).
