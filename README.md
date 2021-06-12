@@ -4,7 +4,7 @@
 
 Project Owners - Cameron Ball, Ty Saunders, Nick Bainbridge, Aaron Au Yoong
 
-Here is a live link to our application on ```Heroku```: <Insert Link>
+Here is a live link to our application on Heroku: [Gamers-Hideout](https://polar-castle-84176.herokuapp.com/)
 
 <br>
 
