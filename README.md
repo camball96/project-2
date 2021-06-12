@@ -1,8 +1,10 @@
+<img src="./public/images/readme-banner.png" width="100%">
+
 # Gamers-Hideout
 
-Project Owners - Cam, Ty, Nick, Aaron
+Project Owners - Cameron Ball, Ty Saunders, Nick Bainbridge, Aaron Au Yoong
 
-Heroku Link: <Insert Link>
+Here is a live link to our application on ```Heroku```: <Insert Link>
 
 <br>
 
@@ -18,9 +20,9 @@ Heroku Link: <Insert Link>
 * [Credits](#Credits)
 
 ## Description
-The web application allows users to create an account and leave reviews for games, with the ability to add a game to the site if there are no existing reviews for it.
+This web application allows users to look up games and their reviews, alongside writing their own reviews for their favourite games. Users must create an account before being able to leave reviews for games. Furthermore, users have the ability to add a game to the site if it currently does not exist in our database.
 
-Below is our User Story:
+Below is our defined User Story:
 
 ```md
 AS A gamer who wants to look up game reviews, 
@@ -29,8 +31,9 @@ SO I CAN decide whether I want to invest time and money into that game.
 
 ```
 
-Below is our database layout. 
-<insert database layout screenshot here>
+The diagram below illustrates our database layout:
+<br>
+<img src="./public/images/gamers-hideout-database.png" width="60%">
 
 ## Features
 Below are some features of the site:
@@ -48,7 +51,7 @@ Copyright © 2021-Present
 
 ## Development
 Our main goal was to build a full stack application that helps users find reviews on games they may want to try out. 
-We wanted to fill a gap in the market between a reddit forum page and an IGN game review site.
+We wanted to fill a gap in the market between a Reddit forum page and an IGN game review site.
 <br>
 
 `Minimum Viable Product - Users to add game reviews to their favourite games!`
