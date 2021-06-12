@@ -1,18 +1,18 @@
 // helper functions for iterating over returned data
-// modified averageOut because Heroku war doing concat instead of addition
+// modified averageOut because Heroku was doing concat instead of addition; changed from var to const & review to Review
 module.exports = {
 	averageOut: (reviews) => {
-		var total = reviews.reduce((acc, review) => acc += parseInt(review.review_score), 0);
-		var average = total / reviews.length;
+		const total = reviews.reduce((acc, Review) => acc += parseInt(Review.review_score), 0);
+		const average = total / reviews.length;
 		return average.toFixed(1);
 	},
 	cleanDate: (date) => {
-		var str = date.toString();
-		var mod = str.slice(4, 24);
+		const str = date.toString();
+		const mod = str.slice(4, 24);
 		return mod;
 	},
 	upperCase: (item) => {
-		var upper = item.toUpperCase();
+		const upper = item.toUpperCase();
 		return upper;
 	},
 };
