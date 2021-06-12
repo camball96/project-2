@@ -4,7 +4,7 @@ async function updatePassword() {
 
     // Save wasteful db call if PW too short
     if (passwordVal.length < 6) {
-        document.querySelector("#messagesDiv")
+        document.querySelector("#problem")
             .innerText = "password needs to be 6 characters minimum"
         return
     }
@@ -21,8 +21,8 @@ async function updatePassword() {
 
     // Display success message or deal with error
     updatePW.status === 200
-        ? document.querySelector("#messagesDiv").innerText = 'Updated!'
-        : document.querySelector("#messagesDiv").innerText = (updatePW.statusText);
+        ? document.querySelector("#problem").innerText = 'Updated!'
+        : document.querySelector("#problem").innerText = (updatePW.statusText);
 }
 
 
