@@ -11,5 +11,5 @@ const logOut = function leave() {
 	});
 };
 
-// // --------Listeners------------//
+//Listener
 document.querySelector(".logoutButton").addEventListener("click", logOut);

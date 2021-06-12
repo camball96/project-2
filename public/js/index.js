@@ -1,15 +1,19 @@
 // Searching for game by name.
-
-function searchGame() {
-	criteria = document.querySelector("#searchBar").value;
-	window.location.replace(`${window.location.origin}/search/${criteria}`);
+function searchGame(e) {
+	criteria = document.querySelector("#searchBar").value
+	criteria
+		? window.location.assign(`${window.location.origin}/search/game/${criteria}`)
+		: window.location.assign(`${window.location.origin}/search/game/nocriteriaspecified`)
 }
 
+// When clicking all games button
 function searchAllGames() {
-	window.location.replace(`${window.location.origin}/all/games`);
+	window.location.assign(`${window.location.origin}/search/games/all`)
 }
 
-document
-	.querySelector(".searchGameButton")
-	.addEventListener("click", searchAllGames);
-document.querySelector(".searchButton").addEventListener("click", searchGame);
+// Listeners
+document.querySelector('.searchButton').addEventListener('click', searchGame);
+document.querySelector('.searchGameButton').addEventListener('click', searchAllGames)
+document.querySelector('#searchBar').addEventListener('keypress', function (e) {
+	if (e.key === 'Enter') { searchGame() }
+})

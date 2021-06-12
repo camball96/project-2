@@ -18,6 +18,7 @@
 	--lilac: rgb(176, 176, 240);
 	--lightpink: rgb(241, 173, 173);
 	--purewhite: white;
+	--greenish: rgb(23, 160, 23);
 }
 
 h1,
@@ -250,6 +251,10 @@ img {
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 90%;
+}
+
+#problem {
+	color: var(--greenish);
 }
 
 /* WEBSITE FOOTER */
@@ -792,7 +797,8 @@ img {
 .updateEmail,
 .updateUsername,
 .updatePassword,
-.submitReviewBtn {
+.submitReviewBtn,
+#orJoin {
 	cursor: pointer;
 	background-color: var(--midnightblack);
 	color: var(--lilac);
