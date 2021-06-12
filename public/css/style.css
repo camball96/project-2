@@ -709,6 +709,10 @@ img {
 }
 
 /* Star Rating styling */
+
+/* Below prevents radio(star) buttons from jumping to the top of the page */
+input[type="radio"]{visibility:hidden;}
+
 .gameRate {
 	float: left;
 	justify-content: center;
@@ -722,7 +726,7 @@ img {
 }
 .gameRate:not(:checked) > label {
 	float: right;
-	width: 16px;
+	width: 30px;
 	overflow: hidden;
 	white-space: nowrap;
 	cursor: pointer;
