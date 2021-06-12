@@ -5,7 +5,7 @@ const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
 // search for results similar to what user types into the search field
-router.get("/:game", async (req, res) => {
+router.get("/game/:game", async (req, res) => {
 	try {
 		const gameSearch = await Game.findAll({
 			where: {
@@ -16,7 +16,6 @@ router.get("/:game", async (req, res) => {
 				{
 					model: Review,
 					attributes: [
-						"user_id",
 						"user_name",
 						"review_score",
 						"review_txt",
@@ -42,7 +41,7 @@ router.get("/:game", async (req, res) => {
 	}
 });
 
-// GET ALL games
+// GET ALL games when user clicks all games button
 router.get("/games/all", async (req, res) => {
 	try {
 		const gameData = await Game.findAll({
@@ -52,6 +51,7 @@ router.get("/games/all", async (req, res) => {
 					attributes: ["review_score"],
 				},
 			],
+			order: Sequelize.literal('rand()')
 		});
 
 		const games = gameData.map((item) => item.get({ plain: true }));
