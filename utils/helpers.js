@@ -2,7 +2,7 @@
 // modified averageOut because Heroku war doing concat instead of addition
 module.exports = {
 	averageOut: (reviews) => {
-		var total = reviews.reduce((acc, review) => { acc = acc + review.review_score }, 0);
+		var total = reviews.reduce((acc, review) => acc += parseInt(review.review_score), 0);
 		var average = total / reviews.length;
 		return average.toFixed(1);
 	},
