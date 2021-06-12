@@ -137,7 +137,7 @@ router.get("/create/newgame", (req, res) => {
 	}
 	let loggedIn = req.session.loggedIn
 	let user_name = req.session.user_name
-	res.render("reviewnewgame", {
+	res.render("reviewNewGame", {
 		loggedIn,
 		user_name
 	})
