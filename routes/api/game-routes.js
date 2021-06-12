@@ -3,7 +3,7 @@ const { User, Game, Review } = require("../../models");
 
 // POST game - for adding new game and then adding a review
 
-router.post("/newgame", async (req, res) => {
+router.post("/new", async (req, res) => {
 	if (!req.session.loggedIn) {
 		return res.redirect('/login')
 	}
