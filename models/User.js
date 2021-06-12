@@ -7,6 +7,10 @@ class User extends Model {
 	checkPassword(loginPw) {
 		return bcrypt.compareSync(loginPw, this.password);
 	}
+	hashBeforeUpdate(newPW) {
+		var hashedPW = bcrypt.hash(newPW, 10);
+		return hashedPW;
+	}
 }
 
 User.init(
@@ -44,14 +48,6 @@ User.init(
 				newUserData.password = await bcrypt.hash(newUserData.password, 10);
 				return newUserData;
 			},
-			// async beforeUpdate(newUserData) {
-			//     newUserData.password = await bcrypt.hash(newUserData.password, 10);
-			//     return newUserData;
-			// },
-			// async beforeBulkUpdate(newUserData) {
-			//     newUserData.password = await bcrypt.hash(newUserData.password, 10);
-			//     return newUserData;
-			// },
 		},
 		sequelize,
 		freezeTableName: true,
