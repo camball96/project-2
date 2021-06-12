@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const { User, Game, Review } = require("../../models");
-const { bulkCreate } = require('../../models/game');
+
 
 // Create account & establish a session
 router.post('/register', async (req, res) => {
@@ -86,18 +86,10 @@ router.put('/update', async (req, res) => {
 // update password -retreive user then hash and save the new password.
 router.put('/update/pw', async (req, res) => {
     try {
-        const findAcct = await User.findByPk(req.session.user_id)
-        const newPW = await findAcct.hashBeforeUpdate(req.body.password)
+        const userAcct = await User.findByPk(req.session.user_id)
 
-        await User.update(
-            {
-                password: newPW
-            },
-            {
-                where: {
-                    id: req.session.user_id
-                },
-            })
+        await userAcct.update(req.body)
+
         res.status(200).json(1)
     }
     catch (err) {
