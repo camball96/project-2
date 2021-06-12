@@ -12,7 +12,6 @@ router.post("/new", async (req, res) => {
 		});
 
 		const newGame = addGame.get({ plain: true });
-		console.log(newGame);
 		const addReview = await Review.create({
 			game_id: newGame.id,
 			review_txt: req.body.review_txt,
@@ -21,11 +20,8 @@ router.post("/new", async (req, res) => {
 			user_id: req.session.user_id,
 		});
 
-		console.log(addReview);
-
 		const newReview = addReview.get({ plain: true });
 
-		// redirect them to the new game page
 		res.redirect(`/gameProfile/${newReview.game_id}`);
 	} catch (err) {
 		console.log(err);
