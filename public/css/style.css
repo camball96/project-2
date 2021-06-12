@@ -798,7 +798,7 @@ img {
 .updateUsername,
 .updatePassword,
 .submitReviewBtn,
-#orJoin {
+#alt-button {
 	cursor: pointer;
 	background-color: var(--midnightblack);
 	color: var(--lilac);

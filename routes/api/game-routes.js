@@ -4,6 +4,9 @@ const { User, Game, Review } = require("../../models");
 // POST game - for adding new game and then adding a review
 
 router.post("/new", async (req, res) => {
+	if (!req.session.loggedIn) {
+		return res.redirect('/login')
+	}
 	try {
 		const addGame = await Game.create({
 			game_name: req.body.game_name,

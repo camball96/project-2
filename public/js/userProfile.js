@@ -1,6 +1,6 @@
 // Password update fetch function
 async function updatePassword() {
-    const passwordVal = document.querySelector('#password').value;
+    const passwordVal = document.querySelector('#passW').value;
 
     // Save wasteful db call if PW too short
     if (passwordVal.length < 6) {
@@ -21,7 +21,7 @@ async function updatePassword() {
 
     // Display success message or deal with error
     updatePW.status === 200
-        ? document.querySelector("#problem").innerText = 'Updated!'
+        ? document.querySelector("#problem").innerText = 'password updated!'
         : document.querySelector("#problem").innerText = (updatePW.statusText);
 }
 
@@ -29,11 +29,11 @@ async function updatePassword() {
 // Email or Username update function
 // the request body changes depending on what they are updating
 async function updateProfile() {
-    const usernameVal = document.querySelector('#username').value;
-    const emailVal = document.querySelector('#email').value;
+    const usernameVal = document.querySelector('#userN').value;
+    const emailVal = document.querySelector('#userEmail').value;
 
     var body = {}
-    this.id === 'updateUser'
+    this.id === 'username'
         ? body.user_name = usernameVal
         : body.user_email = emailVal
 
@@ -46,7 +46,7 @@ async function updateProfile() {
 
     // return success message or deal with error
     accountUpdate.status === 200
-        ? document.querySelector("#problem").innerText = 'Updated!'
+        ? document.querySelector("#problem").innerText = `${this.id} updated!`
         : accountUpdate.text().then(data =>
             JSON.parse(data)).then(msg => errorLookup(msg))
 }
@@ -85,9 +85,9 @@ const errorLookup = (msg) => {
 
 // Listeners.
 window.onload = function () {
-    document.querySelector('#updateUser').addEventListener('click', updateProfile);
-    document.querySelector('#updateEmail').addEventListener('click', updateProfile);
-    document.querySelector('#updatePass').addEventListener('click', updatePassword);
+    document.querySelector('#username').addEventListener('click', updateProfile);
+    document.querySelector('#email').addEventListener('click', updateProfile);
+    document.querySelector('#password').addEventListener('click', updatePassword);
     document.querySelector('#deleteProfileBtn').addEventListener('click', deleteProfile);
 }
 

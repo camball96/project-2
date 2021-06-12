@@ -132,6 +132,9 @@ router.get("/gameprofile/:id", async (req, res) => {
 
 // serve the new game review page
 router.get("/create/newgame", (req, res) => {
+	if (!req.session.loggedIn) {
+		res.redirect("/login")
+	}
 	let loggedIn = req.session.loggedIn
 	let user_name = req.session.user_name
 	res.render("reviewnewgame", {

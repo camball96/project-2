@@ -32,6 +32,7 @@
 	{{/if}}
 </div>
 <div class="addReview">
+	{{#if loggedIn}}
 	<div class="gameRate" id="default">
 		<div class="review-form">
 			<div class="reviewCard">
@@ -57,5 +58,9 @@
 		<input type="radio" class="star" id="star1" name="rate" value="1" />
 		<label for="star1" title="text">1 star</label>
 	</div>
+	{{else}}
+	<div class="createAccount"><a href='/login' id="alt-button">LOGIN</a> - TO LEAVE A
+		REVIEW</div>
+	{{/if}}
 </div>
 <script src="/js/addReview.js"></script>
