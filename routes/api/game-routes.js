@@ -20,7 +20,6 @@ router.post("/new", async (req, res) => {
 			review_txt: req.body.review_txt,
 			review_score: req.body.review_score,
 			user_name: req.session.user_name,
-			user_id: req.session.user_id,
 		});
 
 		const newReview = addReview.get({ plain: true });
