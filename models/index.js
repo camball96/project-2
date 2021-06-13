@@ -7,7 +7,7 @@ Review.belongsTo(Game, {
 });
 
 Review.belongsTo(User, {
-	foreignKey: "user_id",
+	foreignKey: "user_name",
 });
 
 Game.hasMany(Review, {
