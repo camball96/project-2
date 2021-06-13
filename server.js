@@ -11,6 +11,7 @@ const sesh = {
   secret: "secretsecretsecret",
   cookie: {
     path: "/",
+    maxAge: 7 * 24 * 60 * 60 * 1000
   },
   resave: false,
   saveUninitialized: true,
