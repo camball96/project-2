@@ -75,6 +75,30 @@ router.put('/update', async (req, res) => {
                 id: req.session.user_id
             }
         })
+
+        if (!req.body.user_name) {
+            return res.status(200).json(1)
+        }
+
+        // if username is being updated, update the reviews table
+        const findDependencies = await Review.findAll({
+            where: {
+                user_name: req.session.user_name
+            }
+        })
+        const reviews = findDependencies.map(item => item.get({ plain: true }))
+        const updateReviews = reviews.map(item => {
+            item.user_name = req.body.user_name
+            return item
+        })
+
+        await Review.bulkCreate(updateReviews,
+            { updateOnDuplicate: ["id", "user_name"] })
+
+        // save new username in session
+        req.session.user_name = req.body.user_name
+        req.session.save();
+
         res.status(200).json(1)
     }
     catch (err) {
@@ -120,18 +144,17 @@ router.delete('/delete', async (req, res) => {
     try {
         const findDependencies = await Review.findAll({
             where: {
-                user_id: req.session.user_id
+                user_name: req.session.user_name
             }
         })
         const reviews = findDependencies.map(item => item.get({ plain: true }))
         const updateReviews = reviews.map(item => {
-            item.user_id = 1
             item.user_name = 'Deleted Account'
             return item
         })
 
         await Review.bulkCreate(updateReviews,
-            { updateOnDuplicate: ["id", "user_id", "user_name"] })
+            { updateOnDuplicate: ["id", "user_name"] })
         await User.destroy({
             where: { id: req.session.user_id }
         })
